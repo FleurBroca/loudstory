@@ -1,26 +1,27 @@
-<div id="footer" class="inline-block">
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col-xs-4">
+    <div id="about-contact">
+      <ul class="list-inline">
+        <li>About   <%= fa_icon "bolt" %></li>
+        <li>Contact   <%= fa_icon "envelope" %></li>
+        </ul>
+    </div>
 
-  <div id="about-contact" class="pull-left">
-    <ul class="list-inline">
-      <li>About   <%= fa_icon "bolt" %></li>
-      <li>Contact   <%= fa_icon "envelope" %></li>
+    <div class="col-xs-4 col-sm-4" id="social-icons">
+      <p id="social-baseline">We share storytelling tips and inspiration daily</p>
+      <ul class="list-inline social text-center">
+        <li><%= fa_icon "facebook-square" %></li>
+        <li><%= fa_icon "twitter-square" %></li>
+        <li><%= fa_icon "youtube" %></li>
       </ul>
+    </div>
+
+    <div class="col-xs-4 col-sm-4" id="copypright">
+      <p><%= fa_icon "copyright" %>  LoudStory 2014</p>
+    </div>
+
   </div>
-
-
-  <div id="social-icons" class="text-center">
-    <p id="social-baseline">We share storytelling tips and inspiration daily</p>
-    <ul class="list-inline social text-center">
-      <li><%= fa_icon "facebook-square" %></li>
-      <li><%= fa_icon "twitter-square" %></li>
-      <li><%= fa_icon "youtube" %></li>
-    </ul>
-  </div>
-
-  <div id="copypright" class="pull-right">
-    <p><%= fa_icon "copyright" %>  LoudStory 2014</p>
-  </div>
-
 </div>
 
 

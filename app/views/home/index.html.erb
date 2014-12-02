@@ -1,27 +1,30 @@
 <div class="wrapper" id="header">
-  <div class="container fit-fixed">
-    <div class="row padding-top--1">
+
+<div class="container">
+  <div class="row">
       <div class="col-sm-12 text-center text-title">
         <h1><%= t '.title' %></h1>
-      </div>
+        <h2><small>Lorem ipsum dolor sit amet!</small></h2>
     </div>
-    <div class="row homebanner">
-      <div class="col-sm-4 col-offset-3 text-center pic-align-home">
-        <%= image_tag "homebanner-blur.jpg", id: "home_pic" %>
-      </div>
-      <div class="col-sm-2 col-offset-3" id="home_cta">
-        <% if user_signed_in? %>
-          <div class="col-sm-3 col-offset-3" id="home_track">
-            <h1><%= t '.header' %></h1>
-            <% @tracks.each do |track| %>
-            <h2><%= link_to track.title, track %></h2>
-            <p><%= track.description %></p>
+    <div class="col-sm-offset-1 col-sm-10 col-xs-12 homebanner">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-6">
+
+            <% if user_signed_in? %>
+            <div class="col-sm-2 col-sm-offset-2" id="home_track">
+              <h1><%= t '.header' %></h1>
+              <% @tracks.each do |track| %>
+              <h2><%= link_to track.title, track %></h2>
+              <p><%= track.description %></p>
+              <% end %>
+            </div>
+            <% else %>
+            <%= render "devise/registrations/new" %>
             <% end %>
-          </div>
-        <% else %>
-        <%= render "devise/registrations/new" %>
-        <% end %>
+
+        </div>
       </div>
     </div>
   </div>
+</div>
 </div>

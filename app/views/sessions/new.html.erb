@@ -1,46 +1,58 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-    <div class="header">
-      <h1><%= @exercise.title %></h1>
-    </div>
-    <div class="subheader">
-      <p><%= @exercise.description %></p>
-    </div>
-      <%= form_for([@exercise, @session]) do |f| %>
-        <%= f.fields_for :answers do |a| %>
-          <div class="field form-group", id="exercise-form">
-            <%= label_tag a.object.question.title %>
-            <br><%= a.object.question.description %>
-            <%= a.hidden_field :original_question, value: a.object.question.title %>
-            <%= a.hidden_field :question_id %>
-            <br>
-            <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>
+        <div role="tabpanel">
+          <ul class="nav nav-tabs" role="tablist">
+            <% @previous_sessions.each do |session| %>
+              <li role="presentation">
+                <a href="#session-<%= session.id %>" aria-controls="" role="tab" data-toggle="tab">
+                <%= session.exercise.title %></a>
+              </li>
+            <% end %>
+            <li role="presentation"   class="active">
+              <a href="#session-new"  aria-controls="" role="tab" data-toggle="tab">
+                New
+              </a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <% @previous_sessions.each do |session| %>
+              <div role="tabpanel" class="tab-pane subheader" id="session-<%= session.id %>">
+                <p class="bold-blue"><%= session.exercise.description %></p>
+
+                <% session.answers.each do |answer| %>
+                  <div>
+                    <%= answer.question.title %>
+                  </div>
+                  <div>
+                    <%= answer.content %>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+
+            <div role="tabpanel" class="tab-pane subheader active" id="session-new">
+              <%= form_for([@exercise, @session]) do |f| %>
+                <% @exercise.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                <%= f.fields_for :answers do |a| %>
+                  <div class="field form-group", id="exercise-form">
+                    <%= label_tag a.object.question.title %>
+                    <br><%= a.object.question.description %>
+                    <%= a.hidden_field :original_question, value: a.object.question.title %>
+                    <%= a.hidden_field :question_id %>
+                    <%= a.hidden_field :exercise_id %>
+                    <br>
+                    <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>
+                  </div>
+                <% end %>
+                <%= f.submit "Save my story", class: "btn btn-primary" %>
+              <% end %>
+            </div>
           </div>
-        <% end %>
-        <%= f.submit "Save my exercise", class: "btn btn-primary" %>
-      <% end %>
+        </div>
     </div>
   </div>
 </div>
-<!-- <form role="form">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> -->

@@ -10,5 +10,5 @@ class Exercise < ActiveRecord::Base
   validates_attachment_content_type :photo,
     content_type: /\Aimage\/.*\z/
 
-  validates_presence_of :track, :position
+  validates_presence_of :title, :description, :track_id, :position
 end

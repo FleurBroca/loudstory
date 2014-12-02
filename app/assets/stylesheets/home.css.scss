@@ -7,30 +7,26 @@
 }
 
 #header{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .fit-fixed{
   display: block;
 }
 
-.padding-top--1{
-  padding-top: 1rem !important;
-}
-
-.padding-top--3{
-  padding-top: 3rem !important;
-}
-
 .text-title{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
 .homebanner{
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 15px;
+  // margin-left: -15px;
+  // margin-right: -15px;
+  // margin-top: 15px;
+  padding: 100px;
+  background-image:url(homebanner-blur.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #home_pic{

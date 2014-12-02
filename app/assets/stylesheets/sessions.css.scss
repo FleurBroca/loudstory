@@ -1,6 +1,8 @@
 $input-border: #0F0F5B;
 $btn-danger-color: #FF0000;
 $btn-primary-color: #43AAC9;
+$btn-primary-border: none;
+
 
 body{
   font-family: 'Lato' sans-serif;
@@ -101,8 +103,18 @@ h4{
 
 .btn-primary{
   background-color: $btn-primary-color;
+  color: white;
+}
+
+.btn-primary:hover{
+  color: none;
 }
 
 .btn-danger{
   background-color: $btn-danger-color;
+}
+
+.bold-blue {
+  color: #43AAC9;
+  font-weight: 400;
 }

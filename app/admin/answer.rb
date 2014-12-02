@@ -10,6 +10,8 @@ ActiveAdmin.register Answer do
       link_to answer.original_question, admin_answer_path(answer)
    end
    column :photo do |answer| image_tag answer.photo.url, width:"100px", height:"100px" end
+   column :session_id
+   column :user_id
    actions
  end
 

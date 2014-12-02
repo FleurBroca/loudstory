@@ -7,6 +7,6 @@ class Track < ActiveRecord::Base
   validates_attachment_content_type :photo,
     content_type: /\Aimage\/.*\z/
 
-  validates_presence_of :position
+  validates_presence_of :title, :description, :position
 
 end

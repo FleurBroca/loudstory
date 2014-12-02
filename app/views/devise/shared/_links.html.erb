@@ -1,9 +1,9 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Already a member? Log in", new_session_path(resource_name), class:"pull-right, orlogin-color" %>
+  <%= link_to "Already a member? Log in", new_session_path(resource_name), class:"pull-right orlogin-color" %>
 <% end -%><br />
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), class:"pull-right, forgot-color" %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class:"pull-right forgot-color" %><br />
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
