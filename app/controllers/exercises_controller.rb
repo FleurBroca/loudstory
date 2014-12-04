@@ -1,8 +1,5 @@
 class ExercisesController < ApplicationController
 
-  def edit
-
-  end
 
   private
   def exercise_params

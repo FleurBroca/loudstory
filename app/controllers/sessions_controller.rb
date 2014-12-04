@@ -1,9 +1,14 @@
 class SessionsController < ApplicationController
   before_action :set_exercise
 
+  def index
+    #list of all done exercises
+    @sessions = @exercise.sessions
+  end
+
   def new
     @user = current_user
-    @previous_sessions = @exercise.sessions.where(user: current_user)
+    # @previous_session = @exercise.sessions.where(user: current_user).first
     @session = @exercise.sessions.new
     @exercises = @exercise.questions.each do |question|
       @session.answers.new(question: question)
@@ -36,18 +41,17 @@ class SessionsController < ApplicationController
   def update
     @session = Session.find(params[:id])
 
-    if @session.update(session_params)
+    # For each answer attribute in params, update the corresponding session
+    # We can't go through session_params because it actually creates new answers instead of updating them
+    params[:session][:answers_attributes].each do |_, answer_attr|
+      @session.answers.find(answer_attr[:id]).update_attribute(:content, answer_attr[:content])
+    end
+
+    if @session.valid?
       redirect_to dashboards_index_path
     else
       render :edit, notice: 'An error occurred, please try again.'
     end
-  end
-
-
-
-  def index
-    #list of all done exercises
-    @sessions = @exercise.sessions
   end
 
   def destroy
@@ -63,8 +67,8 @@ class SessionsController < ApplicationController
       @exercise = Exercise.find(params[:exercise_id])
     end
 
-    def session_params
-      params.require(:session).permit(answers_attributes: [ :original_question, :content, :question_id, :exercise_id ])
-    end
+    #def session_params
+    #  params.require(:session).permit(answers_attributes: [ :original_question, :content, :question_id, :exercise_id ])
+    #end
 
 end

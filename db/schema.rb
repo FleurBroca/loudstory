@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128172224) do
+ActiveRecord::Schema.define(version: 20141203170419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,12 @@ ActiveRecord::Schema.define(version: 20141128172224) do
   add_index "sessions", ["exercise_id"], name: "index_sessions_on_exercise_id", using: :btree
   add_index "sessions", ["user_id"], name: "index_sessions_on_user_id", using: :btree
 
+  create_table "teams", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
   create_table "tracks", force: true do |t|
     t.string   "title"
     t.string   "description"
@@ -109,6 +115,16 @@ ActiveRecord::Schema.define(version: 20141128172224) do
     t.datetime "photo_updated_at"
     t.integer  "position"
   end
+
+  create_table "user_teams", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_teams", ["team_id"], name: "index_user_teams_on_team_id", using: :btree
+  add_index "user_teams", ["user_id"], name: "index_user_teams_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 text-center pic-align">
+      <div class="page-header" id="header-signup">
+        <h1>Sign up your team</h1>
+      </div>
+
+      <%= form_for(@team) do |f| %>
+
+        <div class="field form-group">
+          <%= f.text_field :name, autofocus: true, placeholder: 'My team', class: "form-control signin-label" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Submit", class: 'btn btn-lg btn-block btn-signin' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

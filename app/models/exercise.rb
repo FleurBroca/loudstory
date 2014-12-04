@@ -11,4 +11,8 @@ class Exercise < ActiveRecord::Base
     content_type: /\Aimage\/.*\z/
 
   validates_presence_of :title, :description, :track_id, :position
+
+  def user_sessions(user)
+    self.sessions.where(user: user)
+  end
 end
