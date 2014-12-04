@@ -1,3 +1,32 @@
-// Place all the styles related to the Team controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$btn-bg: #0F0F5B;
+$btn-color: white;
+$btn-horizontal-padding: 10px;
+$color: #0F0F5B;
+
+// Classes
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-signup-team{
+  line-height: 40px;
+  padding: 0 $btn-horizontal-padding;
+  color: $btn-color;
+  border-radius: 4px;
+  margin-top: $btn-margin-top;
+  border-radius: 2px;
+  font-weight: normal;
+  background-color: $btn-bg;
+  border-top: $btn-top-border-width solid $btn-top-border-color;
+  border-right: $btn-right-border-width solid $btn-right-border-color;
+  border-left: $btn-left-border-width solid $btn-left-border-color;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.header-signup-team{
+  margin-bottom: 200px;
+  color: $color;
+}

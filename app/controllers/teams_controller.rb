@@ -1,8 +1,16 @@
 class TeamsController < ApplicationController
+
+  before_action :set_team, only: [:show, :edit, :update, :destroy]
+
   def index
+    @teams = current_user.teams
+    @team = Team.new
+
   end
 
   def show
+    session[:current_team_id] = @team.id
+    redirect_to tracks_path
   end
 
   def new
@@ -10,10 +18,9 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.new(team_params)
-
-    if @team.save
-      redirect_to tracks_path
+    @team = current_user.teams.create(team_params)
+    if current_user.save
+      redirect_to team_path(@team)
     else
       render :new
     end
@@ -29,6 +36,10 @@ class TeamsController < ApplicationController
   end
 
   private
+
+  def set_team
+    @team = Team.find(params[:id])
+  end
 
   def team_params
     params.require(:team).permit(:name)
