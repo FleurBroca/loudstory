@@ -1,23 +1,30 @@
 <div class="container" id="footer">
   <div class="row">
-    <div class="col-xs-4">
-    <div id="about-contact">
+    <div class="col-xs-4 col-sm-4" id="about-contact">
       <ul class="list-inline">
         <li>About   <%= fa_icon "bolt" %></li>
         <li>Contact   <%= fa_icon "envelope" %></li>
         </ul>
     </div>
 
-    <div class="col-xs-4 col-sm-4" id="social-icons">
+    <div class="col-xs-4 col-sm-4" id="social-icons text-center">
       <p id="social-baseline">We share storytelling tips and inspiration daily</p>
       <ul class="list-inline social text-center">
-        <li><%= fa_icon "facebook-square" %></li>
-        <li><%= fa_icon "twitter-square" %></li>
-        <li><%= fa_icon "youtube" %></li>
+        <!-- <li><%= fa_icon "facebook-square" %></li> -->
+        <li><%= link_to "http://www.facebook.com/loudstory" do %>
+          <i class="fa fa-facebook-square", alt="Facebook", target="blank"></i>
+        <% end %>
+        <li><%= link_to "http://www.twitter.com/loudstory" do %>
+          <i class="fa fa-twitter-square", alt="Twitter", target="blank"></i>
+        <% end %>
+        <li><%= link_to "https://www.youtube.com/user/Loudstory" do %>
+          <i class="fa fa-youtube", alt="Youtube", target="blank"></i>
+        <% end %>
+
       </ul>
     </div>
 
-    <div class="col-xs-4 col-sm-4" id="copypright">
+    <div class="col-xs-4 col-sm-4" id="copypright pull-right">
       <p><%= fa_icon "copyright" %>  LoudStory 2014</p>
     </div>
 

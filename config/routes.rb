@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   ActiveAdmin.routes(self)
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "auth/registrations" }
 
   scope '(:locale)', locale: /fr/ do
 
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
     get 'dashboards/index', path: 'dashboard'
 
+    resources :teams
     resources :tracks
 
     resources :exercises do

@@ -8,6 +8,7 @@ class TracksController < ApplicationController
   def show
     @track = Track.find(params[:id])
     @exercises = @track.exercises.order(:position)
+    @user = current_user
   end
 
   def new
