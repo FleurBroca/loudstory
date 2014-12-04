@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :answers
   has_many :sessions
+  has_many :user_teams
   has_many :teams, through: :user_teams
 
   has_attached_file :picture,
