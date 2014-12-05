@@ -30,8 +30,8 @@
                    <p>Description : <br><%= session.exercise.description %></p>
                    <%= form_for([session.exercise, session]) do |f| %>
 
-                    <!-- We get all the answers and creates empty ones for the ones not filled -->
-                     <% session.exercise.questions.each do |question| %>
+                    <!-- We get all the answers and create empty ones for the ones not filled -->
+                     <% session.exercise.questions.order_by(:position).each do |question| %>
                        <% session.answers.new(question: question, session_id: session.id) unless question.answers.where(session_id: session.id).any? %>
                      <% end %>
 

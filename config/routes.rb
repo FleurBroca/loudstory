@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
 
   ActiveAdmin.routes(self)
-  devise_for :users, :controllers => { :registrations => "auth/registrations" }
+  devise_for :users, :controllers => {
+    :registrations => "auth/registrations",
+    :invitations => 'auth/invitations'
+  }
 
   scope '(:locale)', locale: /fr/ do
 
@@ -14,7 +17,11 @@ Rails.application.routes.draw do
     resources :tracks
 
     resources :exercises do
-      resources :sessions
+      resources :sessions do
+        resources :answers do
+          resources :comments, only: [:index, :new, :create, :destroy]
+        end
+      end
     end
 
   end

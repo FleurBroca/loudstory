@@ -3,6 +3,7 @@ class Answer < ActiveRecord::Base
   belongs_to :session
   belongs_to :user
   belongs_to :exercise
+  has_many :comments
 
   has_attached_file :photo,
     styles: { moodboard: "200x200>" }

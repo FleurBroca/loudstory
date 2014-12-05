@@ -48,7 +48,7 @@ class SessionsController < ApplicationController
     end
 
     if @session.valid?
-      redirect_to dashboards_index_path
+      redirect_to track_path(@session.exercise.track)
     else
       render :edit, notice: 'An error occurred, please try again.'
     end

@@ -40,7 +40,7 @@ en:
 
   time:
     formats:
-      long: "%Y-%m-%d %H:%M"
+      long: "%h %d, %y"
 
   home:
     index:
