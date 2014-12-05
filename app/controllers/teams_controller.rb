@@ -22,6 +22,7 @@ class TeamsController < ApplicationController
     if current_user.save
       redirect_to team_path(@team)
     else
+      flash[:alert] = "This name is not available. Try a new one."
       render :new
     end
   end

@@ -49,4 +49,7 @@ gem 'paperclip'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_admin_editor'
 
+gem 'devise_invitable', '~> 1.3.4'
+
+gem "letter_opener", :group => :development
 
