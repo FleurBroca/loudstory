@@ -7,10 +7,11 @@
       </div>
 
         <%= form_for([@exercise, @session]) do |f| %>
-          <%= f.fields_for :answers do |a| %>
+          <%= f.fields_for :answers, @session.answers.order(position: :asc) do |a| %>
             <div class="field form-group", id="exercise-form">
               <%= label_tag a.object.original_question %>
               <%= a.text_area :content, rows: "3", class: "form-control" %>
+              <%= render partial: "comments/index", locals: { answer: a.object } %>
             </div>
           <% end %>
           <%= f.submit "Update", class: "btn btn-primary" %>

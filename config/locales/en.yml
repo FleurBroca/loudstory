@@ -65,6 +65,7 @@ en:
     index:
       title: "My dashboard"
       header1: "Tracks"
-      header2: "Team"
-      subheader2: "Manage collaborators"
+      header2: "Projects"
+      subheader2: "Other members on my project"
+      subheader3: "My other projects"
 

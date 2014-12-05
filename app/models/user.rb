@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  after_create :send_welcome_email
+
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -8,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :sessions
   has_many :user_teams
   has_many :teams, through: :user_teams
+  has_many :comments, dependent: :destroy
 
   has_attached_file :picture,
     styles: { profile: "100x100#", nav: "30x30#" }, :default_url => "http://placehold.it/200&text=user"

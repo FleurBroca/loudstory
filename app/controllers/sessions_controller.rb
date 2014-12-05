@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :set_exercise
+  before_action :set_session, only: [:show, :edit, :destroy]
 
   def index
     #list of all done exercises
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
     @user = current_user
     # @previous_session = @exercise.sessions.where(user: current_user).first
     @session = @exercise.sessions.new
-    @exercises = @exercise.questions.each do |question|
+    @exercises = @exercise.questions.order(position: :asc).each do |question|
       @session.answers.new(question: question)
     end
     # @exercises.questions.order(:position)
@@ -22,7 +23,7 @@ class SessionsController < ApplicationController
 
     if @session.save
       @exercise.questions.each do |question|
-        answer = @session.answers.new(exercise: @exercise, question: question, session: @session, user: current_user, original_question: question.title)
+        answer = @session.answers.new(exercise: @exercise, question: question, session: @session, user: current_user, original_question: question.title, position: question.position)
         answer.content = params[:session][:answers_attributes][(answer.question.position - 1).to_s][:content]
       end
 
@@ -35,7 +36,6 @@ class SessionsController < ApplicationController
   end
 
   def edit
-    @session = Session.find(params[:id])
   end
 
   def update
@@ -60,11 +60,18 @@ class SessionsController < ApplicationController
     redirect_to dashboards_index_path, notice: 'Exercise was successfully deleted.'
   end
 
+  def show
+  end
+
 
   private
 
     def set_exercise
       @exercise = Exercise.find(params[:exercise_id])
+    end
+
+    def set_session
+      @session = Session.find(params[:id])
     end
 
     #def session_params
