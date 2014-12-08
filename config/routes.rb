@@ -13,15 +13,22 @@ Rails.application.routes.draw do
 
     get 'dashboards/index', path: 'dashboard'
 
-    resources :teams
+    resources :teams do
+      resources :users, only:[] do
+        member do
+          delete :remove_from_team
+        end
+      end
+    end
     resources :tracks
 
     resources :exercises do
       resources :sessions do
-        resources :answers do
-          resources :comments, only: [:index, :new, :create, :destroy]
-        end
       end
+    end
+
+    resources :answers do
+      resources :comments, only: [:index, :new, :create, :destroy]
     end
 
   end
