@@ -19,4 +19,11 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  def remove_from_team
+    team = Team.find(params[:team_id])
+    user = team.users.find(params[:id])
+    team.users.delete(user)
+    redirect_to dashboards_index_path
+  end
 end

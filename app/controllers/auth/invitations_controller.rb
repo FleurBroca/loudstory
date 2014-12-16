@@ -9,7 +9,7 @@ class Auth::InvitationsController < Devise::InvitationsController
       respond_with resource, :location => after_invite_path_for(resource)
     rescue
       self.resource = resource_class.new
-      flash[:alert] = "Le mec a deja ete invite"
+      flash[:alert] = "This member is already on your team!"
       respond_with_navigational(resource) { render :new }
     end
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205091858) do
+ActiveRecord::Schema.define(version: 20141205154741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20141205091858) do
     t.integer  "session_id"
     t.string   "original_question"
     t.integer  "exercise_id"
+    t.integer  "position"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
@@ -55,9 +56,11 @@ ActiveRecord::Schema.define(version: 20141205091858) do
     t.integer  "answer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "comments", ["answer_id"], name: "index_comments_on_answer_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "exercises", force: true do |t|
     t.string   "title"

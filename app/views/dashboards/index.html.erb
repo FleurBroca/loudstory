@@ -62,9 +62,30 @@
     </div>
     <div class="col-xs-7 col-xs-offset-2">
       <h3><%= t '.subheader2' %></h3>
+      <% if current_team.present? %>
+
+
+        <% @members.each do |member| %>
+          <% if member.id != current_user.id %>
+            <%= member.first_name %> <%= member.last_name %>
+            <%= link_to "Delete", remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
+          <% end %>
+        <% end %>
+        <br>
+        <div class="col-xs-7 col-xs-offset-2">
+          <%= link_to "Invite new member", new_user_invitation_path, class:"btn btn-lg btn-exo" %>
+        </div>
+        <br>
+        <br>
+        <h3><%= t '.subheader3' %></h3>
+        <% current_user.teams.each do |team| %>
+          <% if team.id != current_team.id %>
+            <%= team.name %>
+            <%= link_to "Delete", team_path(team), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
-    <div class="col-xs-7 col-xs-offset-2">
-      <%= link_to "Invite new member", new_user_invitation_path, class:"btn btn-lg btn-exo" %>
-    </div>
+
   </div>
 </div>
