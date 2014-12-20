@@ -44,8 +44,10 @@ en:
 
   home:
     index:
-      title: "Inspire people with storytelling."
-      header: "Try our latest track"
+      title: "Discover the magic of your brand."
+      subtitle: "A SIMPLE DIY STORYTELLING PLAN FOR THE ENTHOUSIASTIC STARTUP."
+      textsearchbar: "Access storytelling-based exercises to create powerful communication tools."
+      header: "THE STORY TOOLBOX"
 
   devise:
     sessions:
@@ -55,17 +57,18 @@ en:
   tracks:
     index:
       title: "Storytelling tracks"
-      header: "LoudStory allows you to draft each one of the stories you'll want to share with  users, employees, partners, journalists or investors all along your startup's journey."
+      header: "LoudStory allows you to draft each of the stories you'll want to share with users, employees, partners, journalists or investors all along your startup's journey."
     show:
       title_for: "%{title}"
-      header: "Make something people want. Tell a story people love."
-      warmup: "Start with our warm-up program."
+      header: "'Make something people want. Tell a story people love.'"
+      warmup: "Unlock your create mind."
+      warmupdescription: "Before you start to explore the depths of your story, it's always a healthy exercise to write down all your negative thoughts first. It's quite common to feel disappoint by the way we write, by our lack of inspiration or creativity. But it should not stop us from allowing ourselves to create. The more you do it, the better you'll become. "
 
   dashboards:
     index:
-      title: "My dashboard"
-      header1: "Tracks"
+      title: "My storyboard"
+      header1: "Stories"
       header2: "Projects"
-      subheader2: "Other members on my project"
-      subheader3: "My other projects"
+      subheader2: "Team"
+      subheader3: "Other projects"
 

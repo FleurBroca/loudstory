@@ -1,32 +1,61 @@
-$color: white;
+$color: #0B1247;
 
-#footer {
-  background-color: #0F0F5B;
+#footer-logout {
+  color: white;
+  background-color: #0B1247;
+  opacity: 0.3;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  // position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+#footer-login {
   color: $color;
   font-weight: 300;
   padding-top: 2em;
   padding-bottom: 1em;
-  margin-top: 100px;
+  margin-top: 50;
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-  position: absolute;
+  // position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 20px;
+  vertical-align: middle;
 }
+
 
 #social-baseline{
-  font-size: 20px;
+  font-size: 14px;
   color: $color;
+  font-weight: 700;
 }
 
-#social-icons li {
-  font-size: 30px;
+.social-icons {
+  color: $color;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 #about-contact li{
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 #copypright p {
-  color: white;
-  font-size: 16px;
+  color: $color;
+  font-size: 14px;
+  font-weight: 400;
 }
+

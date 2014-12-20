@@ -14,40 +14,46 @@ $link-hover-decoration: none;
 @import "home";
 @import "footer";
 @import "team";
+@import "tracks";
+@import "dashboard";
 
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic|Oswald:400,300|Open+Sans:400,300,600");
+@import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
 
 
-#wraper{
-  margin-top: 30px;
+#wrapper{
   min-height:100%;
-  position:relative;
+  height: auto !important;
+  height: 100%;
+  // position:relative;
 }
 
 body{
-  font-family: 'Lato' sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   margin: 0 auto;
   font-size: 16px;
   padding: 0;
   height: 100%;
-  padding-top: 80px;
+  // padding-top: 80px;
 }
 
 h1 {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
   color: #0F0F5B;
+  letter-spacing: 2px;
 }
 
 h2{
-  font-size: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
   color: #383635;
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 22px;
 }
 
 h4{
@@ -56,9 +62,16 @@ h4{
 }
 
 p{
-  font-size: 20px;
-  line-height: 22px;
-  color: #383635;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a{
+  color: #0F0F5B;
 }
 
 .notice {
@@ -67,6 +80,10 @@ p{
 
 .color-red{
   color: #FF0000;
+}
+
+.space-line{
+  border-bottom: 2px solid #ddd;
 }
 
 
