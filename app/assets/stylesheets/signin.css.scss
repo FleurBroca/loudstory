@@ -3,27 +3,26 @@ $btn-color: white;
 $btn-horizontal-padding: 10px;
 
 .btn-signin {
-  line-height: 40px;
+  line-height: 35px;
   padding: 0 $btn-horizontal-padding;
   color: $btn-color;
   border-radius: 4px;
-  margin-top: $btn-margin-top;
-  border-radius: 2px;
+  margin-top: 0;
   font-weight: normal;
+  letter-spacing: 2px;
   background-color: $btn-bg;
   border-top: $btn-top-border-width solid $btn-top-border-color;
   border-right: $btn-right-border-width solid $btn-right-border-color;
   border-left: $btn-left-border-width solid $btn-left-border-color;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 300;
+  height: 34px;
 }
 
-a {
-  text-decoration: none;
-}
 
-.btn-signin:hover{
-  color: none;
+a.btn-signin:hover{
+  color: none !important;
+  background: white !important;
 }
 
 .signin-label{
@@ -35,51 +34,51 @@ a {
   border-color: $bg;
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 12px;
 }
 
 .page-header-signin {
   margin-bottom: 200px;
 }
 
-#header-signup h1{
-  color: #FF0000;
-}
-
-#login_pic{
-  max-height: 100%;
-}
 
 .pic-align{
   padding-left: 115px;
 }
 
 .forgot-color {
-  color: white;
+  color: #FF0000;
+  font-size: 10px;
+  text-shadow: 1px 1px black;
 }
 
 .forgot-color a:hover{
-  text-decoration: white;
+  text-decoration: none;
 }
 
 .orlogin-color {
   color: white;
   text-align: right;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 300;
   text-shadow: 1px 1px black;
+  margin-top: 18px;
+  letter-spacing: 2px;
 
   & a:hover{
   text-decoration: none;
-  color: white;
+  color: #FF0000;
   }
 }
-
-
 
 .color-red{
   color: #FF0000;
 }
 
-.padding-left{
-  padding-left: 100px;
+.signin-form{
+  margin-top: 430px;
+}
+
+#forgot-password{
+  margin-top: 20px;
 }

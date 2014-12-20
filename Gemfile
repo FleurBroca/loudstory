@@ -53,3 +53,5 @@ gem 'devise_invitable', '~> 1.3.4'
 
 gem "letter_opener", :group => :development
 
+gem 'wicked'
+

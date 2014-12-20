@@ -1,28 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3 page-header">
-      <h1><%= t '.title_for', title: @track.title %></h1>
-      <h4><%= t '.header' %></h4>
-    </div>
-    <div class="col-xs-6 col-xs-offset-3 page-body">
-      <p><%= t '.warmup' %></p>
-      <% @exercises.each do |exercise| %>
-        <p><%= exercise.title %></p>
+<div class="wrapper-login">
+  <div class="container double-page">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6" id="star-track-banner">
+        <h1><%= t '.title_for', title: @track.title %></h1>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="star-track-text">
+        <h4><%= t '.header' %></h4>
+        <p class="space-line"></p>
+        <p><%= t '.warmup' %></p>
+        <h5><%= t '.warmupdescription' %></h5>
 
-        <%= link_to "New version", new_exercise_session_path(exercise), class:"btn btn-sm btn-primary" %>
-
-        <% if @user.exercises.count > 0 %>
-          <% session = exercise.user_sessions(current_user).last %>
-          <% if session %>
-           <%= link_to "Update last version", edit_exercise_session_path(exercise, session), class:"btn btn-sm btn-primary" %>
+        <div class="put-inline">
+          <% @exercises.each do |exercise| %>
+            <p><%= exercise.title %></p>
+            <%= link_to "New version", new_exercise_session_path(exercise), class:"btn  btn-white btn-lg" %>
+            <% if @user.exercises.count > 0 %>
+              <% session = exercise.user_sessions(current_user).last %>
+              <% if session %>
+               <%= link_to "Update last version", edit_exercise_session_path(exercise, session), class:"btn btn-white btn-sm" %>
+              <% end %>
+            <% end %>
           <% end %>
-        <% end %>
-
-      <% end %> <!-- each -->
-    </div>
-    <div class="col-xs-6 col-xs-offset-3 page-btn">
-      <div class="actions">
-        <%= link_to "Go to my dashboard", dashboards_index_path, class: "btn btn-lg btn-exo" %>
+        </div>
+        <div class="actions">
+          <%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %>
+        </div>
       </div>
     </div>
   </div>

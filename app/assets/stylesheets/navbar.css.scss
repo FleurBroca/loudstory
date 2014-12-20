@@ -1,6 +1,6 @@
 // Set your navbar general settings
 $color: white;
-$bg: #0F0F5B;
+$bg: #0B1247;
 $height: 30px;
 $vertical-padding: 18px;
 $horizontal-padding: 90px;
@@ -29,6 +29,9 @@ $profile-border-width: 2px;
 
 // And do not look at what follows!
 // This is why we use sass :)
+.navbar{
+  margin-bottom: 0px;
+}
 .navbar-wagon{
   background: $bg;
   border: none;
@@ -37,12 +40,18 @@ $profile-border-width: 2px;
   padding-right: $horizontal-padding;
   box-shadow: 1px 1px 1px #0F0F5B;
   min-height: 0;
+  margin-top: 0;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+  margin-left: -140px;
+  margin-top: -27px;
 }
 
 .navbar-wagon .navbar-nav > li > a {
   color: $color;
   font-size: 20px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: $height;
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
@@ -58,6 +67,7 @@ $profile-border-width: 2px;
   padding-bottom: $vertical-padding;
   padding-right: 30px;
   padding-left: 30px;
+  border-radius: 20px;
 }
 
 .navbar-wagon .navbar-nav>.open>a,
@@ -68,6 +78,7 @@ $profile-border-width: 2px;
   padding-bottom: $vertical-padding;
   color: #FF0000;
   background-color: #EBEBEC;
+  border-radius: 40px;
 }
 
 .navbar-wagon .navbar-brand,
@@ -87,7 +98,6 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   color: $btn-color;
   border-radius: 4px;
   margin-top: $btn-margin-top;
-  border-radius: 2px;
   font-weight: bold;
   background-color: $btn-bg;
   border-top: $btn-top-border-width solid $btn-top-border-color;
@@ -109,8 +119,41 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   border-bottom: none;
 }
 
+.navbar-wagon .navbar-toggle {
+  border-color: none;
+  width: 100px;
+  background: transparent;
+}
+
+
+.navbar-wagon .navbar-nav > li > .dropdown-menu{
+  border-radius: 6px;
+  height: 230px;
+  min-width: 250px;
+  font-size: 20px;
+  background-color: #EBEBEC;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a{
+  display: block;
+  padding: 5px 22px;
+  color: #0F0F5B;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a:hover{
+  font-weight: 700;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+  background-color: none;
+}
+
 #logo{
-  height: 135px;
+  height: 160px;
   padding: 0px;
 }
 
@@ -122,38 +165,10 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   border-radius: $profile-radius;
 }
 
-.navbar-wagon .navbar-toggle {
-  border-color: none;
-  width: 100px;
-  background: transparent;
-}
-
-
-.navbar-wagon .navbar-nav > li > .dropdown-menu{
-  border-radius: 0;
-  height: 230px;
-  min-width: 250px;
-  font-size: 20px;
-  background-color: #EBEBEC;
-  color: white;
-}
-
-.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a{
-  display:block;
-  padding: 5px 22px;
-  color: #0F0F5B;
-  font-weight: 300;
-  font-family: 'Oswald', sans-serif;
-}
-
-.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a:hover{
-  color: #FF0000;
-}
-
 
 @media screen and (max-width: 768px) {
   #logo {
-    height: 50px;
+    height: 100px;
   }
   .navbar-wagon .navbar-brand,
   .navbar-wagon .navbar-brand:hover

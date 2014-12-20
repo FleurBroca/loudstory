@@ -1,30 +1,46 @@
-<div class="wrapper" id="header">
-
-<div class="container">
-  <div class="row">
-      <div class="col-sm-12 text-center text-title">
-        <h1><%= t '.title' %></h1>
-        <h2><small>Lorem ipsum dolor sit amet!</small></h2>
-    </div>
-    <div class="col-sm-offset-1 col-sm-10 col-xs-12 homebanner">
+<% if user_signed_in? %>
+  <div class="wrapper-login">
+    <div class="container double-page">
       <div class="row">
-        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-6">
+<!--         <div class="col-sm-12 text-center text-title ">
+          <h1><%= t '.title' %></h1>
+          <h2><%= t '.subtitle' %></h2>
+        </div> -->
+        <div class="col-xs-12 col-sm-12 col-md-6" id="home-track-banner">
+          <h1><%= t '.header' %></h1>
+        </div>
 
-            <% if user_signed_in? %>
-            <div class="col-sm-2 col-sm-offset-2" id="home_track">
-              <h1><%= t '.header' %></h1>
-              <% @tracks.each do |track| %>
-              <h2><%= link_to track.title, track %></h2>
-              <p><%= track.description %></p>
-              <% end %>
-            </div>
-            <% else %>
-            <%= render "devise/registrations/new" %>
+        <div class="col-xs-12 col-sm-12 col-md-6" id="home-track-text">
+          <% @tracks.each do |track| %>
+          <h2><%= link_to track.title, track %></h2>
+          <p><%= track.description %></p>
+          <div class="spacer-50">
+            <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
             <% end %>
+          </div>
+        </div>
 
+    </div>
+  </div>
+</div>
+<% else %>
+  <div class="wrapper-logout">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center text-title ">
+          <h1><%= t '.title' %></h1>
+          <h2><%= t '.subtitle' %></h2>
+        </div>
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6 col-md-offset-1 col-md-10" id="homebanner">
+          <div class="row" id="underbanner">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-10">
+              <%= render "devise/registrations/new" %>
+              <br>
+              <p class="transbox"><%= t '.textsearchbar'%></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+<% end %>
