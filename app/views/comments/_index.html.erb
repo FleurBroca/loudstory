@@ -1,7 +1,7 @@
 <% answer.comments.each do |comment| %>
   <tr>
-    <td><%= comment.user.name %></td>
-    <td><%= comment.content %></td>
-    <td><%= link_to 'Destroy', answer_comment_path(answer, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <p id="comment-user"><td><%= comment.user.name %> said: </td></p>
+    <td id="comment-text"><%= comment.content %></td>
+    <td><%= link_to 'X', answer_comment_path(answer, comment), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm btn-danger-small" %></td>
   </tr>
 <% end %>

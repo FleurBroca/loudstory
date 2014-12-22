@@ -42,10 +42,8 @@
             <%= link_to "Delete", exercise_session_path(exercise, session), method: :delete,
                 data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
           <% end %>
-          <br>
-          <br>
-
         <% end %>
+        <div class="spacer-2em"></div>
         <div class="col-xs-12">
             <div class="actions">
               <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>

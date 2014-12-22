@@ -1,14 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <div class="page-header">
+<div class="wrapper-login">
+  <div class="container double-page">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6" id="all-tracks-banner">
         <h1><%= t '.title' %></h1>
-        <h4><%= t '.header' %></h4>
       </div>
-        <p><% @tracks.each do |track| %></p>
-        <h2><%= link_to track.title, track %></h2>
-        <p><%= track.description %></p>
-        <% end %>
+      <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="all-tracks-text">
+        <div class="page-header">
+          <h4><%= t '.header' %></h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
+          <% @tracks.each do |track| %>
+            <h3><%= link_to track.title, track %></h3>
+  <!--         <p><%= track.description %></p>
+   -->      <div class="spacer-50">
+            <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

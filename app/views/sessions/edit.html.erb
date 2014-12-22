@@ -1,22 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="page-header">
-        <h1><%= @exercise.title %></h1>
-        <h4><%= @exercise.description %></h4>
-      </div>
+<div class="wrapper-login paper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page-header-session header">
+          <h2 class="color-red"><%= @exercise.title %></h2>
+          <h4 class="subheader"><%= @exercise.description %></h4>
+          <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
+        </div>
 
-        <%= form_for([@exercise, @session]) do |f| %>
-          <%= f.fields_for :answers, @session.answers.order(position: :asc) do |a| %>
-            <div class="field form-group", id="exercise-form">
-              <%= label_tag a.object.original_question %>
-              <%= a.text_area :content, rows: "3", class: "form-control" %>
-              <%= render partial: "comments/index", locals: { answer: a.object } %>
-            </div>
+          <%= form_for([@exercise, @session]) do |f| %>
+            <%= f.fields_for :answers, @session.answers.order(position: :asc) do |a| %>
+              <div class="field form-group", id="exercise-form">
+                <%= label_tag a.object.original_question %>
+                <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>
+                <%= render partial: "comments/index", locals: { answer: a.object } %>
+              </div>
+            <% end %>
+            <div class="spacer-2em"></div>
+            <%= f.submit "Update", class: "btn btn-sm btn-danger" %>
           <% end %>
-          <%= f.submit "Update", class: "btn btn-primary" %>
-        <% end %>
+        </div>
       </div>
     </div>
+    <div class="spacer-10em"></div>
   </div>
 </div>

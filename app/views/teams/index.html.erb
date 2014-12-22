@@ -1,20 +1,21 @@
-<div class="container center-block">
+<div class="wrapper-login">
+  <div class="container center-block">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <div class="page-header" id="header-signup">
-        <h1>Choose your project</h1>
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <div class="page-header" class="header-signup-team">
+        <h2><%= t '.title' %></h2>
       </div>
 
       <% if current_team.present? %>
         <% current_user.teams.each do |team| %>
           <% if team.id != current_team.id %>
-            <%= link_to team.name, team_path(team), class:"btn-lg btn-block btn-signin" %>
+            <%= link_to team.name, team_path(team), class:"btn btn-danger" %>
           <% end %>
         <% end %>
       <% end %>
      </div>
   </div>
 </div>
-
-      <%= render "teams/form" %>
+<div class="spacer-2em"></div>
+<%= render "teams/form" %>
 

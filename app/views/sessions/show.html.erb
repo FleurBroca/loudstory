@@ -1,22 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="page-header">
-        <h1><%= @exercise.title %></h1>
-        <h4><%= @exercise.description %></h4>
-      </div>
+<div class="wrapper-login paper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page-header">
+          <div class="spacer-4em"></div>
+          <h2><%= @exercise.title %></h2>
+<!--           <h4><%= @exercise.description %></h4> -->
+        </div>
 
-
-        <% @session.answers.order(position: :asc).each do |a| %>
-            <div class="field form-group", id="exercise-form">
-              <p>a.original_question </p>
-              <div class="panel">
-                <%= a.content %>
+          <% @session.answers.order(position: :asc).each do |a| %>
+              <div id="original-question">
+                <p>a.original_question </p>
               </div>
-              <%= render partial: "comments/index", locals: { answer: a } %>
-              <%= render partial: "comments/new", locals: { answer: a } %>
-            </div>
-        <% end %>
+              <div class="panel" id="original-content">
+                <p><%= a.content %></p>
+              </div>
+                <%= render partial: "comments/index", locals: { answer: a } %>
+              <div class="spacer-1em"></div>
+              <div class="field form-group", id="exercise-comment">
+                <%= render partial: "comments/new", locals: { answer: a } %>
+              </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

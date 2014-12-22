@@ -31,3 +31,53 @@
 .progress {
   height: 13px;
 }
+
+.pic-dashboard{
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn-view-session{
+  background-color: #337AB7;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-style: 700;
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 28px;
+  padding: 6px 19px 6px 20px;
+  letter-spacing: 2px;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+
+.btn-view-session.btn:hover, .btn-view-session.btn:focus{
+  border-color: #3988CC;
+  border-bottom-color: #3D92DB;
+  background-color: #3988CC;
+  color: white;
+}
+
+.btn-delete-session{
+  background-color: #0F0F5B;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-style: 700;
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 28px;
+  padding: 6px 19px 6px 20px;
+  letter-spacing: 2px;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+
+.btn-delete-session.btn:hover, .btn-delete-session.btn:focus{
+  border-color: #3988CC;
+  border-bottom-color: #3D92DB;
+  background-color: #3988CC;
+  color: white;
+}
