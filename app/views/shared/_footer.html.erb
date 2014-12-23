@@ -4,7 +4,9 @@
       <div class="col-xs-12 col-sm-3" id="about-contact">
         <ul class="list-inline">
           <li>Our Story   <%= fa_icon "bolt" %></li>
-          <li>Send love   <%= fa_icon "envelope" %></li>
+          <li><%= mail_to('brocafleur@gmail.com', :target => "_blank") do %>
+            <i class="fa fa-envelope"></i>  Send love
+            <% end %></li>
           </ul>
       </div>
 
@@ -13,27 +15,19 @@
           <li id="social-baseline">Be inspired</li>
           <li class="social-icons"><%= link_to "http://www.facebook.com/loudstory", :target => "_blank" do %>
             <i class="fa fa-facebook-square", alt="Facebook", target="blank"></i>
-          <% end %>
+          <% end %></li>
           <li class="social-icons"><%= link_to "http://www.twitter.com/loudstory" do %>
             <i class="fa fa-twitter-square", alt="Twitter", target="blank"></i>
-          <% end %>
+          <% end %></li>
           <li class="social-icons"><%= link_to "https://www.youtube.com/user/Loudstory" do %>
             <i class="fa fa-youtube", alt="Youtube", target="blank"></i>
-          <% end %>
+          <% end %></li>
 
         </ul>
       </div>
 
       <div class="col-xs-12 col-sm-3 pull-right" id="copypright">
         <p><%= fa_icon "copyright" %>  LoudStory 2014</p>
-      </div>
-    </div>
-  </div>
-<% else %>
-<div class="container text-center" id="footer-logout">
-    <div class="row">
-      <div class="col-xs-4 col-sm-4" id="about-contact">
-      Send your love   <%= fa_icon "envelope" %>
       </div>
     </div>
   </div>

@@ -1,0 +1,26 @@
+<div class="container center-block">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="page-header" id="header-signup-team">
+        <h2>Now invite members!</h2>
+
+        <p>Working with other team members can help bringing a new perspective or fine-tuning the wording of your copies.</p>
+        <p>If you prefer to skip this step, you'll be able to add members later from your storyboard.</p>
+      </div>
+
+      <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
+
+
+<!--         <div class="field form-group">
+          <%= f.hidden_field :team_id, value: current_team.id %>
+        </div> -->
+
+        <%= text_field_tag 'email' %></p>
+
+        <%= f.submit 'Invite', class: 'btn btn-lg btn-block btn-signup-team' %>
+        <% end %>
+
+      <%= link_to 'Skip', next_wizard_path %>
+    </div>
+  </div>
+</div>

@@ -13,15 +13,16 @@
         <div class="put-inline">
           <% @exercises.each do |exercise| %>
             <p><%= exercise.title %></p>
-            <%= link_to "New version", new_exercise_session_path(exercise), class:"btn  btn-white btn-lg" %>
             <% if @user.exercises.count > 0 %>
               <% session = exercise.user_sessions(current_user).last %>
               <% if session %>
-               <%= link_to "Update last version", edit_exercise_session_path(exercise, session), class:"btn btn-white btn-sm" %>
+               <%= link_to "Update last version", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %>
               <% end %>
             <% end %>
+            <%= link_to "Create new version", new_exercise_session_path(exercise), class:"btn  btn-white btn-lg" %>
           <% end %>
         </div>
+        <div class="spacer-10em"></div>
         <div class="actions">
           <%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %>
         </div>

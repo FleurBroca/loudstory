@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     :invitations => 'auth/invitations'
   }
 
+  resources :after_register
+
   scope '(:locale)', locale: /fr/ do
 
     root to: "home#index"
@@ -31,7 +33,7 @@ Rails.application.routes.draw do
       resources :comments, only: [:index, :new, :create, :destroy]
     end
 
-    resources :after_signup
+
 
   end
   # The priority is based upon order of creation: first created -> highest priority.

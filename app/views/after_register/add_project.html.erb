@@ -1,13 +1,13 @@
 <div class="container center-block">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      <div class="page-header" id="header-signup-team">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="page-header" id="header-signup-member">
         <h1>Welcome: You're signed up!</h1>
         <h2>You can now give a name to your first project</h2>
         <p>LoudStory helps you create multiple communications strategies and tools based on storytelling for different projects. Whether the project is your startup or just an idea you want to work on.</p>
       </div>
 
-      <%= form_for(@team, :url => wizard_path, :method => :put), html: {class: 'form-inline'}) do |f| %>
+      <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
 
         <div class="field form-group">
           <%= f.text_field :name, autofocus: true, placeholder: 'Project name', class: "form-control signin-label" %>
@@ -18,7 +18,7 @@
         </div>
       <% end %>
 
-      <% link_to 'Skip', next_wizard_path %>
+      <%= link_to 'Skip', next_wizard_path %>
     </div>
   </div>
 </div>
