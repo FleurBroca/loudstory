@@ -8,6 +8,7 @@
 
 Track.destroy_all
 Exercise.destroy_all
+Session.destroy_all
 
 track = Track.create!(
   { title: 'Your Shining Star Story', description: 'Being unique is the price to pay to tell good stories.The stories you tell are what you are made of (cf your story, your aspirations, your fears, your passion, your intelligence, your vision). That’s what you ought to share. Inspire people like you’ve been inspired in your life. Care for people. Wish them the best for their lives. Do it for them. Do things for them. You love people when they care for you. You love even more people when they inspire you to be your best, when you’re thinking: « what is he going to do next? »

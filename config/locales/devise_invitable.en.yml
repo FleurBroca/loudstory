@@ -10,8 +10,9 @@ en:
         header: "Send invitation"
         submit_button: "Send an invitation"
       edit:
-        header: "Set your password"
-        submit_button: "Set my password"
+        header: "Welcome to LoudStory!"
+        title: "You need to set up a password to access your account"
+        submit_button: "Get started"
     mailer:
       invitation_instructions:
         subject: 'Invitation instructions'

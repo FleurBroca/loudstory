@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def index
     #list of all done exercises
-    @sessions = @exercise.sessions
+    @sessions = @exercise.sessions.team
   end
 
   def new
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   def create
     @session = @exercise.sessions.new
     @session.user = current_user
+    @session.team = current_team
 
     if @session.save
       @exercise.questions.each do |question|

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700|Abril+Fatface|Open+Sans:400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,9 +15,14 @@
 
   <%= render partial: "shared/navbar" %>
 
-  <p class="notice"><%= notice %></p>
-    <%= flash_messages %>
+<!--   <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %> -->
 
+<!--   <% if flash_messages.present? %>
+ -->    <%= flash_messages %>
+<!--   <% end %>
+ -->
   <div id="wrapper">
 
     <%= yield %>

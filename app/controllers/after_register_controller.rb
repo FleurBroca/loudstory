@@ -1,15 +1,14 @@
 class AfterRegisterController < Wicked::WizardController
   before_filter :authenticate_user!
-  steps :add_project
-  # :add_members
+  steps :add_project, :add_members
 
   def show
+    @user = current_user
     case step
     when :add_project
-    @user = current_user
     @team = Team.new
     when :add_members
-    @team = Team.new
+    @team = current_team
     end
     render_wizard
   end
@@ -20,9 +19,11 @@ class AfterRegisterController < Wicked::WizardController
     @team = current_user.teams.create(team_params)
     render_wizard @team
     when :add_members
-    @team = Team.find(params[:team][:id])
-    User.invite!({:email => params[:email]}, current_user)
-    render_wizard
+    @user = current_user
+    User.invite!({:email => params[:email]}, current_user) do |u|
+    u.teams << current_team
+    end
+    render_wizard @user
     end
   end
 
@@ -35,15 +36,15 @@ class AfterRegisterController < Wicked::WizardController
     params.require(:team).permit(:name)
   end
 
-  def send_invitation
-    begin
-    invite_resource { |x| x.teams << current_team }
-    yield resource if block_given?
-    set_flash_message :notice, :send_instructions, :email => self.resource.email if self.resource.invitation_sent_at
-    rescue
-    self.resource = resource_class.new
-    flash[:alert] = "This member is already on your team!"
-  end
-  end
+  # def send_invitation
+  #   begin
+  #   invite_resource { |x| x.teams << current_team }
+  #   yield resource if block_given?
+  #   set_flash_message :notice, :send_instructions, :email => self.resource.email if self.resource.invitation_sent_at
+  #   rescue
+  #   self.resource = resource_class.new
+  #   flash[:alert] = "This member is already on your team!"
+  # end
+  # end
 
 end

@@ -16,8 +16,9 @@ $link-hover-decoration: none;
 @import "team";
 @import "tracks";
 @import "dashboard";
+@import "comments";
 
-@import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
+// @import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
 
 
 #wrapper{
@@ -43,6 +44,20 @@ $link-hover-decoration: none;
   height: 100%;
   min-height: 500px;
   // margin-top: 83px;
+}
+
+.double-page{
+  width: 100%;
+  min-height: 30em;
+  height: 100%;
+  margin-top: 84px;
+}
+
+.single-page{
+  width: 100%;
+  min-height: 30em;
+  height: 100%;
+  margin-top: 84px;
 }
 
 body{
@@ -89,6 +104,20 @@ a {
   text-decoration: none;
 }
 
+.size-30{
+  font-size: 30px;
+}
+
+.small-text{
+  font-size: 18px;
+  color: #404040;
+}
+
+.tiny-text{
+  font-size: 14px;
+  color: #404040;
+}
+
 .notice {
   margin-top: 35px;
 }
@@ -124,6 +153,7 @@ a {
 .paper{
   background-image: image-url('paper.png');
 }
+
 
 
 

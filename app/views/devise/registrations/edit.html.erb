@@ -1,69 +1,75 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-    <div class="page-header">
-      <h1>Edit Account</h1>
-      <p><em>Don't forget to enter your password before submitting any change.</em></p>
-    </div>
-
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= devise_error_messages! %>
-
-      <div class="profile-picture-update img-circle">
-          <%= image_tag current_user.picture(:profile) %>
+<div class="wrapper-login">
+  <div class="container double-page">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4">
+      <div class="page-header">
+        <h2><%= t '.title' %></h2>
       </div>
 
-      <div class="field form-group">
-          <%= f.label :picture %><br />
-          <%= f.file_field :picture %>
-      </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="field form-group">
-          <%= f.label :first_name %><br />
-          <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
-      </div>
+        <div class="profile-picture-update img-circle">
+            <%= image_tag current_user.picture(:profile) %>
+        </div>
+
+        <div class="spacer-1em"></div>
 
         <div class="field form-group">
-          <%= f.label :last_name %><br />
-          <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
-      </div>
+            <%= f.label :picture, 'New picture?' %><br />
+            <%= f.file_field :picture %>
+        </div>
 
-      <div class="field form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
+        <div class="field form-group">
+            <%= f.label :first_name, "New username?" %><br />
+            <%= f.text_field :first_name, autofocus: true, class: "form-control signin-label" %>
+        </div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <div class="field form-group">
+          <%= f.label :email, "New email?" %><br />
+          <%= f.email_field :email, autofocus: true, class: "form-control signin-label" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field form-group">
+          <%= f.label :password, "New password?" %><br />
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation, "Confirm new password" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        </div>
+
+<!--         <div class="field"> -->
+<!--           <%= f.label :current_password %> <i class="tiny-text"> --we need your current password to confirm your changes</i><br /> -->
+<!--           <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %> -->
+<!--         </div> -->
+        <br>
+        <div class="actions">
+          <%= f.submit "Update", class: 'btn btn-lg btn-block btn-signup-team' %>
+        </div>
       <% end %>
+      <div class="spacer-2em"></div>
+      <div class="space-line"></div>
+      <p class="small-text">Unhappy with our service?</p>
 
-      <div class="field form-group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      <p id="cancel-contact"><%= mail_to('brocafleur@gmail.com', :target => "_blank") do %>
+      <i class="fa fa-envelope"></i>  Share your concern
+      <% end %></p>
+      <p class="small-text">or</p>
+
+      <%= button_to "Cancel the account", registration_path(resource_name), method: :delete, class: 'btn btn-danger' %>
+      <p class="tiny-text"><i>Clicking on this button will permanently erase all your exercises.</i></p>
+
+      <div class="spacer-2em"></div>
+
+      <%= link_to "Back to business", :back %>
+
       </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-      </div>
-      <br>
-      <br>
-      <div class="field">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-      </div>
-      <br>
-      <div class="actions">
-        <%= f.submit class: "btn btn-lg btn-block btn-signin" "Update" %>
-      </div>
-    <% end %>
-
-    <h3>Cancel my account</h3>
-
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-primary' %></p>
-
-    <%= link_to "Back", :back %>
-
     </div>
   </div>
 </div>

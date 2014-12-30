@@ -81,15 +81,19 @@
         <div class="storyboard-subtitle">
           <h2><%= t '.subheader3' %></h2>
         </div>
+
+        <%= link_to 'Switch project', teams_path, class:"btn btn-lg btn-blue" %>
+
         <div class="put-inline">
-          <% current_user.teams.each do |team| %>
+          <p><% current_user.teams.each do |team| %>
             <% if team.id != current_team.id %>
               <h3><%= team.name %></h3>
-              <%= link_to "Delete", team_path(team), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-white" %>
+              <%= link_to "Delete", team_path(team), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-white" %></p>
               <% end %>
             <% end %>
           <% end %>
         </div>
+
     </div>
 
   </div>

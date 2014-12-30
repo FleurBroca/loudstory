@@ -3,7 +3,7 @@ ActiveAdmin.register Session do
 index do
    selectable_column
    column :track_id do |session|
-      link_to session.track_id, admin_session_path(session)
+      link_to session.track, admin_session_path(session)
     end
    column :user_id do |session|
       link_to session.user_id, admin_session_path(session)

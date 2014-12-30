@@ -21,6 +21,8 @@ class TeamsController < ApplicationController
     @team = current_user.teams.create(team_params)
     if current_user.save
       redirect_to team_path(@team)
+      # redirect_to new_user_invitation_path
+
     else
       flash[:alert] = "This name is not available. Try a new one."
       render :new

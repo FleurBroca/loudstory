@@ -1,5 +1,5 @@
 <div class="wrapper-login paper">
-  <div class="container">
+  <div class="container single-page">
     <div class="row">
       <div class="col-xs-12">
           <div role="tabpanel">
@@ -31,12 +31,12 @@
                      <h4 class="subheader"><%= session.exercise.description %></h4>
                      <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
 
-                     <%= form_for([session.exercise, session]) do |f| %>
-
                       <!-- We get all the answers and create empty ones for the ones not filled -->
                        <% session.exercise.questions.order(position: :asc).each do |question| %>
                          <% session.answers.new(question: question, session_id: session.id) unless question.answers.where(session_id: session.id).any? %>
                        <% end %>
+
+                     <%= form_for([session.exercise, session]) do |f| %>
 
                        <%= f.fields_for :answers do |a| %>
                          <div class="field form-group", id="exercise-form">

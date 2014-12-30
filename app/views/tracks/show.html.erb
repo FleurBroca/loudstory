@@ -14,9 +14,9 @@
           <% @exercises.each do |exercise| %>
             <p><%= exercise.title %></p>
             <% if @user.exercises.count > 0 %>
-              <% session = exercise.user_sessions(current_user).last %>
+              <% session = exercise.team_sessions(current_team).last %>
               <% if session %>
-               <%= link_to "Update last version", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %>
+               <%= link_to "Review last version", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %>
               <% end %>
             <% end %>
             <%= link_to "Create new version", new_exercise_session_path(exercise), class:"btn  btn-white btn-lg" %>

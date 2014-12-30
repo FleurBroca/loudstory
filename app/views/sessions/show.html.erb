@@ -1,5 +1,5 @@
 <div class="wrapper-login paper">
-  <div class="container">
+  <div class="container single-page">
     <div class="row">
       <div class="col-xs-12">
         <div class="page-header">
@@ -10,7 +10,7 @@
 
           <% @session.answers.order(position: :asc).each do |a| %>
               <div id="original-question">
-                <p>a.original_question </p>
+                <p><%= a.original_question %></p>
               </div>
               <div class="panel" id="original-content">
                 <p><%= a.content %></p>
