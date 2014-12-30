@@ -2,6 +2,8 @@
   <tr>
     <p id="comment-user"><td><%= comment.user.name %> said: </td></p>
     <td id="comment-text"><%= comment.content %></td>
-    <td><%= link_to 'X', answer_comment_path(answer, comment), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm btn-danger-small" %></td>
+    <td>
+     <%= link_to 'X', answer_comment_path(answer, comment), method: :delete, class:"btn btn-sm btn-danger-small" %>
+    </td>
   </tr>
 <% end %>

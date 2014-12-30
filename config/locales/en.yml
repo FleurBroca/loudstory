@@ -42,6 +42,12 @@ en:
     formats:
       long: "%h %d, %y"
 
+   # pundit:
+   #   default: 'You cannot perform this action.'
+   #   post_policy:
+   #     update?: 'You cannot edit this post!'
+   #     create?: 'You cannot create posts!'
+
   home:
     index:
       title: "Discover the magic of your brand."
@@ -51,8 +57,14 @@ en:
 
   devise:
     sessions:
+    passwords:
       new:
-        title: "Ready for another round?"
+        title: "Forgot your password?"
+      edit:
+        title: "Change your password"
+    registrations:
+      edit:
+        title: "Edit Account"
 
   tracks:
     index:
@@ -68,9 +80,8 @@ en:
     index:
       title: "My storyboard"
       header1: "Stories"
-      header2: "Projects"
       subheader2: "Team"
-      subheader3: "Other projects"
+      subheader3: "Projects"
 
   teams:
     index:

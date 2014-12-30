@@ -42,6 +42,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  def last_team_sessions(cur_session, user, current_team)
+    track = cur_session.track
+    # We get all the exercises for the user based on their belonging to one track and their position
+    exercises_in_track = self.exercises.select { |e| e.track_id == track.id && e.position != cur_session.exercise.position }
+
+    # An has with the format { position => array_of_exercises }.
+    # e.g : { 1 => [Exo1, Exo2], 2 => [Exo1, Exo2] }
+    grouped_exercises = exercises_in_track.group_by { |e| e.position }
+
+    # We retrieve the last session (last trial of an exercise) for each exercise
+    grouped_exercises.map do |position, exercises|
+      exercises.last.team_sessions(current_team).order(:updated_at).limit(1).last
+    end
+  end
+
   def name
     "#{self.first_name} #{self.last_name}"
   end

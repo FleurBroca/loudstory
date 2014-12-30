@@ -41,18 +41,18 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: ""
     sessions:
-      signed_in: ""
-      signed_out: ""
-      already_signed_out: ""
+      signed_in: " "
+      signed_out: " "
+      already_signed_out: " "
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
+      already_confirmed: "was already confirmed, please try signing in."
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
+      expired: "has expired, please request a new one."
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:

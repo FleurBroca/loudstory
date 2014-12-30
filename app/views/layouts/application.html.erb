@@ -15,9 +15,14 @@
 
   <%= render partial: "shared/navbar" %>
 
-  <p class="notice"><%= notice %></p>
-    <%= flash_messages %>
+<!--   <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %> -->
 
+<!--   <% if flash_messages.present? %>
+ -->    <%= flash_messages %>
+<!--   <% end %>
+ -->
   <div id="wrapper">
 
     <%= yield %>

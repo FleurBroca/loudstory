@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
+  # include Pundit
+  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   protect_from_forgery with: :exception
   before_action :authenticate_user!, :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+  # after_action :verify_authorized, :except => :index, unless: :devise_controller?
+  # after_action :verify_policy_scoped, :only => :index, unless: :devise_controller?
 
   helper_method :current_team
 
@@ -23,6 +29,11 @@ class ApplicationController < ActionController::Base
     @current_team ||= (session[:current_team_id] &&
       current_user.teams.find_by(id: session[:current_team_id])) ||
       current_user.teams.first
+   end
+
+   def user_not_authorized
+     flash[:alert] = "You are not authorized to perform this action."
+     redirect_to(root_path)
    end
 
 end

@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_answer, only: [:index, :create, :new, :destroy]
 
   def index
@@ -21,6 +22,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    # current_user = @comments.user
     @comment = @answer.comments.find(params[:id])
     @comment.destroy
     redirect_to exercise_session_path(@answer.exercise, @answer.session)
