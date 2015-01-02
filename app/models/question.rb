@@ -1,6 +1,7 @@
 class Question < ActiveRecord::Base
   belongs_to :exercise
   has_many :answers
+  scope :ordered, -> { order('position asc') }
 
   has_attached_file :photo,
     styles: { medium: "200x200#", thumb: "100x100>" }

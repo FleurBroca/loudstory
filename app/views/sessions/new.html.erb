@@ -32,22 +32,27 @@
                      <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
 
                       <!-- We get all the answers and create empty ones for the ones not filled -->
-                       <% session.exercise.questions.order(position: :asc).each do |question| %>
+                       <% session.exercise.questions.ordered.each do |question| %>
                          <% session.answers.new(question: question, session_id: session.id) unless question.answers.where(session_id: session.id).any? %>
                        <% end %>
 
                      <%= form_for([session.exercise, session]) do |f| %>
 
-                       <%= f.fields_for :answers do |a| %>
+                       <%= f.fields_for :answers, session.answers.sort_by(&:position) do |a| %>
                          <div class="field form-group", id="exercise-form">
+                          <!-- Pour ajouter le numéro devant chaque question -->
+                          <!--
+                          <%= label_tag a.object.question.position %>
+                           -->
                            <% if a.object.id.nil? %>
                              <%= label_tag a.object.question.title %>
+
                              <%= a.hidden_field :original_question, value: a.object.question.title %>
                              <%= a.hidden_field :question_id %>
                            <% else %>
                              <%= label_tag a.object.original_question %>
                            <% end %>
-                           <%= a.object.question.description %>
+                           <p><%= a.object.question.description %></p>
                            <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>
                          </div>
                        <% end %>
