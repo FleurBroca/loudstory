@@ -36,6 +36,9 @@ class TeamsController < ApplicationController
   end
 
   def destroy
+    @team = Team.find(params[:id])
+    @team.destroy
+    redirect_to dashboards_index_path, notice: 'Team was successfully deleted.'
   end
 
   private
