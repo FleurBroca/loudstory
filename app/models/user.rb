@@ -22,6 +22,15 @@ class User < ActiveRecord::Base
   # accepts_nested_attributes_for :team, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
 
+  # def getsessions(team)
+    # self.sessions.where(:team team)
+  # end
+#
+  # def exercises(team)
+    # team_sessions = self.getsessions(team)
+    # team_sessions.map{ |session| session.exercise }.uniq.compact
+  # end
+
   def exercises
     self.sessions.map{ |session| session.exercise }.uniq.compact
   end

@@ -26,18 +26,20 @@
 
         <% @user.exercises.each do |exercise| %>
           <% if current_track != exercise.track %>
-            <h3><%= exercise.track.title %></h3>
-            <%=
-              current_track = exercise.track
-              nb_exercises = @user.exercises.select{|ex| ex.track_id == exercise.track.id}.size
-              nb_total_exercises = exercise.track.exercises.count
-              render "progressbar", percentage: nb_exercises.to_f / nb_total_exercises.to_f * 100.0
-            %>
+            <% if exercise.team_sessions(current_team).size > 0 %>
+              <h3><%= exercise.track.title %></h3>
+              <%=
+                current_track = exercise.track
+                nb_exercises = @user.exercises.select{|ex| ex.track_id == exercise.track.id}.size
+                nb_total_exercises = exercise.track.exercises.count
+                render "progressbar", percentage: nb_exercises.to_f / nb_total_exercises.to_f * 100.0
+              %>
+            <% end %>
           <% end %>
 
-          <h4><%= exercise.title %></h4>
-          <% @user.sessions.where(exercise_id: exercise.id).each do |session| %>
-            <p id="version"><%= "Version: #{l session.updated_at, format: :long}" %></p>
+          <% exercise.team_sessions(current_team).each do |session| %>
+           <h4><%= exercise.title %></h4>
+           <p id="version"><%= "Version: #{l session.updated_at, format: :long}" %></p>
             <%= link_to "View", edit_exercise_session_path(exercise, session), class:"btn btn-sm btn-view-session" %>
             <%= link_to "Delete", exercise_session_path(exercise, session), method: :delete,
                 data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
@@ -46,7 +48,9 @@
         <div class="spacer-2em"></div>
         <div class="col-xs-12">
             <div class="actions">
-              <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>
+              <% unless current_track == nil %>
+               <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>
+              <% end %>
               <%= link_to "Back to tracks", tracks_path, class:"btn btn-lg btn-blue" %>
             </div>
           </div>
