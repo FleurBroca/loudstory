@@ -1,6 +1,6 @@
 class Exercise < ActiveRecord::Base
   belongs_to :track
-  has_many :questions, -> {order('position ASC')}
+  has_many :questions
   has_many :sessions
   has_many :answers
 

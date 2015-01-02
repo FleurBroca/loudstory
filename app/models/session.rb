@@ -10,7 +10,6 @@ class Session < ActiveRecord::Base
   validates_presence_of :user_id, :exercise_id, :team_id
 
   scope :team, -> { where(team: current_team) }
-  scope :orderByQuestion, -> { order('position asc') }
 
 
 
