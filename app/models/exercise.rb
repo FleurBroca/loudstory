@@ -16,6 +16,10 @@ class Exercise < ActiveRecord::Base
     self.sessions.where(user: user)
   end
 
+  def user_team_sessions(user, team)
+    self.sessions.where(user: user, team: team)
+  end
+
   def team_sessions(team)
     self.sessions.where(team: team)
   end

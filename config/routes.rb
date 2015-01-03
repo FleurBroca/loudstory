@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     root to: "home#index"
 
     get 'dashboards/index', path: 'dashboard'
+    get 'dashboards/:team_id/:user_id', to: 'dashboards#team_user_dashboard', as: 'dashboard'
 
     resources :teams do
       resources :users, only:[] do

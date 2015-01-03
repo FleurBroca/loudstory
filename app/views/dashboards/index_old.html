@@ -1,0 +1,104 @@
+<div class="container text-center header">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="page-header">
+        <h1 class="color-red" id="storyboard-headtitle"><%= t '.title' %></h1>
+      </div>
+      <div class="img-fit">
+        <%= image_tag current_user.picture(:profile), class:"pic-dashboard" %>
+      </div>
+      <div id="identity">
+        <h3><%= current_user.first_name%>  <%= current_user.last_name%></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-2">
+
+      <% if @user.exercises.size > 0 %>
+        <div class="storyboard-subtitle">
+          <h2><%= t '.header1' %></h2>
+        </div>
+        <% current_track = nil %>
+
+        <% @user.exercises.each do |exercise| %>
+          <% if current_track != exercise.track %>
+            <% if exercise.team_sessions(current_team).size > 0 %>
+              <h3><%= exercise.track.title %></h3>
+              <%=
+                current_track = exercise.track
+                nb_exercises = @user.exercises.select{|ex| ex.track_id == exercise.track.id}.size
+                nb_total_exercises = exercise.track.exercises.count
+                render "progressbar", percentage: nb_exercises.to_f / nb_total_exercises.to_f * 100.0
+              %>
+            <% end %>
+          <% end %>
+
+          <% exercise.team_sessions(current_team).each do |session| %>
+           <h4><%= exercise.title %></h4>
+           <p id="version"><%= "Version: #{l session.updated_at, format: :long}" %></p>
+            <%= link_to "View", edit_exercise_session_path(exercise, session), class:"btn btn-sm btn-view-session" %>
+            <%= link_to "Delete", exercise_session_path(exercise, session), method: :delete,
+                data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
+          <% end %>
+        <% end %>
+        <div class="spacer-2em"></div>
+        <div class="col-xs-12">
+            <div class="actions">
+              <% unless current_track == nil %>
+               <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>
+              <% end %>
+              <%= link_to "Back to tracks", tracks_path, class:"btn btn-lg btn-blue" %>
+            </div>
+          </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+<!--     <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-2">
+      <h2 ><%= t '.header2' %></h2>
+    </div> -->
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-2">
+      <div class="storyboard-subtitle">
+        <h2><%= t '.subheader2' %></h2>
+      </div>
+      <% if current_team.present? %>
+        <% @members.each do |member| %>
+          <% if member.id != current_user.id %>
+           <h3><%= member.first_name %></h3>
+            <%= link_to "Delete", remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %>
+          <% end %>
+      <% end %>
+        <br>
+      <div class="col-xs-12">
+        <%= link_to "Invite new member", new_user_invitation_path, class:"btn btn-lg btn-blue" %>
+      </div>
+    </div>
+
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-2">
+        <div class="storyboard-subtitle">
+          <h2><%= t '.subheader3' %></h2>
+        </div>
+
+        <%= link_to 'Switch project', teams_path, class:"btn btn-lg btn-blue" %>
+
+        <div class="put-inline">
+          <p><% current_user.teams.each do |team| %>
+            <% if team.id != current_team.id %>
+              <h3><%= team.name %></h3>
+              <%= link_to "Delete", team_path(team), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-white" %></p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+
+    </div>
+
+  </div>
+</div>

@@ -64,7 +64,7 @@
 
                 <!-- Current exercise -->
                 <div role="tabpanel" class="tab-pane active" id="<%= @session.exercise.id %>">
-                  <h4 class="subheader"><%= @exercise.description %></h4>
+                  <h4 class="subheader"><%= @exercise.description.html_safe %></h4>
                   <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
 
                   <%= form_for([@exercise, @session]) do |f| %>
