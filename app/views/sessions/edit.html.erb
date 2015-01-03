@@ -4,7 +4,7 @@
       <div class="col-xs-10 col-xs-offset-1">
         <div class="page-header-session header">
           <h2 class="color-red"><%= @exercise.title %></h2>
-          <h4 class="subheader"><%= @exercise.description %></h4>
+          <h4 class="subheader"><%= @exercise.description.html_safe %></h4>
           <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
         </div>
 
