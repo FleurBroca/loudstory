@@ -32,6 +32,7 @@ $profile-border-width: 2px;
 .navbar{
   margin-bottom: 0px;
 }
+
 .navbar-wagon{
   background: $bg;
   border: none;
@@ -48,7 +49,20 @@ $profile-border-width: 2px;
   margin-top: -27px;
 }
 
-.navbar-wagon .navbar-nav > li > a {
+.navbar-default .navbar-nav > .active > a {
+  color: $color;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FF0000;
+  background-color: transparent;
+}
+
+.navbar-wagon .navbar-perso > li > a,
+.navbar-wagon .navbar-gen > li > a,
+ {
   color: $color;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
@@ -60,7 +74,7 @@ $profile-border-width: 2px;
   margin-left: -40px;
 }
 
-.navbar-wagon .navbar-nav > li > a:hover {
+.navbar-wagon .navbar-perso > li > a:hover {
   color: $color;
   line-height: $height;
   padding-top: $vertical-padding;
@@ -70,9 +84,29 @@ $profile-border-width: 2px;
   border-radius: 20px;
 }
 
-.navbar-wagon .navbar-nav>.open>a,
-.navbar-wagon .navbar-nav>.open>a:hover,
-.navbar-wagon .navbar-nav>.open>a:focus {
+.navbar-wagon .navbar-gen > li > a:hover{
+  color: $color;
+  line-height: $height;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: transparent;
+}
+
+.navbar-wagon .navbar-gen>.open>a,
+.navbar-wagon .navbar-gen>.open>a:hover,
+.navbar-wagon .navbar-gen>.open>a:focus {
+  line-height: $height;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+  color: #FF0000;
+  background-color: transparent;
+}
+
+.navbar-wagon .navbar-perso>.open>a,
+.navbar-wagon .navbar-perso>.open>a:hover,
+.navbar-wagon .navbar-perso>.open>a:focus {
   line-height: $height;
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
@@ -125,10 +159,16 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   background: transparent;
 }
 
+.navbar-wagon .dropdown a.dropdown-toggle{
+  height: 82px;
+  width: 203px;
+  vertical-align: center;
+}
 
-.navbar-wagon .navbar-nav > li > .dropdown-menu{
+
+.navbar-wagon .navbar-perso > li > .dropdown-menu{
   border-radius: 6px;
-  height: 230px;
+  height: 197px;
   min-width: 250px;
   font-size: 20px;
   background-color: #EBEBEC;
@@ -136,7 +176,18 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   letter-spacing: 2px;
 }
 
-.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a{
+.navbar-wagon .navbar-gen > li > .dropdown-menu{
+  border-radius: 6px;
+  height: 197px;
+  min-width: 200px;
+  font-size: 20px;
+  background-color: #EBEBEC;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.navbar-wagon .navbar-gen > li > .dropdown-menu > li,
+.navbar-wagon .navbar-gen > li > .dropdown-menu > li > a{
   display: block;
   padding: 5px 22px;
   color: #0F0F5B;
@@ -144,7 +195,16 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   font-family: 'Raleway', sans-serif;
 }
 
-.navbar-wagon .navbar-nav > li > .dropdown-menu > li > a:hover{
+.navbar-wagon .navbar-perso > li > .dropdown-menu > li > a{
+  display: block;
+  padding: 5px 22px;
+  color: #0F0F5B;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-wagon .navbar-gen > li > .dropdown-menu > li > a:hover,
+.navbar-wagon .navbar-perso > li > .dropdown-menu > li > a:hover{
   font-weight: 700;
 }
 

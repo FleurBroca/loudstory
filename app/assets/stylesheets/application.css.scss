@@ -60,6 +60,10 @@ $link-hover-decoration: none;
   margin-top: 84px;
 }
 
+.page-header {
+   margin: 20px 0 20px;
+  }
+
 body{
   font-family: 'Raleway', sans-serif;
   color: #0F0F5B;
@@ -131,6 +135,14 @@ a {
   border-bottom: 2px solid #ddd;
 }
 
+.spacer-50{
+  margin-top: 50px;
+}
+
+.spacer-30{
+  margin-top: 30px;
+}
+
 .spacer-20em{
   height: 20em;
 }
@@ -149,6 +161,10 @@ a {
 
 .spacer-1em{
   height: 1em;
+}
+
+.padding-left-20{
+  padding-left: 20px;
 }
 
 .paper{

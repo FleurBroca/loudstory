@@ -88,6 +88,7 @@
   line-height: 30px;
   padding-right: 20px;
   padding-left: 20px;
+  padding-top: 20px;
 }
 
 #all-tracks-text h3 a {
@@ -97,4 +98,13 @@
 
 #all-tracks-text h3 a:hover {
   color: #FF0000;
+}
+
+#all-tracks-text h5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }

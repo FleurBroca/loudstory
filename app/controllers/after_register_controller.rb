@@ -1,6 +1,6 @@
 class AfterRegisterController < Wicked::WizardController
   before_filter :authenticate_user!
-  steps :add_project, :add_members
+  steps :add_project, :add_members, :how_it_works
 
   def show
     @user = current_user
@@ -9,6 +9,8 @@ class AfterRegisterController < Wicked::WizardController
     @team = Team.new
     when :add_members
     @team = current_team
+    when :how_it_works
+    tracks_path
     end
     render_wizard
   end

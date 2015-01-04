@@ -1,25 +1,23 @@
 <div class="container center-block single-page">
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="page-header" id="header-signup-team">
-        <h2>Now invite members!</h2>
-
-        <p>Working with other team members can help bringing a new perspective or fine-tuning the wording of your copies.</p>
-        <p>If you prefer to skip this step, you'll be able to add members later from your storyboard.</p>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="page-header" class="header-onboarding">
+        <h2>Create your team!</h2>
+        <h3>Working with team members can help bring a new perspective or fine-tune the wording of your copies.</h3>
+        <h3>If you prefer to skip this step, you'll be able to add members later from your dashboard.</h3>
       </div>
 
       <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
+      <%= devise_error_messages! %>
 
-
-<!--         <div class="field form-group">
-          <%= f.hidden_field :team_id, value: current_team.id %>
-        </div> -->
-
-        <%= text_field_tag 'email' %></p>
-
-        <%= f.submit 'Invite', class: 'btn btn-lg btn-block btn-signup-team' %>
-        <% end %>
-
+        <div class="form-group">
+         <%= text_field :email, autofocus: true, placeholder:'Email 1', class: "signin-label", class: "form-control" %>
+        </div>
+        <div class="form-group">
+         <%= f.submit 'Send', class: 'btn btn-lg btn-block btn-signin' %>
+        </div>
+      <% end %>
+      <div class="spacer-1em"></div>
       <%= link_to 'Skip', next_wizard_path %>
     </div>
   </div>

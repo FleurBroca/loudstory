@@ -57,23 +57,28 @@ $btn-primary-border: none;
 }
 
 .nav-deco {
-  margin-top: 77px;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+.nav-tabs {
+  border-bottom: 1px solid #C7C7C7;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
   color: white;
   letter-spacing: 1px;
   background-color: #FF0000;
 }
 
-.nav-pills > li > a{
+.nav-tabs > li > a{
   border-radius: 10px;
+  border: 1px solid #C7C7C7;
   color: #FF0000;
   letter-spacing: 1px;
 }
 
-.nav-pills > li > a:hover{
+.nav-tabs > li > a:hover{
   background-color: #FF0000;
   color: white;
 }
