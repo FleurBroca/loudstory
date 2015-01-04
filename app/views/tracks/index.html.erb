@@ -11,10 +11,15 @@
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
           <% @tracks.each do |track| %>
             <h3><%= link_to track.title, track %></h3>
-  <!--         <p><%= track.description %></p>
-   -->      <div class="spacer-50">
-            <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
+            <h5><%= track.description %></h5>
+            <div class="spacer-30 padding-left-20">
+              <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
             </div>
+
+            <h3>Your PR Story</h3>
+            <h5>Coming soon...</h5>
+            <h3>Your Landing Page Story</h3>
+            <h5>Coming soon...</h5>
           <% end %>
         </div>
       </div>

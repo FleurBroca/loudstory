@@ -9,4 +9,8 @@ class Auth::RegistrationsController < Devise::RegistrationsController
     # new_team_path
     after_register_path(:add_project)
   end
+
+  def after_sign_in_path_for(resource)
+    tracks_path
+  end
 end

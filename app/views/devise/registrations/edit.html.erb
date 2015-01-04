@@ -39,16 +39,16 @@
           <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
         </div>
 
-        <div class="field">
+        <div class="field form-group">
           <%= f.label :password_confirmation, "Confirm new password" %><br />
           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
         </div>
 
-<!--         <div class="field"> -->
-<!--           <%= f.label :current_password %> <i class="tiny-text"> --we need your current password to confirm your changes</i><br /> -->
-<!--           <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %> -->
-<!--         </div> -->
-        <br>
+        <div class="field form-group">
+          <%= f.label :current_password, "We need your current password to confirm your changes", class: "color-red" %>
+         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+          <br>
+
         <div class="actions">
           <%= f.submit "Update", class: 'btn btn-lg btn-block btn-signup-team' %>
         </div>

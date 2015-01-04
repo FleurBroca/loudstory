@@ -4,7 +4,7 @@
       <div class="col-xs-10 col-xs-offset-1">
           <div role="tabpanel">
             <div role="tabpanel">
-              <ul class="nav nav-tabs nav-deco" role="tablist">
+              <ul class="nav nav-pills nav-deco" role="tablist">
                 <% if @user.exercises.count > 0 %>
                   <!-- For each past exercise we display a tab -->
                   <% @user.last_sessions(@session, current_user).each do |session| %>

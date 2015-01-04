@@ -5,18 +5,32 @@
   font-size: 30px;
 }
 
-#storyboard-headtitle {
+#dashboard-headtitle {
   letter-spacing: 7px;
 }
 
-.storyboard-subtitle h2 {
+.dashboard-subtitle h2 {
   letter-spacing: 4px;
   font-size: 28px;
   border-bottom: 1px solid #eeeee;
 }
 
-.storyboard-subtitle {
+.dashboard-subtitle {
   border-bottom: 1px solid #eeeee;
+}
+
+#dashboard-links >li > a {
+  color: #0F0F5B;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#dashboard-links >li > a:hover {
+  color: #FF0000;
+}
+
+#trash{
+  color: white;
 }
 
 #version{
@@ -29,7 +43,12 @@
 }
 
 .progress {
-  height: 13px;
+  height: 15px;
+  line-height: 15px;
+}
+
+.progress-bar {
+  line-height: 16px;
 }
 
 .pic-dashboard{

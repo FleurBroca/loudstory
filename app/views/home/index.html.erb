@@ -1,12 +1,40 @@
 <% if user_signed_in? %>
-  <div class="wrapper-login">
+<div class="wrapper-login">
+  <div class="container double-page">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6" id="all-tracks-banner">
+        <h1><%= t '.title_logged_in' %></h1>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="all-tracks-text">
+        <div class="page-header">
+          <h4><%= t '.header_logged_in' %></h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
+          <% @tracks.each do |track| %>
+            <h3><%= link_to track.title, track %></h3>
+            <h5><%= track.description %></h5>
+            <div class="spacer-30 padding-left-20">
+              <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
+            </div>
+
+            <h3>Your PR Story</h3>
+            <h5>Coming soon...</h5>
+            <h3>Your Landing Page Story</h3>
+            <h5>Coming soon...</h5>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--   <div class="wrapper-login">
     <div class="container double-page">
-      <div class="row">
+      <div class="row"> -->
 <!--         <div class="col-sm-12 text-center text-title ">
           <h1><%= t '.title' %></h1>
           <h2><%= t '.subtitle' %></h2>
         </div> -->
-        <div class="col-xs-12 col-sm-12 col-md-6" id="home-track-banner">
+<!--         <div class="col-xs-12 col-sm-12 col-md-6" id="home-track-banner">
           <h1><%= t '.header' %></h1>
         </div>
 
@@ -18,17 +46,16 @@
             <%= link_to "Start", track, class:"btn btn-sm btn-danger" %>
             <% end %>
           </div>
-        </div>
-
-    </div>
+        </div> -->
+<!--     </div>
   </div>
-</div>
+</div> -->
 <% else %>
   <div class="wrapper-logout">
     <div class="container">
       <div class="row single-page">
         <div class="col-sm-12 text-center text-title ">
-          <h1><%= t '.title' %></h1>
+          <h1><%= t '.title_signed_out' %></h1>
           <h2><%= t '.subtitle' %></h2>
         </div>
         <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6 col-md-offset-1 col-md-10" id="homebanner">

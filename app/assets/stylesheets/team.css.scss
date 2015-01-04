@@ -12,6 +12,15 @@ $color: #0F0F5B;
 }
 
 #invite-team-banner {
+  background-image: image-url('homebanner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  position: relative;
+  display: table;
+}
+
+#create-project-banner {
   background-image: image-url('football-team-blue.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,15 +29,15 @@ $color: #0F0F5B;
   display: table;
 }
 
-#invite-team-text{
+.invite-team-text{
   padding-bottom: 9px;
   margin-left: 40px;
   margin-right: 20px;
 }
 
-#header-signup-member{
+.header-onboarding{
   padding-bottom: 9px;
-  margin-left: 40px;
+  margin-left: 11px;
   margin-right: 20px;
   margin-top: 140px;
   margin-bottom: 20px;
@@ -56,11 +65,6 @@ $color: #0F0F5B;
   border-bottom-color: #161685;
   background-color: #151582;
   color: white;
-}
-
-.header-signup-team{
-  margin-bottom: 200px;
-  color: $color;
 }
 
 .page-header h2 {

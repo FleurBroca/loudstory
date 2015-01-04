@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
     @exercises = @exercise.questions.order(position: :asc).each do |question|
       @session.answers.new(question: question)
     end
-    # @exercises.questions.order(:position)
   end
 
   def create

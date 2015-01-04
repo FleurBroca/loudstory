@@ -50,10 +50,11 @@ en:
 
   home:
     index:
-      title: "Discover the magic of your brand."
-      subtitle: "A SIMPLE DIY STORYTELLING PLAN FOR THE ENTHOUSIASTIC STARTUP."
-      textsearchbar: "Access storytelling-based exercises to create powerful communication tools."
-      header: "THE STORY TOOLBOX"
+      title_signed_out: "Find the true magic of your brand."
+      subtitle: "A SIMPLE STORYTELLING PLAN FOR ENTHOUSIASTIC STARTUPS."
+      textsearchbar: "Access a storytelling methodology to create powerful communication tools."
+      title_logged_in: "Story Toolboox"
+      header_logged_in: "Each of the stories you'll want to share can be magnified by storytelling. Start with your North Star story, then apply it to one of the basic communication tools."
 
   devise:
     sessions:
@@ -68,17 +69,17 @@ en:
 
   tracks:
     index:
-      title: "The Story Toolbox"
-      header: "Each of the stories you'll want to share can be magnified by storytelling. Start with the Shining Star story, then apply it to one of the basic communication tools."
+      title: "Story Toolbox"
+      header: "Start with your North Star story, then apply it to one of the basic communication tools. Each of the stories you'll want to share can be magnified by storytelling."
     show:
       title_for: "%{title}"
-      header: "'Make something people want. Tell a story people love.'"
+      header: "Make something people want. Tell a story people love."
       warmup: "Unlock your creative mind"
       warmupdescription: "Before you start to explore the depths of your story, it's always a healthy exercise to write down all your negative thoughts first. It's quite common to feel disappoint by the way we write, by our lack of inspiration or creativity. But it should not stop us from allowing ourselves to create. The more you do it, the better you'll become. "
 
   dashboards:
     index:
-      title: "My storyboard"
+      title: "Storyboard"
       header1: "Stories"
       subheader2: "Team"
       subheader3: "Projects"
@@ -88,6 +89,7 @@ en:
       title: "Choose a project"
     form:
       title: "Start a new project"
+      header: "You can work on different projects, whether for multiple startup or various ideas you have in mind."
 
   auth:
     invitations:
@@ -95,15 +97,9 @@ en:
         title: "Invite a new member"
         header: "Working on your stories gets easier with team members."
 
-  teams:
-    index:
-      title: "Choose a project"
-    form:
-      title: "Start a new project"
-
   auth:
     invitations:
       new:
-        title: "Invite a new member"
-        header: "Working on your stories gets easier with team members."
+        title: "Add new team members"
+        header: "Working on your stories gets easier when you collaborate with team members."
 

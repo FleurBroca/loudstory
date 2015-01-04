@@ -1,24 +1,24 @@
 <div class="container center-block single-page">
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="page-header" id="header-signup-member">
-        <h1>Welcome: You're signed up!</h1>
-        <h2>You can now give a name to your first project</h2>
-        <p>LoudStory helps you create multiple communications strategies and tools based on storytelling for different projects. Whether the project is your startup or just an idea you want to work on.</p>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="page-header" class="header-onboarding">
+        <h1>Welcome!</h1>
+        <h3>You can now name your first project.</h3>
+        <h3>LoudStory helps you create multiple communications strategies and tools based on storytelling for your different projects - whether for your startup or just an idea you want to work on.</h3>
       </div>
 
+    <div class="col-xs-10 col-md-6">
+
       <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
+      <%= devise_error_messages! %>
 
-        <div class="field form-group">
-          <%= f.text_field :name, autofocus: true, placeholder: 'Project name', class: "form-control signin-label" %>
+        <div class="form-group">
+          <%= f.text_field :name, autofocus: true, placeholder: 'Project name', class: "signin-label", class: "form-control" %>
         </div>
-
-        <div class="actions">
-          <%= f.submit "Next", class: 'btn btn-lg btn-block btn-signup-team' %>
+        <div class="form-group">
+          <%= f.submit "Next", class: 'btn btn-lg btn-block btn-signin' %>
         </div>
       <% end %>
-
-      <%= link_to 'Skip', next_wizard_path %>
     </div>
   </div>
 </div>
