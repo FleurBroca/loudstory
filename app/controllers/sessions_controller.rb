@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
   def new
     @user = current_user
+    @track = @exercise.track
     # @previous_session = @exercise.sessions.where(user: current_user).first
     @session = @exercise.sessions.new
     @exercises = @exercise.questions.order(position: :asc).each do |question|
