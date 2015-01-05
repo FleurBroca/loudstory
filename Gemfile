@@ -57,3 +57,6 @@ gem 'wicked'
 
 gem "pundit"
 
+gem 'google-webfonts'
+
+
