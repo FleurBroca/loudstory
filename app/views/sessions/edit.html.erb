@@ -1,4 +1,4 @@
-<div class="wrapper-login paper">
+<div class="wrapper-login">
   <div class="container single-page">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
@@ -9,7 +9,7 @@
         </div>
 
           <%= form_for([@exercise, @session]) do |f| %>
-            <%= f.fields_for :answers, @session.answers.order(position: :asc) do |a| %>
+            <%= f.fields_for :answers, session.answers.sort_by(&:position) do |a| %>
               <div class="field form-group", id="exercise-form">
                 <%= label_tag a.object.original_question %>
                 <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>

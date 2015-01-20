@@ -8,6 +8,7 @@ $link-hover-decoration: none;
 @import "bootstrap-sprockets";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "normalize";
 @import "navbar";
 @import "sessions";
 @import "signin";
@@ -17,6 +18,7 @@ $link-hover-decoration: none;
 @import "tracks";
 @import "dashboard";
 @import "comments";
+@import "posts";
 
 // @import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
 
@@ -96,8 +98,8 @@ h3 {
 }
 
 h4{
-  line-height: 26px;
   font-size: 20px;
+  line-height: 26px;
 }
 
 p{

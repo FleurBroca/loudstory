@@ -1,7 +1,10 @@
 class DashboardsController < ApplicationController
   def index
     @user = current_user
-    @members = current_team.users
+
+    if not current_team.blank?
+      @members = current_team.users
+    end
   end
 
   def team_user_dashboard

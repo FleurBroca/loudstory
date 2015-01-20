@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row single-page">
+    <div class="col-sm-12 text-center text-title-academy ">
+      <h1><%= t '.title' %></h1>
+
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default panel-sd" id="panel-heading">
+          <div id="list-post">
+           <% @posts.each do |post| %>
+            <h4 ><%= link_to post.title, post %></h4>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

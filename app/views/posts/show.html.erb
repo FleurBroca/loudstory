@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row single-page">
+    <div class="row">
+      <div class="col-sm-12 text-center text-title-post">
+        <h2><%= @post.title %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <div class="panel panel-default panel-sd panel-course-detail">
+          <div class="panel-body lessons-menu bhoechie-tab-menu">
+            <div class="list-group">
+              <a class="list-group-item" href="#">Why do startups need storytelling</a>
+              <a class="list-group-item" href="#">What is storytelling</a>
+              <a class="list-group-item" href="#">When do startups need storytelling</a>
+              <a class="list-group-item" href="#">How to do storytelling</a>
+              <a class="list-group-item" href="#">Storytelling for your brand</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="panel panel-default panel-sd">
+          <div class="panel-body">
+            <div class="lesson-content">
+              <div class="text-center">
+                <div class="embed-responsive">
+                  <%= raw @post.content.html_safe %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

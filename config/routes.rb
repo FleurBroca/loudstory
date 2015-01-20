@@ -34,7 +34,12 @@ Rails.application.routes.draw do
       resources :comments, only: [:index, :new, :create, :destroy]
     end
 
-
+    resources :posts do
+      resources :lessons do
+        # put :move_up
+        # put :move_down
+      end
+    end
 
   end
   # The priority is based upon order of creation: first created -> highest priority.

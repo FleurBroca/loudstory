@@ -1,0 +1,104 @@
+.text-title-academy{
+  margin-bottom: 111px;
+  margin-top: -3px;
+}
+
+.text-title-academy h1{
+  color: #0F0F5B;
+  letter-spacing: 5px;
+  font-size: 44px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.text-title-post{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.panel-course-detail{
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.bhoechie-tab-menu .list-group>a.active{
+  background-color: #0F0F5B;
+  color: white;
+}
+
+.bhoechie-tab-menu .list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #0F0F5B;
+
+}
+
+a.list-group-item,
+a.list-group-item:hover, a.list-group-item:focus{
+  color: #0F0F5B;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+#list-post h4 {
+  letter-spacing: 3px;
+}
+
+#list-post h4 a {
+  text-decoration: none;
+  color: #0F0F5B;
+}
+
+#list-post h4 a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#panel-heading:hover{
+  background-color: #0F0F5B;
+  color: red !important;
+}
+
+#panel-heading{
+  background-color: white;
+}
+
+.panel-course-detail .lessons-menu{
+  padding: 0px !important;
+  height: 100% !important;
+}
+
+.panel-sd{
+  position: relative;
+  border-radius: 0px;
+  border: 1px solid #d8d8d8;
+}
+
+.bhoechie-tab-menu .list-group{
+  margin-bottom: 0;
+}
+
+.list-group{
+  padding-left: 0;
+}
+
+.list-group-item{
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #dddddd;
+}
+
+.panel-body{
+  padding: 0px !important;
+}
+
+.lesson-content{
+  padding: 0 !important;
+  height: 100% !important;
+}

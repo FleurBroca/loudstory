@@ -54,7 +54,7 @@ en:
       subtitle: "A SIMPLE STORYTELLING PLAN FOR ENTHOUSIASTIC STARTUPS."
       textsearchbar: "Access a storytelling methodology to create powerful communication tools."
       title_logged_in: "Story Toolboox"
-      header_logged_in: "Each of the stories you'll want to share can be magnified by storytelling. Start with your North Star story, then apply it to one of the basic communication tools."
+      header_logged_in: "Start with your North Star story, then apply it to one of the basic communication tools. Each of the stories you'll want to share can be magnified by storytelling."
 
   devise:
     sessions:
@@ -103,3 +103,6 @@ en:
         title: "Add new team members"
         header: "Working on your stories gets easier when you collaborate with team members."
 
+  posts:
+    index:
+      title: "Academy"
