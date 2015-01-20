@@ -1,4 +1,4 @@
-<div class="wrapper-login paper">
+<div class="wrapper-login">
   <div class="container single-page">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
@@ -12,7 +12,7 @@
               <div id="original-question">
                 <p><%= a.original_question %></p>
               </div>
-              <div class="panel" id="original-content">
+              <div class="paper2" id="original-content">
                 <p><%= a.content %></p>
               </div>
                 <%= render partial: "comments/index", locals: { answer: a } %>

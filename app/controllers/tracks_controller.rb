@@ -3,6 +3,7 @@ class TracksController < ApplicationController
 
   def index
     @tracks = Track.all
+    # @post = Post.find(params[:id])
   end
 
   def show

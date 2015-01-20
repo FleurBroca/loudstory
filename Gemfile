@@ -59,4 +59,6 @@ gem "pundit"
 
 gem 'google-webfonts'
 
+gem 'acts_as_list'
+
 

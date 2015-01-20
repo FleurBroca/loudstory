@@ -8,7 +8,7 @@ $btn-primary-border: none;
 }
 
 .subheader {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 3px;
   color: #0F0F5B;
@@ -25,7 +25,7 @@ $btn-primary-border: none;
 }
 
 #track-title {
-  font-family: 'Abril Fatface';
+  font-family: 'Lato';
   font-size: 26px;
   letter-spacing: 2px;
 }
@@ -34,8 +34,7 @@ $btn-primary-border: none;
 #exercise-form {
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 16px;
 }
 
 #exercise-form p {
@@ -47,7 +46,6 @@ $btn-primary-border: none;
   border-color: #BDBDBD;
   font-size: 16px;
   font-weight: 300;
-  letter-spacing: 2px;
   margin-top: 18px;
   color: #404040;
   // background-image: image-url('paper.png');
@@ -89,13 +87,19 @@ $btn-primary-border: none;
   color: white;
 }
 
+.nav > li > a {
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
 .note{
   font-size: 13px;
   color: #383635;
   font-style: italic;
+  line-height: 19px;
 }
 
-.panel{
+.paper2{
   background-image: image-url('paper.png');
   margin-bottom: -12px;
 }
@@ -119,7 +123,7 @@ $btn-primary-border: none;
 .btn-blue{
   // background-color: $btn-primary-color;
   color: #0F0F5B;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Oswald';
   font-size: 15px;
   font-weight: 400;
   border-color: #0F0F5B;
