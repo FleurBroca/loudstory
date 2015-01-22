@@ -44,14 +44,18 @@
   font-weight: 400;
 }
 
-#about-contact li{
+#about-story {
   font-size: 14px;
   font-weight: 700;
-}
-
-#about-contact li a{
   text-decoration: none;
   color: #0F0F5B;
+}
+
+#about-contact a{
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: red;
 }
 
 #copypright p {
