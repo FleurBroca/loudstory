@@ -27,6 +27,10 @@ Rails.application.routes.draw do
 
     resources :exercises do
       resources :sessions do
+        member do
+          put :move_up
+          put :move_down
+        end
       end
     end
 

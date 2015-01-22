@@ -3,6 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @tracks = Track.all
-    # @post = Post.find(params[:id])
+    @post = Post.find(1)
   end
 end

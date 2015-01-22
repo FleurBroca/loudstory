@@ -30,7 +30,9 @@
       </ul>
     </div>
   </div>
+
   <div class="row">
+
     <div class="col-xs-3">
       <h3>My Team</h3>
       <% if not @members.blank? %>
@@ -42,11 +44,15 @@
       </ul>
       <% end %>
     </div>
+
     <div class="col-xs-8">
-      <% if @user.exercises.size > 0 %>
+      <% if @user.exercises.size <=  0 %>
+          <p> This team member hasn''t done any exercise yet </p>
+      <% else %>
         <div class="dashboard-subtitle">
 <!--           <h2><%= t '.header1' %></h2>
- -->        </div>
+ -->    </div>
+
         <% current_track = nil %>
 
         <% @user.exercises.each do |exercise| %>

@@ -1,11 +1,11 @@
 <% if user_signed_in? %>
   <div class="container text-center" id="footer-login">
     <div class="row">
-      <div class="col-xs-12 col-sm-3" id="about-contact">
+      <div class="col-xs-12 col-sm-3" >
         <ul class="list-inline">
-          <li>Our Story   <%= fa_icon "bolt" %></li>
-          <li><%= mail_to('brocafleur@gmail.com', :target => "_blank") do %>
-            <i class="fa fa-envelope"></i>  Send love
+          <li id="about-story">Our Story   <%= fa_icon "bolt" %></li>
+          <li id="about-contact"><%= mail_to('brocafleur@gmail.com', :target => "_blank") do %>
+            <i class="fa fa-envelope"></i>  ASK FEEDBACK
             <% end %></li>
           </ul>
       </div>
