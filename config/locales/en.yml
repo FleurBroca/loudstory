@@ -73,9 +73,8 @@ en:
       header: "Start with your North Star story, then apply it to one of the basic communication tools. Each of the stories you'll want to share can be magnified by storytelling."
     show:
       title_for: "%{title}"
-      header: "Make something people want. Tell a story people love."
-      warmup: "Unlock your creative mind"
-      warmupdescription: "Before you start to explore the depths of your story, it's always a healthy exercise to write down all your negative thoughts first. It's quite common to feel disappoint by the way we write, by our lack of inspiration or creativity. But it should not stop us from allowing ourselves to create. The more you do it, the better you'll become. "
+      warmup: "Unlock your creativity"
+      warmupdescription: "Before exploring your story, it's helpful to first get rid of your negative thoughts (about the way you write or your lack of inspiration). Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. "
 
   dashboards:
     index:

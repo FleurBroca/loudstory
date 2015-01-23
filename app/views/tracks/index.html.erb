@@ -5,9 +5,9 @@
         <h1><%= t '.title' %></h1>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="all-tracks-text">
-        <div class="page-header">
+<!--         <div class="page-header">
           <h4><%= t '.header' %></h4>
-        </div>
+        </div> -->
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
           <% @tracks.each do |track| %>
             <h3><%= link_to track.title, track %></h3>
