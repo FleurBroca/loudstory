@@ -75,6 +75,7 @@ en:
       title_for: "%{title}"
       warmup: "Unlock your creativity"
       warmupdescription: "Before exploring your story, it's helpful to first get rid of your negative thoughts (about the way you write or your lack of inspiration). Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. "
+      create: "Start creating"
 
   dashboards:
     index:
