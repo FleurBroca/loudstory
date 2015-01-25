@@ -35,13 +35,32 @@ $color: #0F0F5B;
   margin-right: 20px;
 }
 
-.header-onboarding{
+#header-onboarding{
   padding-bottom: 9px;
   margin-left: 11px;
   margin-right: 20px;
-  margin-top: 140px;
+  margin-top: 70px;
   margin-bottom: 20px;
 
+}
+
+#header-onboarding h3{
+  font-size: 23px;
+}
+
+#header-onboarding h4{
+  font-size: 19px;
+}
+
+#header-onboarding h5{
+  font-size: 16px;
+  line-height: 23px;
+}
+
+#header-onboarding p{
+  font-size: 13px;
+  line-height: 20px;
+  color: #404040;
 }
 
 .btn-signup-team{

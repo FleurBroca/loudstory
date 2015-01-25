@@ -54,7 +54,7 @@ en:
       subtitle: "A SIMPLE STORYTELLING PLAN FOR ENTHOUSIASTIC STARTUPS."
       textsearchbar: "Access a storytelling methodology to create powerful communication tools."
       title_logged_in: "Story Toolboox"
-      header_logged_in: "Start with your North Star story, then apply it to one of the basic communication tools. Each of the stories you'll want to share can be magnified by storytelling."
+      header_logged_in: "Starting with your North Star story will help you magnify all your communication tools."
 
   devise:
     sessions:
@@ -70,7 +70,7 @@ en:
   tracks:
     index:
       title: "Story Toolbox"
-      header: "Start with your North Star story, then apply it to one of the basic communication tools. Each of the stories you'll want to share can be magnified by storytelling."
+      header_logged_in: "Start with your North Star story, then magnify any communication tools with it."
     show:
       title_for: "%{title}"
       warmup: "Unlock your creativity"

@@ -31,7 +31,7 @@
                   <!-- TODO: Refactor in a partial -->
                   <% @user.last_sessions(@session, current_user).each do |session| %>
                    <div role="tabpanel" class="tab-pane subheader" id="<%= session.exercise.id %>">
-                     <h4 class="subheader"><%= session.exercise.description %></h4>
+                     <h4 class="subheader"><%= session.exercise.description.html_safe %></h4>
                      <p class="note">Note: For more comfort, you can always expand the size of the text area by pulling the down right corner of each box.</p>
 
                       <!-- We get all the answers and create empty ones for the ones not filled -->
@@ -77,7 +77,7 @@
                   <%= f.fields_for :answers do |a| %>
                     <div class="field form-group", id="exercise-form">
                       <%= label_tag a.object.question.title %>
-                      <p><%= a.object.question.description %></p>
+                      <p><%= a.object.question.description.html_safe %></p>
                       <%= a.hidden_field :original_question, value: a.object.question.title %>
                       <%= a.hidden_field :question_id %>
                       <%= a.hidden_field :exercise_id %>
