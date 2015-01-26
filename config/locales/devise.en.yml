@@ -56,5 +56,5 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "The magic of the button can't act because of one little misstep"
-        other: "The magic of the button can't act because of %{count} little missteps"
+        one: "The magic can't begin because of one little misstep:"
+        other: "The magic can't begin because of %{count} little missteps:"
