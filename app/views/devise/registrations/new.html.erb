@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row single-page">
-    <div class="col-sm-6 text-center oops">
+    <div class="col-xs-12 text-center oops">
       <h1>Oops</h1>
-      <h4>An error as occurred during the registration process.</h4>
-      <p>Please go back to the previous page and make sure you entered a proper email address, a username and a password of minimum 4 letters or digits.</p>
-
+<!--       <h4>An error as occurred during the registration process.</h4>
+ -->    </div>
+    <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-10">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-inline'}) do |f| %>
         <%= devise_error_messages! %>
 
@@ -26,7 +26,6 @@
         <%= f.submit "Start for free", class: "btn btn-lg btn-block btn-signin" %>
       </div>
       <% end %>
-
     </div>
   </div>
 </div>
