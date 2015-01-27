@@ -3,17 +3,17 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6" id="create-project-banner">
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="col-xs-12 col-sm-12 col-md-5 invite-team-text">
         <div>
           <h2><%= t '.title' %></h2>
           <h4><%= t '.header' %></h4>
         </div>
         <div class="spacer-1em"></div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-8">
           <div class="invite-team-text">
             <%= form_for(@team) do |f| %>
               <div class="field form-group">
-                <%= f.text_field :name, autofocus: true, placeholder: 'Name', class: "form-control signin-label" %>
+                <%= f.text_field :name, autofocus: true, placeholder: 'Name', class: "signin-label", class: "form-control" %>
               </div>
               <div class="form-group">
                 <%= f.submit "Start", class: "btn btn-lg btn-block btn-signin" %>
