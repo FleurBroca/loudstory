@@ -86,10 +86,10 @@ en:
 
   teams:
     index:
-      title: "Choose a project"
+      title: "Select a project"
     form:
       title: "Start a new project"
-      header: "You can work on different projects, whether for multiple startup or various ideas you have in mind."
+      header: "You can work on different storytelling projects, whether for multiple startups or various ideas."
 
   auth:
     invitations:

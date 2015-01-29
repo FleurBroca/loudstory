@@ -29,19 +29,14 @@ $color: #0F0F5B;
   display: table;
 }
 
-.invite-team-text{
-  padding-bottom: 9px;
-  margin-left: 40px;
-  margin-right: 20px;
-}
-
-.invite-team-text h2{
+#invite-team-text h2 {
   font-size: 30px;
-  margin-top: 50px;
+  letter-spacing: 2px;
 }
 
-.invite-team-text h4{
-  font-size: 18px;
+#invite-team-text h4 {
+  font-size: 17px;
+  line-height: 22px;
 }
 
 #header-onboarding{

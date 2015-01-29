@@ -1,20 +1,22 @@
 <div class="wrapper-login">
   <div class="container center-block single-page">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
-      <% if current_user.teams.size > 1 %>
-        <div class="page-header" class="header-signup-team">
-          <h2><%= t '.title' %></h2>
-        </div>
-        <% current_user.teams.each do |team| %>
-          <% if team.id != current_team.id %>
-            <%= link_to team.name, team_path(team), class:"btn btn-danger" %>
+    <div class="row">
+      <div class="col-xs-12 col-md-5 col-md-offset-4">
+        <% if current_user.teams.size > 1 %>
+          <div id="invite-team-text">
+            <h2><%= t '.title' %></h2>
+          </div>
+          <div class="spacer-1em"></div>
+          <% current_user.teams.each do |team| %>
+            <% if team.id != current_team.id %>
+              <%= link_to team.name, team_path(team), class:"btn btn-danger" %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
+        <div class="spacer-2em"></div>
+        <%= render "teams/form" %>
+      </div>
     </div>
-    <div class="spacer-2em"></div>
-    <%= render "teams/form" %>
   </div>
 </div>
 
