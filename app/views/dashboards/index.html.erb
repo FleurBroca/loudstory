@@ -40,7 +40,7 @@
       <% if not @members.blank? %>
       <ul class="list-unstyled">
         <% @members.each do |member| %>
-         <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %></li>
+         <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %> <%= link_to '<i class="fa fa fa-trash-o"></i>'.html_safe, remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }%></li>
         <% end %>
          <li>Add member  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_user_invitation_path %></li>
 
