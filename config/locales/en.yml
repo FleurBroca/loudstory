@@ -83,6 +83,8 @@ en:
       header1: "Stories"
       subheader2: "Team"
       subheader3: "Projects"
+      noexercise: "No exercise on my team yet."
+      clicname: "Click on a name to access their exercises."
 
   teams:
     index:
