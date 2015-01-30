@@ -22,10 +22,10 @@
                  <% if @user.exercises.count > 0 %>
                      <% session = exercise.team_sessions(current_team).last %>
                     <% if session %>
-                      <li><%= link_to "Last version", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %></li>
+                      <li><%= link_to "Review", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %></li>
                     <% end %>
                  <% end %>
-                    <li><%= link_to "New version", new_exercise_session_path(exercise), class:"btn btn-white btn-lg" %></li>
+                    <li><%= link_to "Create", new_exercise_session_path(exercise), class:"btn btn-white btn-lg" %></li>
               </ul>
             </div>
         </div>
