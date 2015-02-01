@@ -40,8 +40,8 @@ Rails.application.routes.draw do
 
     resources :posts do
       resources :lessons do
-        # put :move_up
-        # put :move_down
+        put :move_up
+        put :move_down
       end
     end
 

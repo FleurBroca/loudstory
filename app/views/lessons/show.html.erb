@@ -10,11 +10,9 @@
         <div class="panel panel-default panel-sd panel-course-detail">
           <div class="panel-body lessons-menu bhoechie-tab-menu">
             <div class="list-group">
-              <a class="list-group-item" href="#">Why do startups need storytelling</a>
-              <a class="list-group-item" href="#">What is storytelling</a>
-              <a class="list-group-item" href="#">When do startups need storytelling</a>
-              <a class="list-group-item" href="#">How to do storytelling</a>
-              <a class="list-group-item" href="#">Storytelling for your brand</a>
+              <% @post.lessons.each do |lesson| %>
+                <%= link_to lesson.title, [lesson.post, lesson], class: "list-group-item" %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -24,8 +22,8 @@
           <div class="panel-body">
             <div class="lesson-content">
               <div class="text-center">
-                <div class="embed-responsive">
-                  <%= raw @post.content.html_safe %>
+                <div>
+                  <%= raw @lesson.content.html_safe %>
                 </div>
               </div>
             </div>

@@ -2,7 +2,9 @@ ActiveAdmin.register Lesson do
 
   index do
     selectable_column
-    column :id
+    column :post do |lesson|
+      link_to lesson.post, admin_lesson_path(lesson)
+    end
     column :position
     column :title
     column :content
@@ -13,14 +15,14 @@ ActiveAdmin.register Lesson do
   form do |f|
     f.inputs "Identity" do
       f.input :position
-      f.input :post_id
+      f.input :post
       f.input :title
       f.input :content
     end
     f.actions
   end
 
-  permit_params :title, :content, :position
+  permit_params :title, :content, :position, :post_id
 
 
 
