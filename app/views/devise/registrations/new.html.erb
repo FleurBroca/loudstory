@@ -9,18 +9,18 @@
         <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.email_field :email, autofocus: true, placeholder: 'Email', class: "signin-label", class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, required: true, placeholder: 'Email', class: "signin-label", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.text_field :first_name, autofocus: true, placeholder: 'Username', class: "signin-label", class: "form-control" %>
+        <%= f.text_field :first_name, required: true, placeholder: 'Username', class: "signin-label", class: "form-control" %>
       </div>
 
       <div class="form-group">
         <% if @validatable %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %>
-        <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: "signin-label", class: "form-control" %>
+        <%= f.password_field :password, autocomplete: "off", required: true, placeholder: 'Password', class: "signin-label", class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.submit "Start for free", class: "btn btn-lg btn-block btn-signin" %>

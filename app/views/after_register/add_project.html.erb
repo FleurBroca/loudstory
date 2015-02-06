@@ -10,7 +10,13 @@
     <div class="col-xs-10 col-md-6">
 
       <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
-      <%= devise_error_messages! %>
+        <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+
+        <% if flash_messages.present? %>
+          <%= flash_messages %>
+        <% end %>
 
         <div class="form-group">
           <%= f.text_field :name, autofocus: true, placeholder: 'Project name', class: "signin-label", class: "form-control" %>
