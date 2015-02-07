@@ -41,7 +41,7 @@
 
                      <%= form_for([session.exercise, session]) do |f| %>
 
-                       <%= f.fields_for :answers, @session.answers.sort_by(&:position) do |a| %>
+                       <%= f.fields_for :answers, session.answers.sort_by(&:position) do |a| %>
                          <div class="field form-group", id="exercise-form">
                           <!-- Pour ajouter le numéro devant chaque question -->
                           <!--
