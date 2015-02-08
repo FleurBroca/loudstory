@@ -12,7 +12,11 @@
 
 .text-title-post{
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.text-title-post h2{
+  font-family: 'Oswald';
 }
 
 div.bhoechie-tab-container{
@@ -85,16 +89,16 @@ a.list-group-item:hover, a.list-group-item:focus{
   font-size: 13px;
 }
 
-#list-post h4 {
-  letter-spacing: 3px;
-}
-
-#list-post h4 a {
+.list-post li a {
   text-decoration: none;
   color: #0F0F5B;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 26px;
+  font-weight: 500;
 }
 
-#list-post h4 a:hover {
+.list-post li a:hover {
   text-decoration: none;
   color: #FF0000;
 }
@@ -107,14 +111,10 @@ a.list-group-item:hover, a.list-group-item:focus{
   position: relative;
   border-radius: 0px;
   border: 1px solid #d8d8d8;
+  height: 50px;
+  padding-top: 11px;
 }
 
-.bg-light {
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  background: #fcfcfc;
-  border: solid 1px #e5e5e5;
-}
 
 .padding-right-30 {
   padding-right:30px !important;
