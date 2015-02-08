@@ -7,7 +7,7 @@
         <ul class="list-unstyled list-post" id="panel-heading">
 
            <% @posts.each do |post| %>
-            <li class="panel panel-default panel-sd"><%= link_to post.title , [post, post.lessons.first] %></li>
+            <li class="panel panel-default panel-sd-post"><%= link_to post.title , [post, post.lessons.first] %></li>
            <% end %>
 
         </ul>
