@@ -4,6 +4,7 @@
           <h4><%= t '.header' %></h4>
       </div>
       <div class="spacer-1em"></div>
+      <%= flash_messages %>
       <div class="col-xs-6 col-sm-6 col-md-6">
         <%= form_for(@team) do |f| %>
           <div class="field form-group">

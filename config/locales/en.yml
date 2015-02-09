@@ -58,6 +58,8 @@ en:
 
   devise:
     sessions:
+      signed_in: " "
+      signed_out: " "
     passwords:
       new:
         title: "Forgot your password?"

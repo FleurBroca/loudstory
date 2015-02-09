@@ -6,20 +6,14 @@
         <h4>Name your first project</h4>
         <p>LoudStory allows you to work on multiple projects, startups or ideas. Enter the official name of your company or a code name that fits your current energy.</p>
       </div>
-
+      <%= flash_messages %>
     <div class="col-xs-10 col-md-6">
 
       <%= form_for(@team, :url => wizard_path, :method => :put, html: {class: 'form-inline'}) do |f| %>
-        <% if notice.present? %>
-          <p class="notice"><%= notice %></p>
-        <% end %>
-
-        <% if flash_messages.present? %>
-          <%= flash_messages %>
-        <% end %>
+        
 
         <div class="form-group">
-          <%= f.text_field :name, autofocus: true, placeholder: 'Project name', class: "signin-label", class: "form-control" %>
+          <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Project name', class: "signin-label", class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.submit "Next", class: 'btn btn-lg btn-block btn-signin' %>

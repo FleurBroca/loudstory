@@ -46,7 +46,7 @@
 
         <div class="field form-group">
           <%= f.label :current_password, "We need your current password to confirm your changes", class: "color-red" %>
-         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+         <%= f.password_field :current_password, required: true, autocomplete: "off", class: "form-control" %>
           <br>
 
         <div class="actions">

@@ -19,6 +19,9 @@ class AfterRegisterController < Wicked::WizardController
     case step
     when :add_project
     @team = current_user.teams.create(team_params)
+    if !@team.save
+      flash[:alert] = "This name is not available. Try a new one."
+    end
     render_wizard @team
     when :add_members
     @user = current_user
