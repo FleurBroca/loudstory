@@ -38,30 +38,22 @@
     <div class="col-xs-3">
       <h3>My Team</h3>
       <% if not @members.blank? %>
-      <ul class="list-unstyled">
+        <ul class="list-unstyled">
         <% @members.each do |member| %>
-         <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %> <%= link_to '<i class="fa fa fa-trash-o"></i>'.html_safe, remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }%></li>
+          <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %> <%= link_to '<i class="fa fa fa-trash-o"></i>'.html_safe, remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }%></li>
         <% end %>
-         <li>Add member  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_user_invitation_path %></li>
+          <li>Add member  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_user_invitation_path %></li>
 
       <% end %>
     </div>
 
-    <div class="col-xs-8">
-      <% if @user.exercises.size <=  0 %>
-          <div class="spacer-2em"></div>
-          <p class="small-text italic"><%= t '.noexercise' %></p>
-      <% else %>
-        <div class="dashboard-subtitle">
-<!--           <h2><%= t '.header1' %></h2>
- -->    </div>
-          <div class="spacer-2em"></div>
-          <p class="small-text italic"><%= t '.clicname' %></p>
+    <% if @team.blank? %>
+      <div class="col-xs-8">
         <% current_track = nil %>
 
         <% @user.exercises.each do |exercise| %>
           <% if current_track != exercise.track %>
-            <% if exercise.user_team_sessions(@user, @team).size > 0 %>
+            <% if exercise.user_team_sessions(current_user.id, current_team.id).size > 0 %>
               <h3><%= exercise.track.title %></h3>
               <%=
                 current_track = exercise.track
@@ -72,26 +64,65 @@
             <% end %>
           <% end %>
 
-          <% exercise.user_team_sessions(@user, @team).each do |session| %>
-           <ul class="list-unstyled list-inline" id="dashboard-links">
+          <% exercise.user_team_sessions(current_user.id, current_team.id).each do |session| %>
+            <ul class="list-unstyled list-inline" id="dashboard-links">
              <li><%= link_to exercise.title, edit_exercise_session_path(exercise, session) %></li>
              <li><p id="version"><%= "#{l session.updated_at, format: :long}" %></p></li>
               <!-- <li><%= link_to '<i class="fa fa-eye"></i>'.html_safe, edit_exercise_session_path(exercise, session), class:"btn btn-sm btn-view-session" %></li> -->
               <li id="trash"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, exercise_session_path(exercise, session), method: :delete,
                   data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %></li>
-            <% end %>
-          </ul>
+            </ul>
           <% end %>
+          
+        <% end %>
         <div class="spacer-2em"></div>
         <div class="col-xs-12">
           <div class="actions">
             <% unless current_track == nil %>
              <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>
             <% end %>
-<!--             <%= link_to "Back to tracks", tracks_path, class:"btn btn-lg btn-blue" %> -->
+  <!--             <%= link_to "Back to tracks", tracks_path, class:"btn btn-lg btn-blue" %> -->
           </div>
         </div>
-    </div>
+      </div>
     <% end %>
+
+    <div class="col-xs-8">
+      <% current_track = nil %>
+
+      <% @user.exercises.each do |exercise| %>
+        <% if current_track != exercise.track %>
+          <% if exercise.user_team_sessions(@user, @team).size > 0 %>
+            <h3><%= exercise.track.title %></h3>
+            <%=
+              current_track = exercise.track
+              nb_exercises = @user.exercises.select{|ex| ex.track_id == exercise.track.id}.size
+              nb_total_exercises = exercise.track.exercises.count
+              render "progressbar", percentage: nb_exercises.to_f / nb_total_exercises.to_f * 100
+            %>
+          <% end %>
+        <% end %>
+
+        <% exercise.user_team_sessions(@user, @team).each do |session| %>
+          <ul class="list-unstyled list-inline" id="dashboard-links">
+           <li><%= link_to exercise.title, edit_exercise_session_path(exercise, session) %></li>
+           <li><p id="version"><%= "#{l session.updated_at, format: :long}" %></p></li>
+            <!-- <li><%= link_to '<i class="fa fa-eye"></i>'.html_safe, edit_exercise_session_path(exercise, session), class:"btn btn-sm btn-view-session" %></li> -->
+            <li id="trash"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, exercise_session_path(exercise, session), method: :delete,
+                data: { confirm: "Are you sure?" }, class:"btn btn-sm btn-danger" %></li>
+          </ul>
+        <% end %>
+        
+      <% end %>
+      <div class="spacer-2em"></div>
+      <div class="col-xs-12">
+        <div class="actions">
+          <% unless current_track == nil %>
+           <%= link_to "Back to exercises", track_path(current_track), class:"btn btn-lg btn-blue" %>
+          <% end %>
+<!--             <%= link_to "Back to tracks", tracks_path, class:"btn btn-lg btn-blue" %> -->
+        </div>
+      </div>
+    </div>
   </div>
 </div>
