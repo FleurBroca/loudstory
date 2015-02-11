@@ -13,7 +13,7 @@
               <div class="field form-group", id="exercise-form">
                 <%= label_tag a.object.original_question %>
                 <p><%= a.object.question.description %></p>
-                <%= a.text_area :content, rows: "3", class: "form-control form-text-answer" %>
+                <%= a.text_area :content, autocomplete: "off", rows: "3", class: "form-control form-text-answer" %>
                 <%= render partial: "comments/index", locals: { answer: a.object } %>
               </div>
             <% end %>
