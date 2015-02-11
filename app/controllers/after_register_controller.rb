@@ -7,12 +7,14 @@ class AfterRegisterController < Wicked::WizardController
     case step
     when :add_project
     @team = Team.new
+    render_wizard nil, layout: "without_nav"
     when :add_members
     @team = current_team
+    render_wizard
     when :how_it_works
     tracks_path
-    end
     render_wizard
+    end
   end
 
   def update
@@ -28,6 +30,7 @@ class AfterRegisterController < Wicked::WizardController
     User.invite!({:email => params[:email]}, current_user) do |u|
     u.teams << current_team
     end
+
     render_wizard @user
     end
   end
