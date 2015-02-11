@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
   before_action :load_post
 
   def show
-
+    @nb = params[:id]
   end
 
   def move_up
