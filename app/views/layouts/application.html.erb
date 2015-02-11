@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LoudStory</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <title>LoudStory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <%= favicon_link_tag 'favicon.ico' %>
-
-
-  <%= google_webfonts_link_tag :raleway => [ 300, 400, 700 ] %>
-  <%= google_webfonts_link_tag :oswald => [ 700] %>
-
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-
-<body>
-
-  <%= render partial: "shared/navbar" %>
+    <%= favicon_link_tag 'favicon.ico' %>
 
 
-  <div id="wrapper">
+    <%= google_webfonts_link_tag :raleway => [ 300, 400, 700 ] %>
+    <%= google_webfonts_link_tag :oswald => [ 700] %>
 
-    <%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  </div>
+  <body>
 
-  <%= render partial: "shared/footer" %>
+    <%= render partial: "shared/navbar" %>
 
-</body>
+    <div id="wapper">
+      <%= yield %>
+    </div>
+
+    <div id="footer">
+      <%= render partial: "shared/footer" %>
+    </div>
+
+  </body>
 </html>
