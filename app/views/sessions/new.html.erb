@@ -58,7 +58,7 @@
                              <%= label_tag a.object.original_question %>
                            <% end %>
                            <p><%= a.object.question.description %></p>
-                           <%= a.text_area :content, "",autocomplete: "off", rows: "3", class: "form-control form-text-answer" %>
+                           <%= a.text_area :content, autocomplete: "off", rows: "3", class: "form-control form-text-answer" %>
                          </div>
                        <% end %>
                        <%= f.submit "Save", class: "btn btn-sm btn-danger" %>
