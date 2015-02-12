@@ -8,7 +8,7 @@
           <%= devise_error_messages! %>
 
         <div class="field form-group">
-          <%= f.email_field :email, autofocus: true, placeholder: 'Your email', class: "form-control signin-label" %>
+          <%= f.email_field :email, required: true, autofocus: true, placeholder: 'Your email', class: "form-control signin-label" %>
         </div>
 
         <div class="actions">
