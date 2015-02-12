@@ -168,9 +168,9 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 
 .navbar-wagon .navbar-perso > li > .dropdown-menu{
   border-radius: 6px;
-  height: 197px;
+  height: 167px;
   min-width: 250px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #EBEBEC;
   color: white;
   letter-spacing: 2px;
@@ -178,9 +178,9 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 
 .navbar-wagon .navbar-gen > li > .dropdown-menu{
   border-radius: 6px;
-  height: 197px;
+  height: 167px;
   min-width: 300px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #EBEBEC;
   color: white;
   letter-spacing: 2px;
@@ -206,6 +206,8 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 .navbar-wagon .navbar-gen > li > .dropdown-menu > li > a:hover,
 .navbar-wagon .navbar-perso > li > .dropdown-menu > li > a:hover{
   font-weight: 700;
+  background-color: none;
+
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{

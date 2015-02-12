@@ -51,11 +51,11 @@ en:
   home:
     index:
       title_signed_out: "Find the true magic of your brand."
-      subtitle: "A SIMPLE STORYTELLING PLAN FOR ENTHOUSIASTIC STARTUPS."
-      textsearchbar: "Access a storytelling methodology to create powerful communication tools."
-      title_logged_in: "Story Toolboox"
-      header_logged_in: "Starting with your North Star story will help you magnify all your communication tools."
-
+      subtitle: "GET EDUCATION, TRAINING AND FEEDBACK ON YOUR STARTUP STORY. EASY AS 1 2 3."
+      textsearchbar: "Start with a simple storytelling methodology and get feedback from professionals. Master your story each step of your communications strategy."
+      title_logged_in: "Create Your Stories"
+      header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
+      header_logged_in_name: "- Tony Hsieh -CEO at Zappos"
   devise:
     sessions:
       signed_in: " "
@@ -71,13 +71,14 @@ en:
 
   tracks:
     index:
-      title: "Story Toolbox"
-      header_logged_in: "Start with your North Star story, then magnify any communication tools with it."
+      title: "Create Your Stories"
+      header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
+      header_logged_in_name: "- Tony Hsieh -CEO at Zappos"
     show:
       title_for: "%{title}"
-      warmup: "Unlock your creativity"
-      warmupdescription: "Before exploring your story, it's helpful to first get rid of your negative thoughts (about the way you write or your lack of inspiration). Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. "
-      create: "Start creating"
+      warmup: "UNLOCK YOUR CREATIVITY"
+      warmupdescription: "Before exploring your story, get rid of any negative thoughts about the way you write or your lack of inspiration. Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. As long as you keep writing for 5 minutes. Go! "
+      create: "START CREATING"
 
   dashboards:
     index:

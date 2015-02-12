@@ -35,11 +35,11 @@ $link-hover-decoration: none;
   // margin-right: -15px;
   // margin-top: 15px;
   // padding: 100px;
-  background-image: image-url('fans-blue.jpg');
+  background-image: image-url('fans-blue-cut.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1.6;
-  height: 1000px;
+  height: 650px;
 }
 
 .wrapper-login{
@@ -64,6 +64,7 @@ $link-hover-decoration: none;
 
 .page-header {
    margin: 20px 0 20px;
+   padding-bottom: 29px;
   }
 
 body{

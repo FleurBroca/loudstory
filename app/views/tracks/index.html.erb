@@ -7,6 +7,7 @@
       <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="all-tracks-text">
         <div class="page-header">
           <h4><%= t '.header_logged_in' %></h4>
+          <p class="pull-right"><%= t '.header_logged_in_name' %></p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
           <% @tracks.each do |track| %>
@@ -17,9 +18,9 @@
                 <li><%= link_to "Start", track, class: "btn btn-sm btn-danger" %></li>
                 <li><%= link_to "Learn more", posts_path, class: "btn btn-sm btn-blue" %></li>
               </ul>
-            <h3>Your PR Story</h3>
+            <h3>PR Story</h3>
             <h5>Coming soon...</h5>
-            <h3>Your Landing Page Story</h3>
+            <h3>Landing Page Story</h3>
             <h5>Coming soon...</h5>
           <% end %>
           </div>
