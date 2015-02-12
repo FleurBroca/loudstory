@@ -28,7 +28,7 @@ class AfterRegisterController < Wicked::WizardController
     when :add_members
     @user = current_user
     User.invite!({:email => params[:email]}, current_user) do |u|
-    u.teams << current_team
+      u.teams << current_team
     end
 
     render_wizard @user
