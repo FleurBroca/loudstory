@@ -32,13 +32,14 @@ ga('create', 'UA-54746650-2', 'auto');
 ga('send', 'pageview');
 
 
-
-$(".scroll-link").click(function(e) {
-  var section;
-  e.preventDefault();
-  section = $(this).attr("href");
-  return $("html, body").animate({
-    scrollTop: $(section).offset().top
-  }, 1000);
+$(document).ready(function(){
+  $(".scroll-link").click(function(e) {
+    var section;
+    e.preventDefault();
+    section = $(this).attr("href");
+    return $("html, body").animate({
+      scrollTop: $(section).offset().top
+    }, 1000);
+  });
 });
 
