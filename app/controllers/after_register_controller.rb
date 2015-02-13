@@ -10,10 +10,10 @@ class AfterRegisterController < Wicked::WizardController
     render_wizard nil, layout: "without_nav"
     when :add_members
     @team = current_team
-    render_wizard
+    render_wizard nil, layout: "without_nav"
     when :how_it_works
     tracks_path
-    render_wizard
+    render_wizard nil, layout: "without_nav"
     end
   end
 
