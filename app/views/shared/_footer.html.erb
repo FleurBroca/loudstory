@@ -1,37 +1,35 @@
-<% if user_signed_in? %>
-  <div class="container text-center" id="footer-login">
-    <div class="row">
-      <div class="col-xs-12 col-sm-3" >
-        <ul class="list-inline">
-          <li id="about-story">Our Story   <%= fa_icon "bolt" %></li>
-          <li id="about-contact"><%= mail_to('fleur@loudstory.com', :target => "_blank") do %>
-            <i class="fa fa-envelope"></i>  ASK FOR FEEDBACK
-            <% end %></li>
-          </ul>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 text-center">
-        <ul class="list-inline social text-center">
-          <li id="social-baseline">Be inspired</li>
-          <li class="social-icons"><%= link_to "http://www.facebook.com/loudstory", :target => "_blank" do %>
-            <i class="fa fa-facebook-square", alt="Facebook"></i>
+<div class="container text-center" id="footer-login">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3" >
+      <ul class="list-inline">
+        <li id="about-story">Our Story   <%= fa_icon "bolt" %></li>
+        <li id="about-contact"><%= mail_to('fleur@loudstory.com', :target => "_blank") do %>
+          <i class="fa fa-envelope"></i>  ASK FOR FEEDBACK
           <% end %></li>
-          <li class="social-icons"><%= link_to "http://www.twitter.com/loudstory", :target => "_blank" do %>
-            <i class="fa fa-twitter-square", alt="Twitter"></i>
-          <% end %></li>
-          <li class="social-icons"><%= link_to "https://www.youtube.com/user/Loudstory", :target => "_blank" do %>
-            <i class="fa fa-youtube", alt="Youtube"></i>
-          <% end %></li>
-
         </ul>
-      </div>
+    </div>
 
-      <div class="col-xs-12 col-sm-3 pull-right" id="copypright">
-        <p><%= fa_icon "copyright" %>  LoudStory 2015</p>
-      </div>
+    <div class="col-xs-12 col-sm-6 text-center">
+      <ul class="list-inline social text-center">
+        <li id="social-baseline">Be inspired</li>
+        <li class="social-icons"><%= link_to "http://www.facebook.com/loudstory", :target => "_blank" do %>
+          <i class="fa fa-facebook-square", alt="Facebook"></i>
+        <% end %></li>
+        <li class="social-icons"><%= link_to "http://www.twitter.com/loudstory", :target => "_blank" do %>
+          <i class="fa fa-twitter-square", alt="Twitter"></i>
+        <% end %></li>
+        <li class="social-icons"><%= link_to "https://www.youtube.com/user/Loudstory", :target => "_blank" do %>
+          <i class="fa fa-youtube", alt="Youtube"></i>
+        <% end %></li>
+
+      </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-3 pull-right" id="copypright">
+      <p><%= fa_icon "copyright" %>  LoudStory 2015</p>
     </div>
   </div>
-<% end %>
+</div>
 
 
 

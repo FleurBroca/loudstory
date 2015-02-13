@@ -15,7 +15,7 @@
               <%= devise_error_messages! %>
               <div class="field form-group">
                 <% resource.class.invite_key_fields.each do |field| -%>
-                  <%= f.text_field :email, autofocus: true, placeholder: 'Email', class: "signin-label", class: "form-control" %>
+                  <%= f.text_field :email, required: true, autofocus: true, placeholder: 'Email', class: "signin-label", class: "form-control" %>
                 <% end -%>
              </div>
               <div class="form-group">

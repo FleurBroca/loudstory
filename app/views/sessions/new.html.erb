@@ -2,6 +2,8 @@
   <div class="container single-page">
     <div class="row text-center">
         <h3 id="track-title"><%= @track.title %></h3>
+        <p class="note">Feel free to redo any exercise to test other options of your story. You can access all versions in your Storyboard.<br>
+        The nav tabs help you navigate easily from one exercise to another to read or edit your previous answers.</p>
     </div>
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
@@ -56,7 +58,11 @@
                              <%= label_tag a.object.original_question %>
                            <% end %>
                            <p><%= a.object.question.description %></p>
+<<<<<<< HEAD
                            <%= a.text_area :content,autocomplete: "off", rows: "3", class: "form-control form-text-answer" %>
+=======
+                           <%= a.text_area :content, autocomplete: "off", rows: "3", class: "form-control form-text-answer" %>
+>>>>>>> 253558823270871a1002865a07b7c75fda3a7c7d
                          </div>
                        <% end %>
                        <%= f.submit "Save", class: "btn btn-sm btn-danger" %>
