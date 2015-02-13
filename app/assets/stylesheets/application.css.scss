@@ -22,43 +22,29 @@ $link-hover-decoration: none;
 
 // @import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
 
-
-#wrapper{
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  // position:relative;
+html{
+  height: 100% !important;
 }
 
 .wrapper-logout{
-  // margin-left: -15px;
-  // margin-right: -15px;
-  // margin-top: 15px;
-  // padding: 100px;
   background-image: image-url('fans-blue-cut.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   opacity: 1.6;
-  height: 670px;
-}
-
-.wrapper-login{
-  height: 100%;
-  min-height: 500px;
-  // margin-top: 83px;
+  min-height: 100%;
+  position: relative !important;
 }
 
 .double-page{
   width: 100%;
-  min-height: 30em;
-  height: 100%;
+  min-height: 100%;
   margin-top: 84px;
 }
 
 .single-page{
   width: 100%;
-  min-height: 30em;
-  height: 100%;
+  min-height: 100%;
   margin-top: 84px;
 }
 
@@ -74,8 +60,15 @@ body{
   margin: 0 auto;
   font-size: 16px;
   padding: 0;
-  height: 100%;
-  // padding-top: 80px;
+  min-height: 100%;
+  position: relative !important;
+  padding-bottom: 112px;
+}
+
+#footer{
+  bottom: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
 }
 
 h1 {
