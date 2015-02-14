@@ -45,6 +45,9 @@ Rails.application.routes.draw do
       end
     end
 
+    match '/pricing', :to => 'home#pricing', :via => [:get]
+
+
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

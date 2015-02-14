@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @tracks = Track.all
     @post = Post.last
   end
+
+  def pricing
+  end
+
 end

@@ -6,13 +6,9 @@
   margin-top: 220px;
 }
 
-.fit-fixed{
-  display: block;
-}
-
 .text-title{
   margin-bottom: 111px;
-  margin-top: -3px;
+  margin-top: -22px;
 }
 
 .text-title h1{
@@ -41,8 +37,112 @@
   line-height: 24px;
 }
 
-#home-track-banner{
-  background-image: image-url('homebanner.png');
+.suit-quote{
+  margin-top: 55px;
+  margin-bottom: 55px;
+  border-bottom: 1px solid #eeeee;
+}
+
+.suit-quote h2 {
+  font-size: 17px;
+  font-style: italic;
+  color: #0F0F5B;
+  line-height: 24px;
+}
+
+.suit-quote p {
+  font-size: 16px;
+  color: #0F0F5B;
+}
+
+.quote-img{
+  border-radius: 50%;
+  width: 55px;
+}
+
+.suit-mission {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 36px;
+}
+
+.suit-mission h2 {
+  font-family: 'Oswald';
+  font-size: 33px;
+  font-weight: 700;
+  color: #0F0F5B;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+
+.line-title h3 {
+  border-bottom: 1px solid #4e4e4e;
+  width: 100%;
+  font-family: 'Oswald';
+  font-size: 33px;
+  font-weight: 700;
+  color: #0F0F5B;
+  letter-spacing: 3px;
+  margin-bottom: 55px;
+}
+
+.suit-mission p{
+  font-size: 17px;
+  color: #0F0F5B;
+  line-height: 24px;
+}
+
+.suit-features{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.suit-features h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0F0F5B;
+}
+
+.suit-testimonials h2 {
+  font-size: 23px;
+  font-weight: bold;
+  color: #0F0F5B;
+  margin-top: 0px;
+}
+
+.suit-features p,
+.suit-testimonials p{
+  font-size: 15px;
+  line-height: 22px;
+  color: #666666;
+}
+
+.features-img {
+  width: 75px;
+  text-align: center;
+}
+
+.features-img-small{
+  width: 50px;
+}
+
+.testimonials-img {
+  width: 100%;
+}
+
+.suit-contact p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+}
+
+.suit-pricing {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#pricing-banner {
+  background-image: image-url('pricing-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 1000px;
@@ -50,59 +150,89 @@
   display: table;
 }
 
-#home-track-banner h1{
+#pricing-banner h1{
   font-family: 'Oswald';
   color: red;
   font-size: 100px;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.5);
   letter-spacing: 7px;
-  padding-top: 60px;
+  padding-top: 200px;
   text-align: center;
 }
 
-#home-track-text{
-  height: 1000px;
-  position: relative;
-  display: table;
-  margin-top: 20px;
-  padding-left: 50px;
-}
-
-#home-track-text h2 > a{
-  font-family: 'Oswald';
-  font-size: 36px;
-  color: #0F0F5B;
-}
-
-#home-track-text h2 > a:hover, a:focus{
-  color: #FF0000;
-  text-decoration: none;
-}
-
-#home-track-text p{
-  font-size: 17px;
-  letter-spacing: 2px;
-  line-height: 22px;
+#pricing-text h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 47px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-top: 20px;
+  margin-bottom: 12px;
 }
 
-#home_cta{
-  width: 50%;
-  position: relative;
-  padding-top: 300px;
-}
-
-#home_track h1{
-  color: #FF0000;
-}
-
-#home_track h2{
+#pricing-text h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
   color: #0F0F5B;
-  text-decoration: none;
+  line-height: 23px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-#home_track p{
-  line-height: 30px;
-  padding-top: 25px;
+#pricing-text h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  color: #666666;
+  line-height: 23px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#pricing-text h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666666;
+  line-height: 23px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#pricing-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F0F5B;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#pricing-tracks-title h1 {
+  color: red;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+#pricing-tracks-list h2{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0F0F5B;
+  line-height: 23px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#pricing-tracks-list p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  padding-right: 20px;
+  padding-left: 20px;
+  line-height: 18px;
 }
 

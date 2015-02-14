@@ -121,8 +121,8 @@ $btn-primary-border: none;
   font-size: 20px;
 }
 
-.btn-blue{
-  // background-color: $btn-primary-color;
+.btn-blue,
+.btn-blue-big{
   color: #0F0F5B;
   font-family: 'Oswald';
   font-size: 15px;
@@ -136,15 +136,20 @@ $btn-primary-border: none;
   background-color: transparent;
 }
 
-.btn-blue.btn:hover, .btn-blue.btn:focus{
+.btn-blue-big{
+  font-size: 22px;
+  padding: 10px 23px 10px 23px;
+}
+
+.btn-blue.btn:hover, .btn-blue.btn:focus,
+.btn-blue-big.btn:hover, .btn-blue-big.btn:focus{
   border-color: #0F0F6D;
   border-bottom-color: #0F0F76;
   background-color: #0F0F5B;
   color: white;
 }
 
-.btn-blue-small{
-  // background-color: $btn-primary-color;
+.btn-blue-small {
   color: #0F0F5B;
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
@@ -157,12 +162,18 @@ $btn-primary-border: none;
   background-color: transparent;
 }
 
+.btn-blue-big{
+
+}
+
 .btn-blue-small.btn:hover, .btn-blue-small.btn:focus{
   border-color: #0F0F6D;
   border-bottom-color: #0F0F76;
   background-color: #0F0F5B;
   color: white;
 }
+
+
 
 .btn-white{
   background-color: white;
