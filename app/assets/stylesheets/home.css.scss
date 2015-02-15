@@ -75,6 +75,11 @@
   margin-bottom: 35px;
 }
 
+.wagon{
+  background-color: #F0F1F5;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .line-title h3 {
   border-bottom: 1px solid #4e4e4e;
   width: 100%;
@@ -84,6 +89,14 @@
   color: #0F0F5B;
   letter-spacing: 3px;
   margin-bottom: 55px;
+  height: 20px;
+  z-index: 2;
+  
+}
+
+.zindex {
+  z-index: 1;
+  background-color: #F0F1F5;
 }
 
 .suit-mission p{
