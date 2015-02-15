@@ -11,25 +11,63 @@
         <h5><%= t '.warmupdescription' %></h5>
         <p class="color-red"><%= t '.create' %></p>
         <% @exercises.each do |exercise| %>
-        <div class="row">
+          <% if current_user.stripe_customer_id.blank? %>
+            <% if exercise.position < 3 %>
+              <div class="row">
 
-           <div class="col-md-6">
-               <p><%= exercise.title %></p>
-           </div>
+                <div class="col-md-6">
+                  <p><%= exercise.title %></p>
+                </div>
 
-             <div class="col-md-6" id="button-tracks-show">
-              <ul class="list-unstyled list-inline">
-                 <% if @user.exercises.count > 0 %>
-                     <% session = exercise.team_sessions(current_team).last %>
+                <div class="col-md-6" id="button-tracks-show">
+                  <ul class="list-unstyled list-inline">
+                    <% if @user.exercises.count > 0 %>
+                      <% session = exercise.team_sessions(current_team).last %>
+                      <% if session %>
+                        <li><%= link_to "Review", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %></li>
+                      <% end %>
+                    <% end %>
+                    <li><%= link_to "Create", new_exercise_session_path(exercise), class:"btn btn-white btn-lg" %></li>
+                  </ul>
+                </div>
+              </div>
+            <% else %>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <p><%= exercise.title %></p>
+                </div>
+
+                <div class="col-md-6" id="button-tracks-show">
+                  <ul class="list-unstyled list-inline">
+                    <li><%= link_to "Create", pricing_path, class:"btn btn-white btn-lg" %><li>
+                    <li><span class="fa fa-lock"></span><li>
+                  </ul>
+                </div>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="row">
+
+              <div class="col-md-6">
+                <p><%= exercise.title %></p>
+              </div>
+
+              <div class="col-md-6" id="button-tracks-show">
+                <ul class="list-unstyled list-inline">
+                  <% if @user.exercises.count > 0 %>
+                    <% session = exercise.team_sessions(current_team).last %>
                     <% if session %>
                       <li><%= link_to "Review", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %></li>
                     <% end %>
-                 <% end %>
-                    <li><%= link_to "Create", new_exercise_session_path(exercise), class:"btn btn-white btn-lg" %></li>
-              </ul>
+                  <% end %>
+                  <li><%= link_to "Create", new_exercise_session_path(exercise), class:"btn btn-white btn-lg" %></li>
+                </ul>
+              </div>
             </div>
-        </div>
-<% end %>
+          <% end %>
+          
+        <% end %>
 
         <div class="spacer-1em"></div>
         <div class="actions">

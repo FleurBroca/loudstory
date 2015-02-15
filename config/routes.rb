@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     end
 
     match '/pricing', :to => 'home#pricing', :via => [:get]
-
+    match '/charge', :to => 'home#charge', :via => [:patch]
 
   end
   # The priority is based upon order of creation: first created -> highest priority.

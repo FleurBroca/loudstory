@@ -24,7 +24,7 @@ class AfterRegisterController < Wicked::WizardController
     if !@team.save
       flash[:alert] = "This name is not available. Try a new one."
     end
-    render_wizard @team
+    render_wizard @team, layout: "without_nav"
     when :add_members
     @user = current_user
     User.invite!({:email => params[:email]}, current_user) do |u|

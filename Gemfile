@@ -61,4 +61,5 @@ gem 'google-webfonts'
 
 gem 'acts_as_list'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 

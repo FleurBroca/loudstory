@@ -100,6 +100,11 @@
               nb_total_exercises = exercise.track.exercises.count
               render "progressbar", percentage: nb_exercises.to_f / nb_total_exercises.to_f * 100
             %>
+          <% else %>
+            </br>
+            </br>
+            </br>
+            </br>
           <% end %>
         <% end %>
 

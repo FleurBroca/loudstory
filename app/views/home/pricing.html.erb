@@ -19,8 +19,21 @@
           <h3><%= t '.garantee_title' %></h3>
           <h5><%= t '.garantee_text' %></h5>
         </div>
-        <div class="col-md-6 col-md-offset-3">
-          <p>Btn Start Free Trial</p>
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <% if user_signed_in? %>
+            <%= form_tag('/charge', method: :patch) do %>
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_W3z4DqlNCH1uX4s8uPJe8uQq"
+                data-image="/square-image.png"
+                data-name="Demo Site"
+                data-description="2 widgets ($20.00)"
+                data-amount="2000">
+              </script>
+            <% end %>
+          <% else %>
+            <p>Btn Start Free Trial</p>
+          <% end %>
         </div>
         <div class="col-md-6 col-md-offset-3" id="pricing-tracks-title">
           <h1 class="text-center"><%= t '.text_tracks_title' %></h1>
