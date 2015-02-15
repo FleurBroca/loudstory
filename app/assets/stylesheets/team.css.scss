@@ -39,6 +39,13 @@ $color: #0F0F5B;
   line-height: 22px;
 }
 
+
+#onboarding-page {
+  width: 100%;
+  min-height: 100%;
+  margin-top: 0px;
+}
+
 #header-onboarding{
   padding-bottom: 9px;
   margin-left: 11px;
@@ -50,6 +57,7 @@ $color: #0F0F5B;
 
 #header-onboarding h3{
   font-size: 23px;
+  font-family: 'Oswald';
 }
 
 #header-onboarding h4{
@@ -66,6 +74,7 @@ $color: #0F0F5B;
   line-height: 20px;
   color: #404040;
   font-weight: 400;
+  margin-bottom: 7px;
 }
 
 .btn-signup-team{
@@ -117,7 +126,7 @@ ol.progtrckr li.progtrckr-done {
     border-bottom: 4px solid #0F0F5B;
 }
 ol.progtrckr li.progtrckr-todo {
-    color: silver; 
+    color: silver;
     border-bottom: 4px solid silver;
 }
 
