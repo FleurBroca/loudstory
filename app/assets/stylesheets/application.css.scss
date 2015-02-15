@@ -27,7 +27,7 @@ html{
 }
 
 .wrapper-logout{
-  background-image: image-url('fans-blue-cut.jpg');
+  background-image: image-url('fansblue-cut-1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -121,6 +121,12 @@ a {
 .tiny-text{
   font-size: 14px;
   color: #404040;
+}
+
+.very-tiny-text{
+  font-size: 13px;
+  color: #404040;
+  line-height: 16px;
 }
 
 .notice {
