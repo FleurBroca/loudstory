@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6 col-md-offset-1 col-md-10" id="homebanner">
-          <div class="row" id="underbanner">
+          <div class="row">
             <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-10">
               <%= flash_messages %>
               <%= render "devise/registrations/new" %>
@@ -60,17 +60,18 @@
       </div>
     </div>
   </div>
+</div>
+<div class="container wagon">
   <div class="row" id="suit">
     <div class="col-xs-8 col-xs-offset-2 suit-quote">
-      <h2><%= t '.quote1' %></h2>
+      <h2><%= t '.quote2' %></h2>
       <ul class="list-inline pull-right">
-        <li><%= image_tag "elisa-schreiber.jpg", class: "quote-img" %></li>
-        <li><p><%= t '.quote1_name' %></p></li>
+        <li><%= image_tag "ben-horowitz.jpg", class: "quote-img" %></li>
+        <li><p><%= t '.quote2_name' %></p></li>
       </ul>
     </div>
   </div>
 </div>
-
 <div class="container wagon">
   <div class="row suit-testimonials">
     <div class="col-md-12 line-title text-center">
@@ -130,15 +131,29 @@
     </div>
   </div>
 </div>
-
-<div class="container wagon">
+<div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2 suit-quote">
-      <h2><%= t '.quote2' %></h2>
+      <h2><%= t '.quote1' %></h2>
       <ul class="list-inline pull-right">
-        <li><%= image_tag "ben-horowitz.jpg", class: "quote-img" %></li>
-        <li><p><%= t '.quote2_name' %></p></li>
+        <li><%= image_tag "elisa-schreiber.jpg", class: "quote-img" %></li>
+        <li><p><%= t '.quote1_name' %></p></li>
       </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center" id="suit-signin-form">
+  <div class="row">
+    <div class="col-xs-12 ">
+      <h1><%= t '.valueprop1'%></h1>
+      <h1><%= t '.valueprop2'%></h1>
+    </div>
+    <div class="col-xs-12 text-center">
+      <%= flash_messages %>
+      <%= render "devise/registrations/new" %>
+      <br>
+      <p class="transbox"><%= t '.textsearchbar'%></p>
     </div>
   </div>
 </div>

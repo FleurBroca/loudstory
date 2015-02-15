@@ -51,8 +51,8 @@ en:
   home:
     index:
       title_signed_out: "Tell it louder."
-      subtitle: "SET YOUR STARTUP STORY ON THE RIGHT TRACK WITH A STORYTELLING MENTOR."
-      textsearchbar: "Not just general advice. Actual execution of your story. That's consulting work reinvented."
+      subtitle: "GET YOUR STARTUP STORY ON THE RIGHT TRACK WITH A SIMPLE METHOD AND A GOOD MENTOR."
+      textsearchbar: "Test the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
       header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
       header_logged_in_name: "- Tony Hsieh --CEO at Zappos"
@@ -78,9 +78,10 @@ en:
       share_content: "Our toolbox is full of handy templates to help you implement your story at every step of your communications strategy - from a landing page to a press kit or a pitch contest."
       mission_statement_title: "The mission"
       mission_statement_content: "I started LoudStory in September 2014, hoping to build a bridge between striving entrepreneurs and storytelling makers. Originally, I had experienced with some friends, also willing to launch a startup, how the impulse of the entrepreneur often comes from looking at things differently and sensing there is a better way to do it. We nourish our ambitions with lofty dreams for weeks or months, but when comes the time for launching, the fantasy can become an obstacle to an efficient communication. There is a time when the vision needs to be articulated in a clear, concise and inspiring way. Being convinced is one thing; convincing the world is another. This is the source of my own dream and venture: to act as a catalyst for aspiring startups and support their determination to write a loud story."
+      valueprop1: "We want to reinvent the agency work for startups."
+      valueprop2: "We're not doing it for you. We're doing it with you."
       contact: "If you have any question, we are always here to help. Reach out to fleur[at]loudstory.com or use the chat window on the bottom right of your screen."
     pricing:
-      title: "A simple plan"
       text_pricing_title: "299€"
       text_pricing_subtitle: "Per tool. All included."
       text_free_trial: "Free 2-exercise trial. No credit card required. "
@@ -98,6 +99,11 @@ en:
       text_tracks_description2: "This tool will help you identify the visual and content elements to reach your communication goal, every time someone lands on your page."
       text_tracks_content3: "Press Kit Story"
       text_tracks_description3: "This tool helps you write all the basic material your startup needs to reach out to journalists properly: a fact sheet, a boiler plate and a crispy way to send your first launching press release."
+      team_pricing_title: "Team advantages"
+      team_pricing_subtitle1: "Teams get lower prices because, obviously, the feedback will be on one story."
+      team_pricing_subtitle2: "Although misalignment in a team can considerably increase the job of a mentor."
+      team_pricing_content1: "30% off for the second team member."
+      team_pricing_content2: "50% from the third member to the infinit, and beyond."
 
   devise:
     sessions:
