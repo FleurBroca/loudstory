@@ -29,7 +29,9 @@
               </script>
             <% end %>
           <% else %>
-            <p>Btn Start Free Trial</p>
+           <div class="form-group">
+            <%= link_to "Start Free Trial", root_path, class:"btn btn-sm btn-danger" %>
+           </div>
           <% end %>
         </div>
       </div>
