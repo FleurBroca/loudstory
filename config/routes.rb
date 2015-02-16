@@ -23,7 +23,14 @@ Rails.application.routes.draw do
         end
       end
     end
-    resources :tracks
+    resources :tracks do
+      collection do
+        get :votes
+        patch :count1
+        patch :count2
+        patch :count3
+      end
+    end
 
     resources :exercises do
       resources :sessions do

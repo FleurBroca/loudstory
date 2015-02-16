@@ -1,0 +1,39 @@
+<div class="container center-block" id="onboarding-page">
+  <div class="row single-page">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="page-header" id="header-onboarding">
+        <h1>Welcome</h1>
+        <h3>Name your first project</h3>
+        <h5><b>On LoudStory you can create stories for multiple startups, projects or ideas.</b></h5>
+        <h5>Enter the official name of your company or a code name.</h5>
+        <h5>Make sure you feel comfortable with it and your teammates do too, because you'll be stuck with it until you decide to move on to a new project.</h5>
+      </div>
+      <%= flash_messages %>
+
+
+      <a class="pointer">
+        <ul class="list-inline">
+          <li><p id="landing"> Landing</p></li>
+          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
+          <li id="landing_count"> </li>
+        </ul>
+      </a>
+      </br>
+      <a class="pointer" id="press">
+        <ul class="list-inline">
+          <li><p> Press</p></li>
+          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
+          <li></li>
+        </ul>
+      </a>
+      </br>
+      <a class="pointer" id="pitch">
+        <ul class="list-inline">
+          <li><p> Pitch</p></li>
+          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
+          <li></li>
+        </ul>
+      </a>
+
+  </div>
+</div>

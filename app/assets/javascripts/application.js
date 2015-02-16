@@ -41,5 +41,51 @@ $(document).ready(function(){
       scrollTop: $(section).offset().top
     }, 1000);
   });
+
+  $("#landing").change(function() {
+    $.ajax({
+      url: 'count1',
+      data: {
+          value: $(this).val()
+      },
+      type: "GET",
+      success: function(data) {
+        var a = parseInt(data);
+
+        $('#landing_count').html('<p>'+a+'</p>');
+      }
+    });
+  });
+
+  $("#press").change(function() {
+    $.ajax({
+      url: 'count2',
+      data: {
+          value: $(this).val()
+      },
+      type: "GET",
+      success: function(data) {
+        var a = parseInt(data);
+
+        $('#press_count').html('<p>'+a+'</p>');
+      }
+    });
+  });
+
+  $("#pitch").change(function() {
+    $.ajax({
+      url: 'count3',
+      data: {
+          value: $(this).val()
+      },
+      type: "GET",
+      success: function(data) {
+        var a = parseInt(data);
+
+        $('#pitch_count').html('<p>'+a+'</p>');
+      }
+    });
+  });
 });
+
 

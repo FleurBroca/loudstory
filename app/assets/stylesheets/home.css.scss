@@ -34,27 +34,34 @@
   vertical-align: middle;
   text-align: center;
   margin-top: -13px;
-  line-height: 24px;
 }
 
 .fa-chevron-down{
   font-size: 37px;
 }
 
-.suit-quote{
-  margin-top: 55px;
-  margin-bottom: 75px;
+.suit-quote-1{
+  margin-top: 40px;
+  margin-bottom: 40px;
   border-bottom: 1px solid #eeeee;
 }
 
-.suit-quote h2 {
+.suit-quote-2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeee;
+}
+
+.suit-quote-1 h2,
+.suit-quote-2 h2{
   font-size: 17px;
   font-style: italic;
   color: #0F0F5B;
   line-height: 24px;
 }
 
-.suit-quote p {
+.suit-quote-1 p,
+.suit-quote-2 p {
   font-size: 16px;
   color: #0F0F5B;
 }
@@ -113,7 +120,7 @@
 
 .suit-features{
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .suit-features h2 {
@@ -123,7 +130,7 @@
 }
 
 .suit-testimonials {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .suit-testimonials h2 {
@@ -166,7 +173,7 @@
 
 #suit-signin-form {
   margin-top: 50px;
-  margin-bottom: 75px;
+  margin-bottom: 30px;
 }
 
 #suit-signin-form h1 {
