@@ -11,8 +11,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
           <% @tracks.each do |track| %>
-<!--             <% if track.position == 1 %>
- -->              <h3><%= link_to track.title, track %></h3>
+
+              <h3><%= link_to track.title, track %></h3>
               <h5><%= track.description %></h5>
               <div class="spacer-30 padding-left-20">
                 <ul class="list-unstyled list-inline">
@@ -20,16 +20,6 @@
                   <li><%= link_to "Learn more", posts_path, class: "btn btn-sm btn-blue" %></li>
                 </ul>
               </div>
-          <!--   <% else %>
-              <h3><%= link_to track.title, track %></h3>
-              <h5><%= track.description %></h5>
-              <div class="spacer-30 padding-left-20">
-                <ul class="list-unstyled list-inline">
-                  <li><%= link_to "Start", votes_path, class: "btn btn-sm btn-danger" %></li>
-                  <li><%= link_to "Learn more", votes_path, class: "btn btn-sm btn-blue" %></li>
-                </ul>
-              </div>
-            <% end %> -->
 <!--             <h3>The Press kit</h3>
             <h5>This tool helps you write all the basic material your startup needs to reach out to journalists properly: a fact sheet, a boiler plate and a crispy way to send your first launching press release.</h5>
             <h3>The Landing Page</h3>

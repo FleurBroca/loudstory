@@ -19,6 +19,9 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-perso navbar-right">
+      <li>
+        <%= link_to "Upgrade", pricing_path, class:"upgrade" %>
+      </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><% if user_signed_in? %><%= image_tag current_user.picture(:nav), id:'profile-pic' %><% end %>
           <% if current_team.present? %>
