@@ -42,7 +42,7 @@ $(document).ready(function(){
     }, 1000);
   });
 
-  $("#landing").change(function() {
+  $("#landing").click(function() {
     $.ajax({
       url: 'count1',
       data: {
@@ -51,13 +51,13 @@ $(document).ready(function(){
       type: "GET",
       success: function(data) {
         var a = parseInt(data);
-
+        $('#display1').css('display', 'none');
         $('#landing_count').html('<p>'+a+'</p>');
       }
     });
   });
 
-  $("#press").change(function() {
+  $("#press").click(function() {
     $.ajax({
       url: 'count2',
       data: {
@@ -66,13 +66,13 @@ $(document).ready(function(){
       type: "GET",
       success: function(data) {
         var a = parseInt(data);
-
+        $('#display2').css('display', 'none');
         $('#press_count').html('<p>'+a+'</p>');
       }
     });
   });
 
-  $("#pitch").change(function() {
+  $("#pitch").click(function() {
     $.ajax({
       url: 'count3',
       data: {
@@ -81,7 +81,7 @@ $(document).ready(function(){
       type: "GET",
       success: function(data) {
         var a = parseInt(data);
-
+        $('#display3').css('display', 'none');
         $('#pitch_count').html('<p>'+a+'</p>');
       }
     });

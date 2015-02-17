@@ -26,9 +26,9 @@ Rails.application.routes.draw do
     resources :tracks do
       collection do
         get :votes
-        patch :count1
-        patch :count2
-        patch :count3
+        get :count1
+        get :count2
+        get :count3
       end
     end
 

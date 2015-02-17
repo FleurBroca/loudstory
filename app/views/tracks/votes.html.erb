@@ -11,10 +11,11 @@
       <%= flash_messages %>
 
 
-      <a class="pointer">
+      <a class="pointer" id="landing">
         <ul class="list-inline">
-          <li><p id="landing"> Landing</p></li>
+          <li><p> Landing</p></li>
           <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
+          <li id="display1"> <%= @vote.count_landing %></li>
           <li id="landing_count"> </li>
         </ul>
       </a>
@@ -23,7 +24,8 @@
         <ul class="list-inline">
           <li><p> Press</p></li>
           <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
-          <li></li>
+          <li id="display2"> <%= @vote.count_press %></li>
+          <li id="press_count"> </li>
         </ul>
       </a>
       </br>
@@ -31,7 +33,8 @@
         <ul class="list-inline">
           <li><p> Pitch</p></li>
           <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
-          <li></li>
+          <li id="display3"> <%= @vote.count_pitch %></li>
+          <li id="pitch_count"> </li>
         </ul>
       </a>
 
