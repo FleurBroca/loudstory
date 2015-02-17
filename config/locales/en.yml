@@ -50,9 +50,9 @@ en:
 
   home:
     index:
-      title_signed_out: "Shout it louder."
-      subtitle: "GET YOUR STARTUP STORY ON THE RIGHT TRACK WITH A SIMPLE METHOD AND A GOOD MENTOR."
-      textsearchbar: "Test the first 2 exercises of our methodology for free. No credit card required."
+      title_signed_out: "Your startup storytelling"
+      subtitle: "WITH A SIMPLE METHOD AND A GOOD MENTOR."
+      textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
       header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
       header_logged_in_name: "- Tony Hsieh --CEO at Zappos"
@@ -60,20 +60,20 @@ en:
       quote1_name: "- Elisa Schreiber --Marketing Partner at Greylock Partners"
       quote2: "'When a company clearly articulates its story, the context for everyone—employees, partners, customers, investors, and the press—becomes clear.'"
       quote2_name: "-Ben Horowitz --Partner at Andreessen Horowitz"
-      testimonials_title: "Beloved clients"
-      kazoart_testimonials_title: "State of the art"
-      kazoart_testimonials_content: "For my first pitch contest in front of a prestigious incubator for culture startups, the LoudStory methodology helped me address the psychology of my audience and craft a really unique and powerful pitch. Even if I didn’t win the jury that day, the amount of tweets from the audience showed I had found the right way to talk to my users."
+      testimonials_title: "Clients Stories"
+      # kazoart_testimonials_title: "State of the art"
+      kazoart_testimonials_content: "Mathilde- 'For my first pitch contest in front of a prestigious incubator for culture startups, the LoudStory methodology helped me address the psychology of my audience and craft a really unique and powerful pitch. Even if I didn’t win the jury that day, the amount of tweets from the audience showed I had found the right way to talk to my users.'"
       kazoart_testimonials_definition: "KAZoART is a marketplace where artists sell to real people."
-      backpack_testimonials_title: "Go with your heart"
-      backpack_testimonials_content: "I knew I needed a good story to stand out on my market. But I soon realized storytelling was not about telling stories but about focusing on why and how I was going to execute my plan. Through simple exercises, I was able to clarify the core values of the Backpack Club. Now I feel on the right track!"
+      # backpack_testimonials_title: "Go with your heart"
+      backpack_testimonials_content: "Thomas- 'I knew I needed a good story to stand out on my market. But I soon realized storytelling was not about telling stories but about focusing on why and how I was going to execute my plan. Through simple exercises, I was able to clarify the core values of the Backpack Club. Now I feel on the right track!'"
       backpack_testimonials_definition: "The Backpack Club is an invitation-only network of travelers and hosts aiming to revive the spirit of human hospitality."
       process_title: "Simple steps"
       learn_title: "Learn"
-      learn_content: "Understanding the basics of storytelling is the one sure way to find the strategy that works best for you. Our Academy section is full of videos and content to help you become a storyteller by training."
+      learn_content: "Exclusive videos and slideshows."
       create_title: "Create"
-      create_content: "Our 6-exercise methodology lets you explore the truth of your audience, mission and uniqueness to craft a powerful pitch, a strong brand and an inspirational mission statement."
+      create_content: "Your pitch, brand identity, mission statement, PR kit or landing page."
       ask_a_pro_title: "Ask a mentor"
-      ask_a_pro_content: "Get a 2-hour feedback on your story from one of our professionals, handpicked for their mastery of storytelling, knowledge of the startup world and excellent writing skills (in English and French)."
+      ask_a_pro_content: "2-hour feedback from a vetted pro."
       share_title: "Share your story"
       share_content: "Our toolbox is full of handy templates to help you implement your story at every step of your communications strategy - from a landing page to a press kit or a pitch contest."
       mission_statement_title: "The mission"
@@ -127,9 +127,9 @@ en:
       header_logged_in_name: "- Tony Hsieh -CEO at Zappos"
     show:
       title_for: "%{title}"
-      warmup: "UNLOCK YOUR CREATIVITY"
+      warmup: "1- GET RID OF NEGATIVITY - UNLOCK YOUR CREATIVITY"
       warmupdescription: "Before exploring your story, get rid of any negative thoughts about the way you write or your lack of inspiration. Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. As long as you keep writing for 5 minutes. Go! "
-      create: "START CREATING"
+      create: "2- START CREATING"
 
   dashboards:
     index:
@@ -161,4 +161,5 @@ en:
 
   posts:
     index:
-      title: "Academy"
+      title: "Learn"
+      subtitle: "Become a real storyteller"

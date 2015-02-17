@@ -12,7 +12,7 @@
         <p class="color-red"><%= t '.create' %></p>
         <% @exercises.each do |exercise| %>
           <% if current_user.stripe_customer_id.blank? %>
-            <% if exercise.position < 3 %>
+            <% if exercise.position < 10 %>
               <div class="row">
 
                 <div class="col-md-6">

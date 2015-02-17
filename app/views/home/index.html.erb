@@ -17,8 +17,8 @@
             <h5><%= track.description %></h5>
             <div class="spacer-30 padding-left-20">
               <ul class="list-unstyled list-inline">
-                <li><%= link_to "Start", track, class: "btn btn-sm btn-danger" %></li>
-                <li><%= link_to "Learn more", posts_path, class: "btn btn-sm btn-blue" %></li>
+                <li><%= link_to "Learn", posts_path, class: "btn btn-sm btn-blue" %></li>
+                <li><%= link_to "Create", track, class: "btn btn-sm btn-danger" %></li>
               </ul>
 <!--               <h3>The Press kit</h3>
               <h5>This tool helps you write all the basic material your startup needs to reach out to journalists properly: a fact sheet, a boiler plate and a crispy way to send your first launching press release.</h5>
@@ -74,69 +74,40 @@
   </div>
 </div>
 <div class="container wagon">
-  <div class="row suit-testimonials">
-    <div class="col-md-12 line-title text-center">
-      <h3>
-        <span class="zindex"><%= t '.testimonials_title' %></span>
-      </h3>
-    </div>
-    <div class="col-md-6">
-      <div class="col-md-6">
-        <%= image_tag "kazoart-square.png", class: "testimonials-img" %>
-      </div>
-      <div class="col-md-6">
-        <h2><%= t '.kazoart_testimonials_title' %></h2>
-        <p><%= t '.kazoart_testimonials_content' %></p>
-        <h5 class="very-tiny-text"><%= t '.kazoart_testimonials_definition' %></h5>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-md-6">
-        <%= image_tag "backpack-square.png", class: "testimonials-img" %>
-      </div>
-      <div class="col-md-6">
-        <h2><%= t '.backpack_testimonials_title' %></h2>
-        <p><%= t '.backpack_testimonials_content' %></p>
-        <h5 class="very-tiny-text"><%= t '.backpack_testimonials_definition' %></h5>
-      </div>
-    </div>
-  </div>
-  <div class="text-center">
-    <a class="scroll-link" href="#suit2" style="outline:none;">
-      <i class="fa fa-chevron-down", style="color:red;"></i>
-    </a>
-  </div>
-</div>
-<div class="spacer-1" id="suit2"></div>
-<div class="container wagon">
   <div class="row suit-features" >
     <div class="col-md-12 line-title text-center">
       <h3>
         <span  class="zindex"><%= t '.process_title' %></span>
       </h3>
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-4 col-sm-6 text-center">
       <%= image_tag "learn-backpack.svg", class: "features-img text-center" %>
       <h2><%= t '.learn_title' %></h2>
       <p><%= t '.learn_content' %></p>
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-4 col-sm-6 text-center">
       <%= image_tag "write-notes.svg", class: "features-img" %>
       <h2><%= t '.create_title' %></h2>
       <p><%= t '.create_content' %></p>
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-4 col-sm-6 text-center">
       <%= image_tag "askpro-light.svg", class: "features-img" %>
       <h2><%= t '.ask_a_pro_title' %></h2>
       <p><%= t '.ask_a_pro_content' %></p>
     </div>
-    <div class="col-md-3 col-sm-6">
-      <%= image_tag "spread-world.svg", class: "features-img" %>
-      <h2><%= t '.share_title' %></h2>
-      <p><%= t '.share_content' %></p>
-    </div>
   </div>
 </div>
+
+<div class="text-center suit-pricing">
+  <%= link_to "Pricing", pricing_path, class: "btn btn-blue-big" %>
+</div>
+
+  <div class="text-center">
+    <a class="scroll-link" href="#suit2" style="outline:none;">
+      <i class="fa fa-chevron-down", style="color:red;"></i>
+    </a>
+  </div>
+<div class="spacer-1" id="suit2"></div>
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2 suit-quote-2">
@@ -147,18 +118,13 @@
       </ul>
     </div>
   </div>
-  <div class="text-center">
-    <a class="scroll-link" href="#suit3" style="outline:none;">
-      <i class="fa fa-chevron-down", style="color:red;"></i>
-    </a>
-  </div>
+
 </div>
-<div class="spacer-1" id="suit3"></div>
 <div class="container text-center" id="suit-signin-form">
   <div class="row">
     <div class="col-xs-12 ">
-      <h1><%= t '.valueprop1'%></h1>
-      <h1><%= t '.valueprop2'%></h1>
+<!--       <h1><%= t '.valueprop1'%></h1>
+ -->      <h1><%= t '.valueprop2'%></h1>
     </div>
     <div class="col-xs-12 text-center">
       <%= flash_messages %>
@@ -173,8 +139,7 @@
   </div>
 </div>
 
-</div>
-  <div class="container  wagon">
+<div class="container  wagon">
   <div class="row">
     <div class="col-md-12 line-title text-center">
       <h3>
@@ -186,15 +151,56 @@
     </div>
   </div>
 </div>
+
+<div class="container wagon">
+  <div class="row suit-testimonials">
+    <div class="col-md-12 line-title text-center">
+      <h3>
+        <span class="zindex"><%= t '.testimonials_title' %></span>
+      </h3>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-6">
+        <%= image_tag "kazoart-square.png", class: "testimonials-img" %>
+      </div>
+      <div class="col-md-6">
+<!--         <h2><%= t '.kazoart_testimonials_title' %></h2>
+ -->        <p><%= t '.kazoart_testimonials_content' %></p>
+        <h5 class="very-tiny-text"><%= t '.kazoart_testimonials_definition' %></h5>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-6">
+        <%= image_tag "backpack-square.png", class: "testimonials-img" %>
+      </div>
+      <div class="col-md-6">
+<!--         <h2><%= t '.backpack_testimonials_title' %></h2>
+ -->        <p><%= t '.backpack_testimonials_content' %></p>
+        <h5 class="very-tiny-text"><%= t '.backpack_testimonials_definition' %></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--   <div class="text-center">
+    <a class="scroll-link" href="#suit2" style="outline:none;">
+      <i class="fa fa-chevron-down", style="color:red;"></i>
+    </a>
+  </div> -->
+
+
+<!-- <div class="spacer-1" id="suit3"></div>
+
+
+</div>
+
 <div class="text-center">
   <a class="scroll-link" href="#suit4" style="outline:none;">
   <i class="fa fa-chevron-down", style="color:red;"></i>
   </a>
 </div>
-<div class="spacer-1" id="suit4"></div>
-<div class="text-center suit-pricing">
-  <%= link_to "Price Tag", pricing_path, class: "btn btn-blue-big" %>
-</div>
+<div class="spacer-1" id="suit4"></div> -->
+
 
 <div class="container  wagon">
   <div class="row">
