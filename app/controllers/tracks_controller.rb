@@ -70,9 +70,6 @@ class TracksController < ApplicationController
 
   def votes
     @vote = Vote.find(1)
-    session[:landing] = 0
-    session[:press] = 0
-    session[:pitch] = 0
   end
 
   private

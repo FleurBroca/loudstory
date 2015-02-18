@@ -4,6 +4,9 @@ class AfterRegisterController < Wicked::WizardController
 
   def show
     @user = current_user
+    session[:landing] = 0
+    session[:press] = 0
+    session[:pitch] = 0
     case step
     when :add_project
     @team = Team.new
