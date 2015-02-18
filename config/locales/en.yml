@@ -50,8 +50,8 @@ en:
 
   home:
     index:
-      title_signed_out: "Your startup storytelling"
-      subtitle: "WITH A SIMPLE METHOD AND A GOOD MENTOR."
+      title_signed_out: "MAKE THEM BELIEVERS"
+      subtitle: "A simple method and a good mentor to unleash the emotions of your startup story."
       textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
       header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
@@ -127,9 +127,9 @@ en:
       header_logged_in_name: "- Tony Hsieh -CEO at Zappos"
     show:
       title_for: "%{title}"
-      warmup: "1- GET RID OF NEGATIVITY - UNLOCK YOUR CREATIVITY"
+      warmup: "1- HELLO CREATIVITY"
       warmupdescription: "Before exploring your story, get rid of any negative thoughts about the way you write or your lack of inspiration. Take a blank sheet and a pencil and start writing in robot-mode for 5 minutes without pausing. Don't try to make sense, just let go of your current emotions. You're allowed to say 'I hate this guy' or 'I don't know what to write'. As long as you keep writing for 5 minutes. Go! "
-      create: "2- START CREATING"
+      create: "2- START CREATING YOUR STORY"
 
   dashboards:
     index:
