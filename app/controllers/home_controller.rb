@@ -83,7 +83,7 @@ class HomeController < ApplicationController
 
     @user.save
     if @user.save
-      UserMailer.welcom_member_plan(@order).deliver
+      UserMailer.welcome_member_plan(@user).deliver
       redirect_to root_path, notice:"you just subscribe to the Member plan"
     else
       redirect_to pricing_path, error:"problem!"
@@ -108,7 +108,7 @@ class HomeController < ApplicationController
 
     @user.save
     if @user.save
-      redirect_to root_path, notice:"you just unsubscribe to the Member plan"
+      redirect_to root_path, alert:"you just unsubscribe to the Member plan"
     else
       redirect_to pricing_path, error:"problem!"
     end
