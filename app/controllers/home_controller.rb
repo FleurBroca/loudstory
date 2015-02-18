@@ -88,6 +88,7 @@ class HomeController < ApplicationController
     
     @user.save
     if @user.save
+      UserMailer.welcom_member_plan(@order).deliver
       redirect_to home_path, notice:"you just subscribe to the Member offers"
     else
       redirect_to pricing_path, error:"problem!"
