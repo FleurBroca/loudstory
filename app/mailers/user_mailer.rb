@@ -6,7 +6,21 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(user)
+  def welcome_free_plan(user)
+    @user = user
+
+    mail(to: @user.email, subject: 'Welcome to LoudStory')
+    # This will render a view in `app/views/user_mailer`!  end
+  end
+
+  def welcome_member_plan(user)
+    @user = user
+
+    mail(to: @user.email, subject: 'Welcome to LoudStory')
+    # This will render a view in `app/views/user_mailer`!  end
+  end
+
+  def welcome_pro_plan(user)
     @user = user
 
     mail(to: @user.email, subject: 'Welcome to LoudStory')
