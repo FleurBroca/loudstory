@@ -2,41 +2,47 @@
   <div class="row single-page">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="page-header" id="header-onboarding">
-        <h1>Welcome</h1>
-        <h3>Name your first project</h3>
-        <h5><b>On LoudStory you can create stories for multiple startups, projects or ideas.</b></h5>
-        <h5>Enter the official name of your company or a code name.</h5>
-        <h5>Make sure you feel comfortable with it and your teammates do too, because you'll be stuck with it until you decide to move on to a new project.</h5>
+        <h3 class="red">We need your vote</h3>
+        <br>
+        <h5>We are currently expanding our list of handy templates to share you story. We need your vote to prioritize.</h5>
+        <h5><b>Which of the following tools is the most important or urgent for you?</b></h5>
+        <p>Select one or two -or even the three of them if they equally matter to you.</p>
       </div>
       <%= flash_messages %>
 
-
+      <div class="list-unstyled upvote-text">
       <a class="pointer" id="landing">
         <ul class="list-inline">
-          <li><p> Landing</p></li>
-          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
-          <li id="display1"> <%= @vote.count_landing %></li>
-          <li id="landing_count"> </li>
+          <li><h2>The Landing Page</h2></li>
+          <li><h2><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
+          <li id="display1"><h2><%= @vote.count_landing %></h2></li>
+          <li id="landing_count"><h2 class="red"></h2></li>
+          <li><h2>votes</h2></li>
         </ul>
       </a>
-      </br>
+      </div>
+      <div class="list-unstyled">
       <a class="pointer" id="press">
-        <ul class="list-inline">
-          <li><p> Press</p></li>
+        <ul class="list-inline upvote-text">
+          <li><h2>The Press Kit</h2></li>
           <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
-          <li id="display2"> <%= @vote.count_press %></li>
-          <li id="press_count"> </li>
+          <li id="display2"><h2><%= @vote.count_press %></h2></li>
+          <li id="press_count"><h2></h2></li>
+          <li><h2>votes</h2></li>
         </ul>
       </a>
-      </br>
+      </div>
+      <div class="list-unstyled upvote-text">
       <a class="pointer" id="pitch">
         <ul class="list-inline">
-          <li><p> Pitch</p></li>
-          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></li>
-          <li id="display3"> <%= @vote.count_pitch %></li>
-          <li id="pitch_count"> </li>
+          <li><h2>The Pitch Contest</h2></li>
+          <li><%= image_tag "upvote.svg", class: "upvote-img text-center" %></h2></li>
+          <li id="display3"><h2><%= @vote.count_pitch %></h2></li>
+          <li id="pitch_count"><h2></h2></li>
+          <li><h2>votes</h2></li>
         </ul>
       </a>
+      </div>
 
   </div>
 </div>

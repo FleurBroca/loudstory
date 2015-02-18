@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @tracks = Track.all
+    @tracks = Track.all.order(:position)
     @post = Post.last
   end
 
@@ -12,6 +12,7 @@ class HomeController < ApplicationController
 
   def charge
 
+<<<<<<< HEAD
     @user = current_user
     @user.pro = true
     
@@ -96,6 +97,27 @@ class HomeController < ApplicationController
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to pricing_path
+=======
+    customer = Stripe::Customer.create(
+      :email => current_user.email,
+      :card  => params[:stripeToken]
+    )
+    customer_id = customer.id
+    current_user.update_attributes(stripe_customer_id: customer_id)
+
+    Stripe::Charge.create(
+      :amount => 999,
+      :currency => "eur",
+      :customer => customer_id,
+      :description => "#{current_user.email} à payer"
+    )
+
+    redirect_to home_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to pricing_path
+>>>>>>> 7bd90826592b11062de9da7372863d6b1aeb5291
   end
 
 end
