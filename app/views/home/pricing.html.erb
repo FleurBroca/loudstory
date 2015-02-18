@@ -68,7 +68,7 @@
                 <% end %>
               <% else %>
                 </br>
-                <i class="fa fa-check", style="color:blue; margin-bottom:13px;"></i>
+                <%= link_to "Unsubscribe", unsubscribe_path, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: "Are you sure?" } %>
               <% end %>
             </div>
             </br>
