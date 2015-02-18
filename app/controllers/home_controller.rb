@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @tracks = Track.all
+    @tracks = Track.all.order(:position)
     @post = Post.last
   end
 
@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   def charge
-    
+
     customer = Stripe::Customer.create(
       :email => current_user.email,
       :card  => params[:stripeToken]
