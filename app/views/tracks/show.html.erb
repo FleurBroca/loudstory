@@ -11,8 +11,8 @@
         <h5><%= t '.warmupdescription' %></h5>
         <p class="color-red"><%= t '.create' %></p>
         <% @exercises.each do |exercise| %>
-          <% if current_user.stripe_customer_id.blank? %>
-            <% if exercise.position < 10 %>
+          <% if current_user.stripe_customer_id.blank? && current_user.member.blank? && current_user.pro.blank? %>
+            <% if exercise.position == 3 || exercise.position == 4 || exercise.position == 10 %>
               <div class="row">
 
                 <div class="col-md-6">
@@ -41,7 +41,7 @@
                 <div class="col-md-6" id="button-tracks-show">
                   <ul class="list-unstyled list-inline">
                     <li><%= link_to "Create", pricing_path, class:"btn btn-white btn-lg" %><li>
-                    <li><span class="fa fa-lock"></span><li>
+                    <li><span class="fa fa-lock" data-toggle="tooltip" data-placement="right" title="to unlock, upgrade your account"></span><li>
                   </ul>
                 </div>
               </div>
