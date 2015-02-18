@@ -33,6 +33,11 @@ ga('send', 'pageview');
 
 
 $(document).ready(function(){
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+
   $(".scroll-link").click(function(e) {
     var section;
     e.preventDefault();
