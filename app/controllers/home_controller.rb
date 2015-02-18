@@ -49,7 +49,7 @@ class HomeController < ApplicationController
 
     @user.save
     if @user.save
-      redirect_to home_path, notice:"you just subscribe to the Pro offers"
+      redirect_to root_path, notice:"you just subscribe to the Pro offers"
     else
       redirect_to pricing_path, error:"problem!"
     end
@@ -80,7 +80,7 @@ class HomeController < ApplicationController
     subscriptions = Stripe::Customer.retrieve(customer_id).subscriptions.all
 
     if subscriptions.any?
-      redirect_to home_path, alert:"You have already subscribed to this offer"
+      redirect_to root_path, alert:"You have already subscribed to this offer"
     else
       customer.subscriptions.create(:plan => "member", quantity: 1)
     end
@@ -89,7 +89,7 @@ class HomeController < ApplicationController
     @user.save
     if @user.save
       UserMailer.welcom_member_plan(@order).deliver
-      redirect_to home_path, notice:"you just subscribe to the Member offers"
+      redirect_to root_path, notice:"you just subscribe to the Member offers"
     else
       redirect_to pricing_path, error:"problem!"
     end
