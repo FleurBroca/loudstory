@@ -2,7 +2,7 @@ class TracksController < ApplicationController
   before_action :authenticate_user!, only: [:show]
 
   def index
-    @tracks = Track.all
+    @tracks = Track.all.order(:position)
     @post = Post.last
   end
 
