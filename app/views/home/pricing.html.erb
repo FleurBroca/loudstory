@@ -52,7 +52,7 @@
             <h1 class="text-center"><%= t '.text_pricing_title_member' %></h1>
             <h3 class="text-center"><%= t '.text_pricing_subtitle_member' %></h3>
             <div class="text-center">
-              <% if current_user.member.blank? %>
+              <% if !current_user.member == true %>
                 </br>
                 <%= form_tag('/member', method: :patch) do %>
                   <script
@@ -148,14 +148,13 @@
             </div>
           </div>
           <div class="col-md-4">
-            <% if current_user.member.blank? %>
+            <% if !current_user.member == true %>
               <h2><%= t '.text_pricing_title2_pro' %></h2>
-              <h1 class="text-center"><%= t '.text_pricing_title_pro' %></h1>
+              <h1 class="text-center"><%= t '.text_pricing_title_pro1' %></h1>
               <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
               <div class="text-center">
                 </br>
-                <% if current_user.pro.blank? %>
-                  
+                <% if !current_user.pro == true %>
                   <%= form_tag('/charge', method: :patch) do %>
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -173,13 +172,27 @@
                 <% end %>
               </div>
               </br>
+              <div id="accordion.panel-group">
+                <div class="panel.panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title">
+                      <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse"><%= t '.text1_pro' %></a>
+                    </p>
+                  </div>
+                  <div id="collapseUn" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <% else %>
               <h2><%= t '.text_pricing_title2_pro' %></h2>
-              <h1 class="text-center"><%= t '.text_pricing_title_pro' %></h1>
+              <h1 class="text-center"><%= t '.text_pricing_title_pro2' %></h1>
               <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
               <div class="text-center">
                 </br>
-                <% if current_user.pro.blank? %>
+                <% if !current_user.pro == true %>
                   <%= form_tag('/charge', method: :patch) do %>
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -197,21 +210,21 @@
                 <% end %>
               </div>
               </br>
-            <% end %>
-            <div id="accordion.panel-group">
-              <div class="panel.panel-default">
-                <div class="panel-heading">
-                  <p class="panel-title">
-                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse"><%= t '.text1_pro' %></a>
-                  </p>
-                </div>
-                <div id="collapseUn" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
+              <div id="accordion.panel-group">
+                <div class="panel.panel-default">
+                  <div class="panel-heading">
+                    <p class="panel-title">
+                      <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse"><%= t '.text1_pro' %></a>
+                    </p>
+                  </div>
+                  <div id="collapseUn" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>              
+            <% end %>
           </div>
         <% else %>
           <div class="col-md-4 ">
