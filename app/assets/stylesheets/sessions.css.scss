@@ -215,6 +215,24 @@ $btn-primary-border: none;
   color: white;
 }
 
+.btn-grey-big{
+  background-color: #696969;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-color: #8C8C8C;
+  border-radius: 28px;
+  padding: 6px 9px 6px 10px;
+  letter-spacing: 1px;
+}
+
+.btn-grey.btn:hover, .btn-grey.btn:focus{
+  border-color: #828282;
+  border-bottom-color: #696969;
+  background-color: #828282;
+  color: white;
+}
 .btn-danger{
   background-color: $btn-danger-color;
   color: white;
