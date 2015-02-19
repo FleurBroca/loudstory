@@ -2,6 +2,7 @@
   <div class="container pricing-page">
     <div class="row">
       <div class="col-xs-12 col-sm-12 page-header text-center" id="pricing-text">
+        <%= flash_messages %>
         <% if user_signed_in? %>
           <div class="col-md-4 ">
             <h2><%= t '.text_pricing_title2_free' %></h2>

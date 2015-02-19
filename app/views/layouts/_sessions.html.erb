@@ -7,16 +7,12 @@
           <% alltracks.each do |track| %>
             <% if track.position == 1 %>
               <li><%= link_to track.title, track %></li>
+              <li class="divider"></li>
             <% else %>
               <li><%= link_to track.title, votes_tracks_path %></li>
+              <li class="divider"></li>
             <% end %>
           <% end %>
-   <!--        <li class="divider"></li>
-          <li><a>The Landing Page</a></li>
-          <li class="divider"></li>
-          <li><a>The Press Kit</a></li>
-          <li class="divider"></li>
-          <li><a>The Pitch contest</a></li> -->
         </ul>
       </li>
 

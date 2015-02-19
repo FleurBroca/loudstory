@@ -40,6 +40,12 @@
 
                 <div class="col-md-6" id="button-tracks-show">
                   <ul class="list-unstyled list-inline">
+                    <% if @user.exercises.count > 0 %>
+                      <% session = exercise.team_sessions(current_team).last %>
+                      <% if session %>
+                        <li><%= link_to "Update", edit_exercise_session_path(exercise, session), class:"btn btn-grey btn-sm" %></li>
+                      <% end %>
+                    <% end %>
                     <li><%= link_to "Create", pricing_path, class:"btn btn-white btn-lg" %><li>
                     <li><span class="fa fa-lock" data-toggle="tooltip" data-placement="right" title="to unlock, upgrade your account"></span><li>
                   </ul>
