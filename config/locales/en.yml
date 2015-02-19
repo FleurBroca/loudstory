@@ -1,52 +1,4 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-
-  date:
-    abbr_month_names:
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Oct
-    - Nov
-    - Dec
-    formats:
-      long: "%Y-%m-%d"
-
-  time:
-    formats:
-      long: "%h %d, %y"
-
-   # pundit:
-   #   default: 'You cannot perform this action.'
-   #   post_policy:
-   #     update?: 'You cannot edit this post!'
-   #     create?: 'You cannot create posts!'
 
   home:
     index:
@@ -82,6 +34,7 @@ en:
       valueprop2: "Start building a loud story."
       contact: "If you have any question, we are always here to help. Reach out to fleur[at]loudstory.com or use the chat window on the bottom right of your screen."
     pricing:
+      text_pricing_headline: "PRICING PLAN"
       text_pricing_title2_free: "BEGINNER"
       text_pricing_title2_member: "MEMBER"
       text_pricing_title2_pro: "PRO"
@@ -91,7 +44,7 @@ en:
       text_pricing_title_pro2: "179€"
       text_pricing_subtitle_free: "No credit card required"
       text_pricing_subtitle_member: "Cancel at any time"
-      text_pricing_subtitle_pro: "Foreach consultation"
+      text_pricing_subtitle_pro: "For each consultation"
       text1_free: "Access introductory lesson on storytelling"
       text2_free: "Explore your mission : 3 exercises"
       text3_free: "Create your manifesto : 1 template"
@@ -181,3 +134,31 @@ en:
     index:
       title: "Learn"
       subtitle: "Become a real storyteller"
+
+
+  date:
+    abbr_month_names:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    formats:
+      long: "%Y-%m-%d"
+
+  time:
+    formats:
+      long: "%h %d, %y"
+
+   # pundit:
+   #   default: 'You cannot perform this action.'
+   #   post_policy:
+   #     update?: 'You cannot edit this post!'
+   #     create?: 'You cannot create posts!'

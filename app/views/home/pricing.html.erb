@@ -1,7 +1,7 @@
 <div class="wrapper-login">
   <div class="container pricing-page">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-8 page-header" id="pricing-text">
+      <div class="col-xs-12 col-sm-12 page-header text-center" id="pricing-text">
         <% if user_signed_in? %>
           <div class="col-md-4 ">
             <h2><%= t '.text_pricing_title2_free' %></h2>
@@ -251,6 +251,9 @@
             <% end %>
           </div>
         <% else %>
+          <div class="text-center">
+            <h1><%= t '.text_pricing_headline' %></h1>
+          </div>
           <div class="col-md-4 ">
             <h2><%= t '.text_pricing_title2_free' %></h2>
             <h1 class="text-center"><%= t '.text_pricing_title_free' %></h1>
@@ -412,10 +415,12 @@
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
         <% end %>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-4" id="pricing-tracks-title">
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 text-center" id="pricing-tracks-title">
         <h1 class="text-center"><%= t '.text_tracks_title' %></h1>
         <p class="text-center"><%= t '.text_tracks_subtitle' %></p>
         <div id="pricing-tracks-list">
