@@ -1,5 +1,5 @@
 module TrackHelper
   def alltracks
-    Track.all
+    Track.all.order(:position)
   end
 end

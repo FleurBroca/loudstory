@@ -15,19 +15,19 @@
             <div id="accordion.panel-group">
               <div class="panel.panel-default">
                 <div class="panel-heading">
-                  <a href="#collapseOne", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseOne", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text1_free' %>
                     </p>
                   </a>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapseOne" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p style="color:#fff; background-color:#0F0F5B;"> Learn the basics of storytelling </p>
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapseTwo", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseTwo", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text2_free' %>
                     </p>
@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapseThree", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseThree", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text3_free' %>
                     </p>
@@ -64,7 +64,7 @@
                   <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-                    data-image="/square-image.png"
+                    data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
                     data-email= <%= current_user.email %>
                     data-name="Loudstory"
                     data-description="Member 29 €/MO"
@@ -81,19 +81,19 @@
             <div id="accordion.panel-group">
               <div class="panel.panel-default">
                 <div class="panel-heading">
-                  <a href="#collapse1", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse1", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text1_member' %>
                     </p>
                   </a>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse in">
+                <div id="collapse1" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p style="color:#fff; background-color:#0F0F5B;"> Learn to use stories in all your communications tools </p>
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse2", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse2", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text2_member' %>
                     </p>
@@ -105,7 +105,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse3", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse3", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text3_member' %>
                     </p>
@@ -117,7 +117,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse4", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse4", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text4_member' %>
                     </p>
@@ -129,7 +129,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse5", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse5", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text5_member' %>
                     </p>
@@ -141,7 +141,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse6", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse6", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text6_member' %>
                     </p>
@@ -154,7 +154,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse7", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse7", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text7_member' %>
                     </p>
@@ -180,7 +180,7 @@
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                       data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-                      data-image="/square-image.png"
+                      data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
                       data-email= <%= current_user.email %>
                       data-name="Loudstory"
                       data-description="Pro 299 €"
@@ -196,13 +196,13 @@
               <div id="accordion.panel-group">
                 <div class="panel.panel-default">
                   <div class="panel-heading">
-                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse">
+                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                       <p class="panel-title">
                         <%= t '.text1_pro' %>
                       </p>
                     </a>
                   </div>
-                  <div id="collapseUn" class="panel-collapse collapse in">
+                  <div id="collapseUn" class="panel-collapse collapse">
                     <div class="panel-body">
                       <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
                     </div>
@@ -220,7 +220,7 @@
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                       data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-                      data-image="/square-image.png"
+                      data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
                       data-email= <%= current_user.email %>
                       data-name="Loudstory"
                       data-description="Pro 179 €"
@@ -236,13 +236,13 @@
               <div id="accordion.panel-group">
                 <div class="panel.panel-default">
                   <div class="panel-heading">
-                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse">
+                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                       <p class="panel-title">
                         <%= t '.text1_pro' %>
                       </p>
                     </a>
                   </div>
-                  <div id="collapseUn" class="panel-collapse collapse in">
+                  <div id="collapseUn" class="panel-collapse collapse">
                     <div class="panel-body">
                       <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
                     </div>
@@ -266,19 +266,19 @@
             <div id="accordion.panel-group">
               <div class="panel.panel-default">
                 <div class="panel-heading">
-                  <a href="#collapseOne", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseOne", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text1_free' %>
                     </p>
                   </a>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapseOne" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p style="color:#fff; background-color:#0F0F5B;"> Learn the basics to build a louder story </p>
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapseTwo", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseTwo", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <h4 class="panel-title">
                       <%= t '.text2_free' %>
                     </h4>
@@ -290,7 +290,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapseThree", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseThree", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <h4 class="panel-title">
                       <%= t '.text3_free' %>
                     </h4>
@@ -315,19 +315,19 @@
             <div id="accordion.panel-group">
               <div class="panel.panel-default">
                 <div class="panel-heading">
-                  <a href="#collapse1", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse1", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text1_member' %>
                     </p>
                   </a>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse in">
+                <div id="collapse1" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p style="color:#fff; background-color:#0F0F5B;"> Learn all the tricks to create stories in all your communications tools </p>
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse2", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse2", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <h4 class="panel-title">
                       <%= t '.text2_member' %>
                     </h4>
@@ -339,7 +339,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse3", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse3", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <h4 class="panel-title">
                       <%= t '.text3_member' %>
                     </h4>
@@ -351,7 +351,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse4", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse4", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text4_member' %>
                     </p>
@@ -363,7 +363,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse5", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse5", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text5_member' %>
                     </p>
@@ -375,7 +375,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse6", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse6", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text6_member' %>
                     </p>
@@ -387,7 +387,7 @@
                   </div>
                 </div>
                 <div class="panel-heading">
-                  <a href="#collapse7", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapse7", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text7_member' %>
                     </p>
@@ -412,13 +412,13 @@
             <div id="accordion.panel-group">
               <div class="panel.panel-default">
                 <div class="panel-heading">
-                  <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse">
+                  <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
                     <p class="panel-title">
                       <%= t '.text1_pro' %>
                     </p>
                   </a>
                 </div>
-                <div id="collapseUn" class="panel-collapse collapse in">
+                <div id="collapseUn" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p style="color:#fff; background-color:#0F0F5B;"> You need to be a member to get a mentor feedback. Via Skype or Hangout. </p>
                   </div>

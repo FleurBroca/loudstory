@@ -5,7 +5,11 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Create<span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
           <% alltracks.each do |track| %>
-          <li><%= link_to track.title, track %></li>
+            <% if track.position == 1 %>
+              <li><%= link_to track.title, track %></li>
+            <% else %>
+              <li><%= link_to track.title, votes_tracks_path %></li>
+            <% end %>
           <% end %>
    <!--        <li class="divider"></li>
           <li><a>The Landing Page</a></li>
