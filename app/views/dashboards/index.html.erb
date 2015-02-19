@@ -26,8 +26,8 @@
         <li><%= link_to team.name, dashboard_path(team.id, current_user.id) %></li>
         <% end %>
        <% end %>
-       <li>Add project  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_team_path %></li>
-       <li> Switch project  <%= link_to '<i class="fa fa-refresh"></i>'.html_safe, teams_path %></li>
+       <li><%= link_to "Add project", new_team_path %>  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_team_path %></li>
+       <li><%= link_to "Switch project", teams_path %>   <%= link_to '<i class="fa fa-refresh"></i>'.html_safe, teams_path %></li>
       </ul>
       </ul>
     </div>
@@ -40,7 +40,11 @@
       <% if not @members.blank? %>
         <ul class="list-unstyled">
         <% @members.each do |member| %>
-          <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %> <%= link_to '<i class="fa fa fa-trash-o"></i>'.html_safe, remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }%></li>
+          <% if member.first_name.to_s == current_user.first_name.to_s %>
+            <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %></li>
+          <% else %>
+            <li><%= link_to member.first_name, dashboard_path(current_team.id, member.id) %> <%= link_to '<i class="fa fa fa-trash-o"></i>'.html_safe, remove_from_team_team_user_path(current_team, member), method: :delete, data: { confirm: "Are you sure?" }%></li>
+          <% end %>
         <% end %>
           <li>Add member  <%= link_to '<i class="fa fa-plus-circle"></i>'.html_safe, new_user_invitation_path %></li>
 
