@@ -11,7 +11,7 @@
         <h5><%= t '.warmupdescription' %></h5>
         <p class="color-red"><%= t '.create' %></p>
         <% @exercises.each do |exercise| %>
-          <% if current_user.stripe_customer_id.blank? && current_user.member.blank? && current_user.pro.blank? %>
+          <% if !current_user.member == true || !current_user.pro == true %>
             <% if exercise.position == 3 || exercise.position == 4 || exercise.position == 10 %>
               <div class="row">
 
@@ -68,14 +68,23 @@
           <% end %>
 
         <% end %>
-
-        <div class="spacer-1em"></div>
-        <div class="actions">
-          <ul class="list-unstyled list-inline">
-            <li><%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %></li>
-            <li><%= mail_to 'fleur@loudstory.com', "Ask a mentor", subject: "Ask a pro", body: "Hi LoudStory, I'm ready to get feedback from a mentor.", :target => "_blank", class: "btn btn-sm btn-danger" %></li>
-          </ul>
-        </div>
+        <% if current_user.pro == true %>
+          <div class="spacer-1em"></div>
+          <div class="actions">
+            <ul class="list-unstyled list-inline">
+              <li><%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %></li>
+              <li><%= mail_to 'fleur@loudstory.com', "Ask a mentor", subject: "Ask a pro", body: "Hi LoudStory, I'm ready to get feedback from a mentor.", :target => "_blank", class: "btn btn-sm btn-danger" %></li>
+            </ul>
+          </div>
+        <% else %>
+          <div class="spacer-1em"></div>
+            <div class="actions">
+              <ul class="list-unstyled list-inline">
+                <li><%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %></li>
+                <li><%= link_to "Ask a mentor", pricing_path, class: "btn btn-sm btn-blue" %></li>
+              </ul>
+            </div>
+        <% end %>
       </div>
     </div>
   </div>
