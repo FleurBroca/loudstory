@@ -221,14 +221,15 @@
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #0F0F5B;
+  color: #FF0000;
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
+  margin-bottom: 23px;
 }
 
 #pricing-text h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   color: #666666;
   line-height: 23px;
@@ -248,10 +249,23 @@
 }
 
 #pricing-text p{
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 10px;
 }
 
-#pricing-text p,
+#pricing-text p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0F0F5B;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.stripe-button-el span{
+  background-color: #FF0000;
+}
+
 #pricing-tracks-title p {
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
