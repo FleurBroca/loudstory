@@ -96,7 +96,7 @@ class HomeController < ApplicationController
 
   def unsubscribe
     @user = current_user
-    @user.member = nil
+    @user.member = false
     
 
     customer_id = current_user.stripe_customer_id
