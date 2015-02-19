@@ -4,7 +4,7 @@ en:
     index:
       title_signed_out: "MAKE THEM BELIEVERS"
       subtitle: "Unleash the emotions of your startup story."
-      textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
+      # textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
       header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"
       header_logged_in_name: "- Tony Hsieh --CEO at Zappos"
