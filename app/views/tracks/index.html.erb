@@ -10,6 +10,7 @@
           <p class="pull-right"><%= t '.header_logged_in_name' %></p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
+          <h2>Begin your storytelling by finding your north star story</h2>
           <% @tracks.each do |track| %>
             <% if track.position == 1 %>
               <h3><%= link_to track.title, track %></h3>
