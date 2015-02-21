@@ -340,3 +340,24 @@
 .cursor-pricing{
   cursor: help;
 }
+
+.btn-blue-pricing{
+  color: white;
+  font-family: 'Oswald';
+  font-weight: 00;
+  border-color: #0F0F5B;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 28px;
+  letter-spacing: 3px;
+  background-color: #0F0F5B;
+  font-size: 22px;
+  padding: 10px 23px 10px 23px;
+}
+
+.btn-blue-pricing.btn:hover, .btn-blue-pricing.btn:focus{
+  border-color: #0F0F6D;
+  border-bottom-color: #0F0F76;
+  background-color: transparent;
+  color: #0F0F5B;
+}
