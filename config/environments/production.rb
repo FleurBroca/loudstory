@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  # Rack::SSL::Rails
+  config.force_ssl = true
+
   config.action_mailer.default_url_options = { host: 'www.loudstory.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -87,4 +91,6 @@ Rails.application.configure do
   }
 
   ActionMailer::Base.delivery_method = :smtp
+
+
 end
