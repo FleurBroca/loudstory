@@ -30,6 +30,9 @@ Rails.application.routes.draw do
         get :count2
         get :count3
       end
+      member do
+        post :mentor
+      end
     end
 
     resources :exercises do

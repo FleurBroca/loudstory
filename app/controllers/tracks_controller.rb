@@ -10,6 +10,14 @@ class TracksController < ApplicationController
     @track = Track.find(params[:id])
     @exercises = @track.exercises.order(:position)
     @user = current_user
+    @mentor = Mentor.new
+  end
+
+  def mentor
+    @user = current_user
+    @mentor = Mentor.new(mentor_params)
+    @mentor.save
+    redirect_to root_path, notice:"We thank you for your request and promise a pro will get back to you within 48 hours. Check your inbox!"
   end
 
   def new
@@ -75,5 +83,9 @@ class TracksController < ApplicationController
   private
   def track_params
     params.require(:track).permit(:title, :description, :photo)
+  end
+
+  def mentor_params
+    params.require(:mentor).permit(:tool, :language, :deadline)
   end
 end

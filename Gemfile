@@ -63,5 +63,7 @@ gem 'acts_as_list'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
- gem "rack-ssl-rails"
+gem "rack-ssl-rails"
+
+gem 'simple_form'
 
