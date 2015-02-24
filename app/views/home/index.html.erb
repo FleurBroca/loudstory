@@ -13,6 +13,7 @@
         </div>
         <%= flash_messages %>
         <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
+          <h2>Begin your storytelling by finding your north star story</h2>
           <% @tracks.each do |track| %>
             <% if track.position == 1 %>
               <h3><%= link_to track.title, track %></h3>
@@ -55,8 +56,8 @@
               <%= flash_messages %>
               <%= render "devise/registrations/new" %>
               <br>
-              <p class="transbox"><%= t '.textsearchbar'%></p>
-            </div>
+<!--               <p class="transbox"><%= t '.textsearchbar'%></p>
+ -->            </div>
           </div>
           <div class="text-center">
             <a class="scroll-link" href="#suit" style="outline:none;">
@@ -105,7 +106,7 @@
 </div>
 
 <div class="text-center suit-pricing">
-  <%= link_to "Pricing", pricing_path, class: "btn btn-blue-big" %>
+  <%= link_to "Pricing", pricing_path, class: "btn btn-blue-pricing" %>
 </div>
 
   <div class="text-center">
@@ -136,11 +137,11 @@
       <%= flash_messages %>
       <%= render "devise/registrations/new" %>
       <br>
-      <div class="col-md-2"></div>
-      <div class="col-md-8" style="margin-left: 19px;">
-        <p class="transbox"><%= t '.textsearchbar'%></p>
-      </div>
-      <div class="col-md-2"></div>
+ <!--      <div class="col-md-2"></div> -->
+<!--       <div class="col-md-8" style="margin-left: 19px;"> -->
+<!--         <p class="transbox"><%= t '.textsearchbar'%></p> -->
+<!--       </div> -->
+<!--       <div class="col-md-2"></div> -->
     </div>
   </div>
 </div>
