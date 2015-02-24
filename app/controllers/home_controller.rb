@@ -114,4 +114,16 @@ class HomeController < ApplicationController
 
   end
 
+  def mentor
+    @user = current_user
+    @mentor = Mentor.new(mentor_params)
+    @mentor.save
+    redirect_to root_path, notice:"We thank you for your request and promise a pro will get back to you within 48 hours. Check your inbox!"
+  end
+
+  private
+
+  def mentor_params
+    params.require(:mentor).permit(:tool, :language, :deadline)
+  end
 end

@@ -56,6 +56,7 @@ Rails.application.routes.draw do
     end
 
     match '/pricing', :to => 'home#pricing', :via => [:get]
+    match '/mentor', :to => 'home#mentor', :via => [:post]
     match '/charge', :to => 'home#charge', :via => [:patch]
     match '/member', :to => 'home#member', :via => [:patch]
     match '/unsubscribe', :to => 'home#unsubscribe', :via => [:delete]
