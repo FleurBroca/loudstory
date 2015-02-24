@@ -79,7 +79,7 @@
           <div class="actions">
             <ul class="list-unstyled list-inline">
               <li><%= link_to "Go to my storyboard", dashboards_index_path, class: "btn btn-sm btn-blue" %></li>
-              <li><%= mail_to 'fleur@loudstory.com', "Ask a mentor", subject: "Ask a pro", body: "Hi LoudStory, I'm ready to get feedback from a mentor.", :target => "_blank", class: "btn btn-sm btn-danger" %></li>
+              <li><button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal"> Ask a mentor </button></li>
             </ul>
           </div>
         <% else %>
@@ -91,6 +91,29 @@
               </ul>
             </div>
         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ask a mentor</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:18px;">Do you want the feedback to focus on a specific tool ?</p>
+        <p style="font-size:18px;">Do you have a deadline ?</p>
+        <p style="font-size:18px;">In what language are you telling your stories ?</p>
+        <p style="font-size:18px;">Do you want the feedback to focus on a specific tool ?</p>
+        <p style="font-size:18px;">Do you have a deadline ?</p>
+        <p style="font-size:18px;">In what language will you tell your story ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send a request</button>
       </div>
     </div>
   </div>
