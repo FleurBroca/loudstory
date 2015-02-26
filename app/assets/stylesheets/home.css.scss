@@ -362,3 +362,13 @@
   background-color: transparent;
   color: #0F0F5B;
 }
+
+#swap {
+    vertical-align: top;
+    width: 0;
+    height: 3em;
+}
+
+#swap > span {
+    position: absolute;
+}
