@@ -48,9 +48,10 @@ class HomeController < ApplicationController
 
     @user.save
     if @user.save
-      redirect_to pricing_path, notice:"you just subscribed to the Pro plan"
+      session[:modal] = true
+      redirect_to pricing_path
     else
-      redirect_to pricing_path, error:"problem!"
+      render :new
     end
 
 
@@ -118,6 +119,7 @@ class HomeController < ApplicationController
     @user = current_user
     @mentor = Mentor.new(mentor_params)
     @mentor.save
+    session[:modal] = false
     redirect_to root_path, notice:"We thank you for your request and promise a pro will get back to you within 48 hours. Check your inbox!"
   end
 
