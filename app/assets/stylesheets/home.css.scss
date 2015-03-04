@@ -16,6 +16,7 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
   font-size: 44px;
+  text-align: center;
 }
 
 .text-title h2{
@@ -23,6 +24,8 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   letter-spacing: 4px;
   font-size: 24px;
+  text-align: left;
+  margin-left: 60px;
 }
 
 .transbox {
@@ -167,8 +170,8 @@
 }
 
 .suit-pricing {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-top: 35px;
 }
 
 #suit-signin-form {
@@ -371,4 +374,6 @@
 
 #swap > span {
     position: absolute;
+    color: white;
 }
+

@@ -93,7 +93,7 @@ $(document).ready(function(){
   });
 
 
-  var txt = ['startup story.', 'landing page.', 'press kit.', 'pitch contest.'],
+  var txt = ['startup story', 'landing page', 'press kit', 'pitch'],
     n = txt.length,
     $swap = $('#swap'),
     $span,
@@ -102,12 +102,12 @@ $(document).ready(function(){
   // CREATE SPANS INSIDE SPAN
   for(var i=0; i<txt.length; i++) $swap.append($('<span />',{text:txt[i]}));
   // HIDE AND COLLECT THEM
-  $span = $("span", $swap).hide(); 
+  $span = $("span", $swap).hide();
 
   (function loop(){
     c = ++c % n;
     $swap.animate({width: $span.eq( c ).width() });
     $span.stop().fadeOut().eq(c).fadeIn().delay(1000).show(0, loop);
-  }()); 
+  }());
 
 });

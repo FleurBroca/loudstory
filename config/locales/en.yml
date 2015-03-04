@@ -2,7 +2,7 @@ en:
 
   home:
     index:
-      title_signed_out: "MAKE BELIEVERS"
+      title_signed_out: "MAKE THEM LOVE YOUR STORY"
       subtitle: "A simple methodology to unleash the power of your startup story."
       # textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
@@ -11,7 +11,8 @@ en:
       quote1: "'The organizations who effectively tell their story are the ones who can recruit the top talent, acquire long-term customers, and build brands that endure.'"
       quote1_name: "- Elisa Schreiber --Marketing Partner at Greylock Partners"
       quote2: "'A startup without a story is usually a startup without a strategy.'"
-      quote2_name: "-Ben Horowitz --Partner at Andreessen Horowitz"
+      quote2_name: "-Ben Horowitz --Investor, Partner at Andreessen Horowitz"
+      how_it_works_title: "How it works"
       testimonials_title: "Clients Stories"
       # kazoart_testimonials_title: "State of the art"
       kazoart_testimonials_content: "Mathilde- 'For my first pitch contest in front of a prestigious incubator for culture startups, the LoudStory methodology helped me address the psychology of my audience and craft a really unique and powerful pitch. Even if I didn’t win the jury that day, the amount of tweets from the audience showed I had found the right way to talk to my users.'"
