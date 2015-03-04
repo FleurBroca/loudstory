@@ -47,6 +47,15 @@ $(document).ready(function(){
     }, 1000);
   });
 
+  $("#scroll-button").click(function(e) {
+    var section;
+    e.preventDefault();
+    section = $(this).attr("href");
+    return $("html, body").animate({
+      scrollTop: $(section).offset().top
+    }, 1000);
+  });
+
   $("#landing").click(function() {
     $.ajax({
       url: 'count1',

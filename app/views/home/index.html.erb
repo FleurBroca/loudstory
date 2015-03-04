@@ -43,9 +43,9 @@
 
 <% else %>
   <div class="wrapper-logout">
-    <div class="container">
+    <div class="container" id="top">
       <div class="row single-page">
-        <div class="col-sm-12 text-title ">
+        <div class="col-sm-12 text-title">
           <h1><%= t '.title_signed_out' %></h1>
           <h2> A simple methodology to build your <span id="swap"></span> </h2>
         </div>
@@ -59,15 +59,15 @@
 <!--               <p class="transbox"><%= t '.textsearchbar'%></p>
  -->            </div>
           </div>
-          <div class="text-center">
-            <a class="scroll-link" href="#suit" style="outline:none;">
-              <i class="fa fa-chevron-down", style="color:red;"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="text-center">
+  <a class="scroll-link" href="#suit" style="outline:none;">
+    <i class="fa fa-chevron-down", style="color:red;"></i>
+  </a>
 </div>
 <div class="container wagon">
   <div class="row" id="suit">
@@ -80,6 +80,7 @@
     </div>
   </div>
 </div>
+<div class="spacer-4em"></div>
 <div class="container wagon">
   <div class="row suit-features" >
     <div class="col-md-12 line-title text-center">
@@ -104,6 +105,7 @@
     </div>
   </div>
 </div>
+<div class="spacer-4em"></div>
 
 <div class="text-center">
   <a class="scroll-link" href="#suit2" style="outline:none;">
@@ -111,21 +113,27 @@
   </a>
 </div>
 
-<div class="spacer-1em" id="suit2"></div>
+<div class="spacer-2em" id="suit2"></div>
 
-<div class="text-center">
-  <div class="col-md-12 line-title text-center">
-      <h3>
-        <span  class="zindex"><%= t '.how_it_works_title' %></span>
-      </h3>
-  </div>
-  <div>
-    <iframe width="712" height="452" src="https://bunkrapp.com/present/7vi8bt/embed/?utm_medium=embed&utm_source=share" frameborder="1" scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+<div class="container  wagon">
+  <div class="row">
+    <div class="text-center">
+      <div class="col-md-12 line-title text-center">
+          <h3>
+            <span  class="zindex"><%= t '.how_it_works_title' %></span>
+          </h3>
+          <p class="tiny-text-red">-- Click on the right side of the image to know more --</p>
+      </div>
+      <div>
+        <iframe width="712" height="452" src="https://bunkrapp.com/present/7vi8bt/embed/?utm_medium=embed&utm_source=share" frameborder="1" scrolling="no" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+      </div>
+    </div>
   </div>
 </div>
+<div class="spacer-1em"></div>
 
-<div class="text-center suit-pricing">
-  <%= link_to "Pricing", pricing_path, class: "btn btn-blue-pricing" %>
+<div class="text-center">
+  <a type="button" id="scroll-button" href="#top" style="outline:none;"class="btn btn-sm btn-danger"> Start now for free </a>
 </div>
 
 <div class="text-center">
@@ -134,10 +142,29 @@
   </a>
 </div>
 
-<div id="suit3"></div>
+<div class="container wagon" id="suit3">
+  <div class="row">
+    <div class="text-center suit-pricing">
+      <div class="col-md-12 line-title text-center">
+        <h3>
+          <span  class="zindex"><%= t '.pricing_title' %></span>
+        </h3>
+      </div>
+      <div>
+        <div class="spacer-4em"></div>
+        <div class="col-xs-8 col-xs-offset-2 suit-mission">
+          <p><%= t '.pricing_content' %></p>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2">
+          <%= link_to "Learn more", pricing_path, class: "btn btn-blue-pricing" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="spacer-1"></div>
-<div class="container">
+<div class="spacer-4em"></div>
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2 suit-quote-2">
       <h2><%= t '.quote1' %></h2>
@@ -147,26 +174,25 @@
       </ul>
     </div>
   </div>
-
-</div>
-<div class="container text-center" id="suit-signin-form">
+</div> -->
+<!-- <div class="container text-center" id="suit-signin-form">
   <div class="row">
     <div class="col-xs-12 ">
-<!--       <h1><%= t '.valueprop1'%></h1>
- -->      <h1><%= t '.valueprop2'%></h1>
-    </div>
-    <div class="col-xs-12 text-center">
+<!-       <h1><%= t '.valueprop1'%></h1>
+ -->      <!-- <h1><%= t '.valueprop2'%></h1> -->
+  <!--   </div> -->
+    <!-- <div class="col-xs-12 text-center">
       <%= flash_messages %>
-      <%= render "devise/registrations/new" %>
-      <br>
+      #
+      <br> -->
  <!--      <div class="col-md-2"></div> -->
 <!--       <div class="col-md-8" style="margin-left: 19px;"> -->
 <!--         <p class="transbox"><%= t '.textsearchbar'%></p> -->
 <!--       </div> -->
 <!--       <div class="col-md-2"></div> -->
-    </div>
+<!--     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container  wagon">
   <div class="row">
@@ -180,6 +206,8 @@
     </div>
   </div>
 </div>
+
+<div class="spacer-4em"></div>
 
 <div class="container wagon">
   <div class="row suit-testimonials">
@@ -211,24 +239,7 @@
   </div>
 </div>
 
-<!--   <div class="text-center">
-    <a class="scroll-link" href="#suit2" style="outline:none;">
-      <i class="fa fa-chevron-down", style="color:red;"></i>
-    </a>
-  </div> -->
-
-
-<!--
-
-
-</div>
-
-<div class="text-center">
-  <a class="scroll-link" href="#suit4" style="outline:none;">
-  <i class="fa fa-chevron-down", style="color:red;"></i>
-  </a>
-</div>
-<div class="spacer-1" id="suit4"></div> -->
+<div class="spacer-4em"></div>
 
 
 <div class="container  wagon">
