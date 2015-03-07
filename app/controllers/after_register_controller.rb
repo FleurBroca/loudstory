@@ -30,13 +30,20 @@ class AfterRegisterController < Wicked::WizardController
     render_wizard @team, layout: "without_nav"
     when :add_members
     @user = current_user
-    User.invite!({:email => params[:email]}, current_user) do |u|
-      u.teams << current_team
-    end
+    @team = current_team
+    if params[:email] == current_user.email
+      flash[:alert] = "The email you used for your team is already registered. Go back if you want to try a new one."
+      render_wizard @user
+    else
+      User.invite!({:email => params[:email]}, current_user) do |u|
+        u.teams << current_team
+      end
 
-    render_wizard @user
+      render_wizard @user
+    end
     end
   end
+
 
   def finish_wizard_path
     tracks_path
