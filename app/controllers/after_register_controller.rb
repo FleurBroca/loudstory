@@ -11,7 +11,7 @@ class AfterRegisterController < Wicked::WizardController
     when :add_project
     @team = Team.new
     begin
-      mixpanel.track 'sign_up'
+      mixpanel.track("Video play")
     rescue
     else
     ensure
