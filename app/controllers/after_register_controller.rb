@@ -10,6 +10,12 @@ class AfterRegisterController < Wicked::WizardController
     case step
     when :add_project
     @team = Team.new
+    begin
+      mixpanel.track 'sign_up'
+    rescue
+    else
+    ensure
+    end
     render_wizard nil, layout: "without_nav"
     when :add_members
     @team = current_team
