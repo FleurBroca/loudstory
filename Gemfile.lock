@@ -149,6 +149,8 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 4.2)
       responders (~> 1.0)
+    intercom-rails (0.2.27)
+      activesupport (> 3.0)
     jbuilder (2.2.5)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -301,6 +303,7 @@ DEPENDENCIES
   font-awesome-rails
   font-awesome-sass (~> 4.2.0)
   google-webfonts
+  intercom-rails
   jbuilder (~> 2.0)
   jquery-middleman
   jquery-rails
