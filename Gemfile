@@ -67,3 +67,5 @@ gem "rack-ssl-rails"
 
 gem 'simple_form'
 
+gem 'intercom-rails'
+
