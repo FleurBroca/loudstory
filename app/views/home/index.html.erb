@@ -72,8 +72,20 @@
   </a>
 </div>
 
-<div class="container wagon">
+<!-- Change the width and height values to suit you best -->
+<div class="container">
   <div class="row" id="suit">
+    <div class="typeform-widget" data-url="https://fleurbroca.typeform.com/to/qgdBZk" data-text="TestYourStory" style="width:100%;height:500px;"></div>
+    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+  </div>
+</div>
+    <div class="text-center">
+      <a class="scroll-link" href="#suit1" style="outline:none;">
+        <i class="fa fa-chevron-down", style="color:red;"></i>
+      </a>
+    </div>
+<div class="container wagon">
+  <div class="row" id="suit1">
     <div class="spacer-2em"></div>
     <div class="col-md-12 line-title text-center">
       <h3>
@@ -99,12 +111,12 @@
     </div>
   </div>
 </div>
-    <div class="text-center">
-      <a class="scroll-link" href="#suit1" style="outline:none;">
-        <i class="fa fa-chevron-down", style="color:red;"></i>
-      </a>
-    </div>
-<div class="spacer-4em" id="suit1"></div>
+<div class="text-center">
+  <a class="scroll-link" href="#suit2" style="outline:none;">
+    <i class="fa fa-chevron-down", style="color:red;"></i>
+  </a>
+</div>
+<div class="spacer-4em" id="suit2"></div>
 <div class="container wagon">
   <div class="row suit-features" >
     <div class="col-md-12 line-title text-center">
@@ -131,13 +143,9 @@
 </div>
 <div class="spacer-4em"></div>
 
-<div class="text-center">
-  <a class="scroll-link" href="#suit2" style="outline:none;">
-    <i class="fa fa-chevron-down", style="color:red;"></i>
-  </a>
-</div>
 
-<div class="spacer-2em" id="suit2"></div>
+
+<div class="spacer-2em"></div>
 
 <div class="container  wagon">
   <div class="row">
@@ -177,7 +185,8 @@
       <div>
         <div class="spacer-4em"></div>
         <div class="col-xs-10 col-xs-offset-1 suit-target">
-          <h2><%= t '.pricing_content' %></h2>
+          <h2><%= t '.pricing_content1' %></h2>
+          <h2><%= t '.pricing_content2' %></h2>
         </div>
         <div class="col-xs-8 col-xs-offset-2">
           <div class="spacer-2em"></div>
@@ -215,19 +224,6 @@
   </div>
 </div> -->
 
-<div class="container  wagon">
-  <div class="row">
-    <div class="col-md-12 line-title text-center">
-      <h3>
-        <span  class="zindex"><%= t '.mission_statement_title' %></span>
-      </h3>
-    </div>
-    <div class="col-xs-8 col-xs-offset-2 suit-mission">
-      <p><%= t '.mission_statement_content' %></p>
-    </div>
-  </div>
-</div>
-
 <div class="spacer-4em"></div>
 
 <div class="container wagon">
@@ -239,22 +235,32 @@
     </div>
     <div class="col-md-6">
       <div class="col-md-6">
-        <%= image_tag "kazoart-square.png", class: "testimonials-img" %>
+        <%= image_tag "uber-story.png", class: "testimonials-img" %>
       </div>
       <div class="col-md-6">
+        <ul>
+          <li><b>The mission</b>: Everyone's private driver.</li>
+          <li><b>The hero</b>: anyone with a secret desire to feel like a VIP every day.</li>
+          <li><b>The mentor</b>: a fearless entrepreneur determined to overcome the lies and flaws of the taxi industry.</li>
+          <li><b>The promise</b>: an app that's as exciting to use as a James Bond gadget.</li>
+        </ul>
 <!--         <h2><%= t '.kazoart_testimonials_title' %></h2>
- -->        <p><%= t '.kazoart_testimonials_content' %></p>
-        <h5 class="very-tiny-text"><%= t '.kazoart_testimonials_definition' %></h5>
+<!--         <h5 class="very-tiny-text"><%= t '.kazoart_testimonials_definition' %></h5> -->
       </div>
     </div>
     <div class="col-md-6">
       <div class="col-md-6">
-        <%= image_tag "backpack-square.png", class: "testimonials-img" %>
+        <%= image_tag "airbnb-story.png", class: "testimonials-img" %>
       </div>
       <div class="col-md-6">
-<!--         <h2><%= t '.backpack_testimonials_title' %></h2>
- -->        <p><%= t '.backpack_testimonials_content' %></p>
-        <h5 class="very-tiny-text"><%= t '.backpack_testimonials_definition' %></h5>
+        <ul>
+          <li><b>The mission</b>: Belong anywhere.</li>
+          <li><b>The hero</b>: travellers seeking for a more authentic experience.</li>
+          <li><b>The mentor</b>: a welcoming designer with a strong appeal for beauty.</li>
+          <li><b>The promise</b>: an enchanting platform where trustworthy people can connect and discover inspiring places.</li>
+        </ul>
+<!--         <h2><%= t '.airbnb_story_content' %></h2>
+<!--         <h5 class="very-tiny-text"><%= t '.backpack_testimonials_definition' %></h5> -->
       </div>
     </div>
   </div>
@@ -286,6 +292,19 @@
 
 <!--End mc_embed_signup-->
 
+<div class="container  wagon">
+  <div class="row">
+    <div class="col-md-12 line-title text-center">
+      <div class="spacer-1em"></div>
+      <h3>
+        <span  class="zindex"><%= t '.mission_statement_title' %></span>
+      </h3>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 suit-mission">
+      <p><%= t '.mission_statement_content' %></p>
+    </div>
+  </div>
+</div>
 
 <div class="container  wagon">
   <div class="row">
