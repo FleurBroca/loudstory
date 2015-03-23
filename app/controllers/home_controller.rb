@@ -12,7 +12,6 @@ class HomeController < ApplicationController
 
   def charge
     @user = current_user
-    @user.pro = true
     
     if @user.stripe_customer_id.nil?
 
@@ -30,25 +29,13 @@ class HomeController < ApplicationController
       customer_id = current_user.stripe_customer_id
     end
 
-    time_now = Time.new
-    time_limit = Time.new(2015,2,22,23,59)
+    Stripe::Charge.create(
+      :amount => 17900,
+      :currency => "eur",
+      :customer => customer_id,
+      :description => "#{current_user.email} à payer"
 
-    if @user.member == true && time_now <= time_limit
-      Stripe::Charge.create(
-        :amount => 17900,
-        :currency => "eur",
-        :customer => customer_id,
-        :description => "#{current_user.email} à payer"
-      )
-    else
-      Stripe::Charge.create(
-        :amount => 29900,
-        :currency => "eur",
-        :customer => customer_id,
-        :description => "#{current_user.email} à payer"
-      )
-    end
-
+    @user.pro = true
     @user.save
     if @user.save
       session[:modal] = true
@@ -66,7 +53,6 @@ class HomeController < ApplicationController
   def member
 
     @user = current_user
-    @user.member = true
 
     if current_user.stripe_customer_id.nil?
 
@@ -86,7 +72,7 @@ class HomeController < ApplicationController
 
 
     customer.subscriptions.create(:plan => "member", quantity: 1)
-
+    @user.member = true
     @user.save
     if @user.save
       UserMailer.welcome_member_plan(@user).deliver
