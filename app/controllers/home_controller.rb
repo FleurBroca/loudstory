@@ -13,7 +13,9 @@ class HomeController < ApplicationController
     begin
       gb.lists.subscribe({
         :id => @list_id,
-        :email => {:email => params[:email]}
+        :email => {:email => params[:email]},
+        double_optin: false,
+        update_existing: true
       })
 
       flash[:notice] = "You successfully subscribed to the Newsletter!"
@@ -29,7 +31,7 @@ class HomeController < ApplicationController
 
   def charge
     @user = current_user
-    
+
     if @user.stripe_customer_id.nil?
 
 
@@ -79,14 +81,14 @@ class HomeController < ApplicationController
       )
       card = customer.cards.create(card: params[:stripeToken])
       card.save
-      
+
       customer_id = customer.id
       current_user.update_attributes(stripe_customer_id: customer_id)
     else
       customer_id = current_user.stripe_customer_id
       customer = Stripe::Customer.retrieve(customer_id)
     end
-    
+
 
     customer.subscriptions.create(:plan => "member", quantity: 1)
     @user.member = true
@@ -106,7 +108,7 @@ class HomeController < ApplicationController
   def unsubscribe
     @user = current_user
     @user.member = false
-    
+
 
     customer_id = current_user.stripe_customer_id
     subscriptions = Stripe::Customer.retrieve(customer_id).subscriptions.all
