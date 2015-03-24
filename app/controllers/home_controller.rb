@@ -33,7 +33,7 @@ class HomeController < ApplicationController
       :amount => 17900,
       :currency => "eur",
       :customer => customer_id,
-      :description => "#{current_user.email} à payer"
+      :description => "#{current_user.email} à payer")
 
     @user.pro = true
     @user.save
@@ -69,7 +69,7 @@ class HomeController < ApplicationController
       customer_id = current_user.stripe_customer_id
       customer = Stripe::Customer.retrieve(customer_id)
     end
-
+    
 
     customer.subscriptions.create(:plan => "member", quantity: 1)
     @user.member = true
