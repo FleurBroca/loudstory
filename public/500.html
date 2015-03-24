@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>We're sorry, but something went wrong (500)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    color: #0F0F5B;
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     margin: 0;
   }
 
@@ -19,23 +20,23 @@
   }
 
   div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
   h1 {
-    font-size: 100%;
-    color: #730E15;
+    font-size: 30px;
+    color: black;
     line-height: 1.5em;
+    font-weight: 700;
   }
+
+  p {
+    font-size: 20px;
+    color: black;
+  }
+
 
   div.dialog > p {
     margin: 0 0 1em;
@@ -51,6 +52,12 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  img {
+    padding-right: 106px;
+    text-align: center;
+  }
+
   </style>
 </head>
 
@@ -58,9 +65,12 @@
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>ERROR 500</h1>
+      <p><strong>Oh boy, something did not go well.</strong></p>
+      <div class="text-center">
+        <img src="/images/charlie_brown_good_grief.jpg" alt="error" width="500px">
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>

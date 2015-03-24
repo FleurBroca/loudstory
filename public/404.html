@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
@@ -24,10 +26,17 @@
   }
 
   h1 {
-    font-size: 100%;
-    color: #730E15;
+    font-size: 30px;
+    color: black;
     line-height: 1.5em;
+    font-weight: 700;
   }
+
+  p {
+    font-size: 20px;
+    color: black;
+  }
+
 
   div.dialog > p {
     margin: 0 0 1em;
@@ -43,6 +52,11 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  img {
+    padding-right: 106px;
+    text-align: center;
+  }
   </style>
 </head>
 
@@ -51,8 +65,10 @@
   <div class="dialog">
     <div>
       <h1>ERROR 404</h1>
-      <p>This page does not exist. Sigh.</p>
-      <img src="snoopy_sunglasses.jpg" alt="error">
+      <p><strong>This page does not exist. Sigh.</strong></p>
+      <div class="text-center">
+        <img src="/images/charlie_brown_good_grief.jpg" alt="error" width="500px">
+      </div>
     </div>
   </div>
 </body>
