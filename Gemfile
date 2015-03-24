@@ -71,3 +71,4 @@ gem 'intercom-rails'
 
 gem 'gibbon'
 
+gem 'intercom'
