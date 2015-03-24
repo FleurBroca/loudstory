@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :after_register
 
+  resource 'subscriber', only: :create
+
   scope '(:locale)', locale: /fr/ do
 
     root to: "home#index"
