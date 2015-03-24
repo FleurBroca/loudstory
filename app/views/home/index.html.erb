@@ -138,9 +138,9 @@
       </div>
       <div  class="text-center">
         <%= form_tag(subscriber_path) do %>
-        <%= email_field_tag :email, autofocus: true, placeholder: 'Email' %>
-        <%= submit_tag "Subscribe me", class: "signin-label", class: "form-control" %>
-      <% end %>
+          <%= email_field_tag :email, "", placeholder: 'Email' %>
+          <%= submit_tag "Subscribe me", class: "signin-label form-control" %>
+        <% end %>
       </div>
     </div>
   </div>

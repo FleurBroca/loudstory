@@ -6,6 +6,23 @@ class HomeController < ApplicationController
     @post = Post.last
   end
 
+  def subscriber
+    @list_id = ENV["MAILCHIMP_LIST_ID"]
+    gb = Gibbon::API.new
+
+    begin
+      gb.lists.subscribe({
+        :id => @list_id,
+        :email => {:email => params[:email]}
+      })
+
+      flash[:notice] = "You successfully subscribed to the Newsletter!"
+    rescue Gibbon::MailChimpError => exception
+      flash[:alert] = "Unable to subscribe to the newsletter: #{exception.message}"
+    end
+    redirect_to root_path
+  end
+
   def pricing
 
   end
