@@ -137,10 +137,10 @@
         <label for="mce-EMAIL">SUBSCRIBE TO A WEEKLY DOSE OF STORYTELLING IN YOUR INBOX.</label>
       </div>
       <div  class="text-center">
-        <%= form_tag(subscriber_path) do %>
-        <%= email_field_tag :email %>
-        <%= submit_tag "Subscribe me" %>
-      <% end %>
+        <%= form_tag(subscriber_path, method: "post") do %>
+          <%= email_field_tag :email %>
+          <%= submit_tag "Subscribe me" %>
+        <% end %>
       </div>
     </div>
   </div>
