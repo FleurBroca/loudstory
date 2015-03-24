@@ -59,22 +59,6 @@ class SessionsController < ApplicationController
     @session = Session.find(params[:id])
     @exercise = Exercise.find(@session.exercise_id)
 
-    exercise = @exercise
-    current_track = exercise.track
-    nb_exercises = current_user.exercises.select{|ex| ex.track_id == exercise.track.id}.size
-    nb_total_exercises = exercise.track.exercises.count
-    percentage = nb_exercises.to_f / nb_total_exercises.to_f * 100
-
-    Intercom::Event.create(
-      :event_name => "edit exercise", :created_at => Time.now,
-      :user_id => current_user.id,
-      :email => current_user.email,
-      :metadata => {
-        :exercise_title => "#{exercise.title}",
-        :percentage => "#{percentage} %"
-      }
-    )
-
     # For each answer attribute in params, update the corresponding session
     # We can't go through session_params because it actually creates new answers instead of updating them
     params[:session][:answers_attributes].each do |_, answer_attr|
