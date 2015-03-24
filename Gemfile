@@ -69,3 +69,5 @@ gem 'simple_form'
 
 gem 'intercom-rails'
 
+gem 'gibbon'
+

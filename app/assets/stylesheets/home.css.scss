@@ -95,10 +95,10 @@
   margin-bottom: 35px;
 }
 
-// .wagon{
-//   background-color: #F0F1F5;
-//   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-// }
+.wagon{
+  background-color: #F0F1F5;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
 
 .line-title h3 {
   border-bottom: 1px solid #4e4e4e;
@@ -476,6 +476,12 @@
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+#mc_embed_signup {
+  background:#fff;
+  clear:left;
+  font:14px Helvetica,Arial,sans-serif;
 }
 
 #mc_embed_signup input.button {
