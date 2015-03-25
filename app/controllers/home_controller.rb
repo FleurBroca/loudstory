@@ -35,7 +35,7 @@ class HomeController < ApplicationController
 
       customer = Stripe::Customer.create(
         :email => current_user.email,
-        :description => current_user.first_name + " " + current_user.last_name
+        :description => current_user.first_name
       )
       card = customer.cards.create(card: params[:stripeToken])
       card.save
@@ -70,16 +70,14 @@ class HomeController < ApplicationController
   def member
 
     @user = current_user
-
     if current_user.stripe_customer_id.nil?
-
+      puts current_user.first_name
       customer = Stripe::Customer.create(
         :email => current_user.email,
-        :description => current_user.first_name + " " + current_user.last_name
+        :description => current_user.first_name
       )
       card = customer.cards.create(card: params[:stripeToken])
       card.save
-      
       customer_id = customer.id
       current_user.update_attributes(stripe_customer_id: customer_id)
     else
@@ -87,7 +85,6 @@ class HomeController < ApplicationController
       customer = Stripe::Customer.retrieve(customer_id)
     end
     
-
     customer.subscriptions.create(:plan => "member", quantity: 1)
     @user.member = true
     @user.save
