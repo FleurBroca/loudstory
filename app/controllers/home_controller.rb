@@ -6,24 +6,24 @@ class HomeController < ApplicationController
     @post = Post.last
   end
 
-  # def subscriber
-  #   @list_id = ENV["MAILCHIMP_LIST_ID"]
-  #   gb = Gibbon::API.new
+  def subscriber
+    @list_id = ENV["MAILCHIMP_LIST_ID"]
+    gb = Gibbon::API.new
 
-  #   begin
-  #     gb.lists.subscribe({
-  #       :id => @list_id,
-  #       :email => {:email => params[:email]},
-  #       double_optin: false,
-  #       update_existing: true
-  #     })
+    begin
+      gb.lists.subscribe({
+        :id => @list_id,
+        :email => {:email => params[:email]},
+        double_optin: false,
+        update_existing: true
+      })
 
-  #     flash[:notice] = "You successfully subscribed to the Newsletter!"
-  #   rescue Gibbon::MailChimpError => exception
-  #     flash[:alert] = "Unable to subscribe to the newsletter: #{exception.message}"
-  #   end
-  #   redirect_to root_path
-  # end
+      flash[:notice] = "You successfully subscribed to the Newsletter!"
+    rescue Gibbon::MailChimpError => exception
+      flash[:alert] = "Unable to subscribe to the newsletter: #{exception.message}"
+    end
+    redirect_to root_path
+  end
 
   def pricing
 
@@ -37,7 +37,7 @@ class HomeController < ApplicationController
 
       customer = Stripe::Customer.create(
         :email => current_user.email,
-        :description => current_user.first_name + " " + current_user.last_name
+        :description => current_user.first_name
       )
       card = customer.cards.create(card: params[:stripeToken])
       card.save
@@ -77,7 +77,7 @@ class HomeController < ApplicationController
 
       customer = Stripe::Customer.create(
         :email => current_user.email,
-        :description => current_user.first_name + " " + current_user.last_name
+        :description => current_user.first_name
       )
       card = customer.cards.create(card: params[:stripeToken])
       card.save
