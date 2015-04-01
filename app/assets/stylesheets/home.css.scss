@@ -19,15 +19,6 @@
   text-align: center;
 }
 
-.text-title h2{
-  color: #FF0000;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  letter-spacing: 4px;
-  font-size: 24px;
-  text-align: left;
-  margin-left: 180px;
-}
-
 .transbox {
   width: 691px;
   height: 27px;
@@ -101,19 +92,7 @@
   background-color: #F0F1F5;
 }
 
-.line-title h3 {
-  border-bottom: 1px solid #4e4e4e;
-  width: 100%;
-  font-family: 'Oswald';
-  font-size: 33px;
-  font-weight: 700;
-  color: #0F0F5B;
-  letter-spacing: 3px;
-  margin-bottom: 55px;
-  height: 20px;
-  z-index: 2;
 
-}
 
 .zindex {
   z-index: 1;
@@ -479,12 +458,6 @@
   animation-iteration-count: infinite;
 }
 
-#mc_embed_signup {
-  background:#F0F1F5;
-  clear:left;
-  font:14px 'Raleway';
-  margin-top: 30px;
-}
 
 #mc_embed_signup input.button {
   min-width: 130px !important;
@@ -534,4 +507,9 @@
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.testimonials-title{
+  text-align: center;
+  font-size: 23px;
 }

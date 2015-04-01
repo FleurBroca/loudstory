@@ -8,180 +8,212 @@ $link-hover-decoration: none;
 @import "bootstrap-sprockets";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "normalize";
-@import "navbar";
-@import "sessions";
-@import "signin";
-@import "home";
-@import "footer";
-@import "team";
-@import "tracks";
-@import "dashboard";
-@import "comments";
-@import "posts";
+
 
 // @import url("http://fonts.googleapis.com/css?family=Raleway:700,400,300|Abril+Fatface|Open+Sans:400italic");
 
-html{
-  height: 100% !important;
-}
+// format mobile
+@media (max-width: 640px) {
+  @import "normalize";
+  @import "navbar";
+  @import "sessions";
+  @import "signin";
+  @import "home";
+  @import "footer";
+  @import "team";
+  @import "tracks";
+  @import "dashboard";
+  @import "comments";
+  @import "posts";
+  @import "base";
 
-.wrapper-logout{
-  background-image: image-url('fansblue-cut-1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  opacity: 1.6;
-  min-height: 100%;
-  position: relative !important;
-}
-
-.double-page{
-  width: 100%;
-  min-height: 100%;
-  margin-top: 84px;
-}
-
-.single-page{
-  width: 100%;
-  min-height: 100%;
-  margin-top: 84px;
-}
-
-.page-header {
-   margin: 20px 0 20px;
-   padding-bottom: 29px;
+  * {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
   }
 
-body{
-  font-family: 'Raleway', sans-serif;
-  color: #0F0F5B;
-  font-weight: 300;
-  margin: 0 auto;
-  font-size: 16px;
-  padding: 0;
-  min-height: 100%;
-  position: relative !important;
-  padding-bottom: 112px;
+  /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+  body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #0F0F5B;
+    font-weight: 300;
+    font-size: 16px;
+    min-height: 100%;
+    position: relative !important;
+    padding-bottom: 112px;
+  }
+
+  /* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+  img,
+  table,
+  td,
+  blockquote,
+  code,
+  pre,
+  textarea,
+  input,
+  iframe,
+  object,
+  embed,
+  video {
+      max-width: 100%;
+  }
+
+  /* conserver le ratio des images */
+
+  img {
+      height: auto;
+  }
+
+  /* gestion des mots longs */
+
+  textarea,
+  table,
+  td,
+  th,
+  code,
+  pre,
+  samp {
+      -webkit-hyphens: auto; /* césure propre */
+      -moz-hyphens: auto;
+      hyphens: auto;
+      word-wrap: break-word; /* passage à la ligne forcé */
+  }
+
+  code,
+  pre,
+  samp {
+      white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+  }
+
+  /* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+  element1,
+  element2 {
+      float: none;
+      width: auto;
+  }
+
+  /* masquer les éléments superflus */
+
+  .hide_mobile {
+      display: none !important;
+  }
+
+  html{
+    height: 100% !important;
+  }
+
+  .text-title h2{
+    color: #FF0000;
+    text-shadow: 1px 1px rgba(15, 15, 91, 1);
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .line-title h3 {
+    border-bottom: 1px solid #4e4e4e;
+    width: 100%;
+    font-family: 'Oswald';
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #0F0F5B;
+    letter-spacing: 3px;
+    margin-bottom: 112px;
+    height: 20px;
+    z-index: 2;
+
+  }
+
+  #mc_embed_signup {
+    background:#F0F1F5;
+    clear:left;
+    font:14px 'Raleway';
+    height: 270px;
+  }
+
+  #mc_embed_signup_scroll{
+    padding-top: 40px;
+  }
+
 }
 
-#footer{
-  bottom: 0 !important;
-  position: absolute !important;
-  width: 100% !important;
-}
 
-h1 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  font-size: 48px;
-  color: #0F0F5B;
-  letter-spacing: 2px;
-}
 
-h2{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  color: #383635;
-  letter-spacing: 2px;
-}
+@media (min-width:640px) {
+  @import "normalize";
+  @import "navbar";
+  @import "sessions";
+  @import "signin";
+  @import "home";
+  @import "footer";
+  @import "team";
+  @import "tracks";
+  @import "dashboard";
+  @import "comments";
+  @import "posts";
+  @import "base";
 
-h3 {
-  font-size: 22px;
-}
 
-h4{
-  font-size: 20px;
-  line-height: 26px;
-}
+  html {
+    height: 100% !important;
+  }
 
-p{
-  font-size: 25px;
-  line-height: 30px;
-}
+  body{
+    font-family: 'Raleway', sans-serif;
+    color: #0F0F5B;
+    font-weight: 300;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 0;
+    min-height: 100%;
+    position: relative !important;
+    padding-bottom: 112px;
+  }
 
-a {
-  text-decoration: none;
-}
+  .text-title h2{
+    color: #FF0000;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 180px;
+  }
 
-.size-30{
-  font-size: 30px;
-}
+  .line-title h3 {
+    border-bottom: 1px solid #4e4e4e;
+    width: 100%;
+    font-family: 'Oswald';
+    font-size: 33px;
+    font-weight: 700;
+    color: #0F0F5B;
+    letter-spacing: 3px;
+    margin-bottom: 55px;
+    height: 20px;
+    z-index: 2;
 
-.small-text{
-  font-size: 18px;
-  color: #404040;
-}
+  }
 
-.italic{
-  font-style: italic;
-}
+  #mc_embed_signup {
+    background:#F0F1F5;
+    clear:left;
+    font:14px 'Raleway';
+  }
 
-.tiny-text{
-  font-size: 14px;
-  color: #404040;
-}
+  #mc_embed_signup_scroll{
+    padding-top: 40px;
+  }
 
-.big-text-red{
-  font-size: 28px;
-  color: #FF0000;
-}
 
-.very-tiny-text{
-  font-size: 13px;
-  color: #404040;
-  line-height: 16px;
 }
-
-.notice {
-  margin-top: 35px;
-}
-
-.color-red{
-  color: #FF0000;
-}
-
-.space-line{
-  border-bottom: 2px solid #ddd;
-}
-
-.spacer-50{
-  margin-top: 50px;
-}
-
-.spacer-30{
-  margin-top: 30px;
-}
-
-.spacer-20em{
-  height: 20em;
-}
-
-.spacer-10em{
-  height: 10em;
-}
-
-.spacer-4em{
-  height: 4em;
-}
-
-.spacer-2em{
-  height: 2em;
-}
-
-.spacer-1em{
-  height: 1em;
-}
-
-.padding-left-20{
-  padding-left: 20px;
-}
-
-.paper{
-  background-image: image-url('paper.png');
-}
-
 
 
 
