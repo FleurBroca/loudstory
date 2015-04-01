@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  LoudStory | Pricing
+<% end %>
+
 <div class="wrapper-login">
   <div class="container pricing-page">
     <div class="row">
@@ -82,7 +86,9 @@
                 <% end %>
               <% else %>
                 </br>
-                <%= link_to "Unsubscribe", unsubscribe_path, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: "Are you sure?" } %>
+                  <div class="text-center">
+                    <i class="fa fa-check", style="color:grey; margin-bottom:13px;"></i>
+                  </div>
               <% end %>
             </div>
             </br>
@@ -177,89 +183,46 @@
             </div>
           </div>
           <div class="col-md-4">
-            <% if !current_user.member == true %>
-              <h2><%= t '.text_pricing_title2_pro' %></h2>
-              <h1 class="text-center"><%= t '.text_pricing_title_pro1' %></h1>
-              <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
-              <div class="text-center">
-                </br>
-                <% if !current_user.pro == true %>
-                  <%= form_tag('/charge', method: :patch) do %>
-                    <script
-                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-                      data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
-                      data-email= <%= current_user.email %>
-                      data-name="Loudstory"
-                      data-description="Pro 299 €"
-                      data-panel-label="Pay"
-                      data-label="ASK A PRO">
-                    </script>
-                  <% end %>
-                <% else %>
-                  <div class="text-center">
-                    <i class="fa fa-check", style="color:grey; margin-bottom:13px;"></i>
-                  </div>
-                <% end %>
-              </div>
+
+            <h2><%= t '.text_pricing_title2_pro' %></h2>
+            <h1 class="text-center"><%= t '.text_pricing_title_pro1' %></h1>
+            <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
+            <div class="text-center">
               </br>
-              <div id="accordion.panel-group">
-                <div class="panel.panel-default">
-                  <div class="panel-heading">
-                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
-                      <p class="panel-title">
-                        <%= t '.text1_pro' %>
-                      </p>
-                    </a>
-                  </div>
-                  <div id="collapseUn" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p style="color:#fff; background-color:#0F0F5B;"> Any time you need, a mentor gives you feedback on your story via Skype or Hangout. </p>
-                    </div>
+              <% if !current_user.pro == true %>
+                <%= form_tag('/charge', method: :patch) do %>
+                  <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
+                    data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
+                    data-email= <%= current_user.email %>
+                    data-name="Loudstory"
+                    data-description="Pro 299 €"
+                    data-panel-label="Pay"
+                    data-label="ASK A PRO">
+                  </script>
+                <% end %>
+              <% else %>
+                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal"> Ask a pro </button>
+              <% end %>
+            </div>
+            </br>
+            <div id="accordion.panel-group">
+              <div class="panel.panel-default">
+                <div class="panel-heading">
+                  <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
+                    <p class="panel-title">
+                      <%= t '.text1_pro' %>
+                    </p>
+                  </a>
+                </div>
+                <div id="collapseUn" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p style="color:#fff; background-color:#0F0F5B;"> Any time you need, a mentor gives you feedback on your story via Skype or Hangout. </p>
                   </div>
                 </div>
               </div>
-            <% else %>
-              <h2><%= t '.text_pricing_title2_pro' %></h2>
-              <h1 class="text-center"><%= t '.text_pricing_title_pro1' %></h1>
-              <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
-              <div class="text-center">
-                </br>
-                <% if !current_user.pro == true %>
-                  <%= form_tag('/charge', method: :patch) do %>
-                    <script
-                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key= <%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-                      data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
-                      data-email= <%= current_user.email %>
-                      data-name="Loudstory"
-                      data-description="Pro 179 €"
-                      data-panel-label="Pay"
-                      data-label="ASK A PRO">
-                    </script>
-                  <% end %>
-                <% else %>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal"> Ask a pro </button>
-                <% end %>
-              </div>
-              </br>
-              <div id="accordion.panel-group">
-                <div class="panel.panel-default">
-                  <div class="panel-heading">
-                    <a href="#collapseUn", data-parent="#accordion", data-toggle="collapse", class="cursor-pricing">
-                      <p class="panel-title">
-                        <%= t '.text1_pro' %>
-                      </p>
-                    </a>
-                  </div>
-                  <div id="collapseUn" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p style="color:#fff; background-color:#0F0F5B;"> Any time you need, a mentor gives you feedback on your story via Skype or Hangout. </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+            </div>
           </div>
         <% else %>
           <div class="text-center">
