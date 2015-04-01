@@ -5,8 +5,9 @@
       <%= yield(:meta) %>
     <% end %>
 
-    <% title= content_for?(:title) ? yield(:title) : "LoudStory, Storytelling for Startups" %>
-
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "LoudStory | On-demand Storytelling" %>
+    </title>
 
     <%= favicon_link_tag 'favicon.ico' %>
 

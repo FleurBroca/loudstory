@@ -49,10 +49,10 @@ class HomeController < ApplicationController
     end
 
     Stripe::Charge.create(
-      :amount => 17900,
+      :amount => 29900,
       :currency => "eur",
       :customer => customer_id,
-      :description => "#{current_user.email} à payer")
+      :description => "#{current_user.email} a payé")
 
     @user.pro = true
     @user.save
@@ -90,7 +90,12 @@ class HomeController < ApplicationController
     end
 
 
-    customer.subscriptions.create(:plan => "member", quantity: 1)
+    Stripe::Charge.create(
+      :amount => 2900,
+      :currency => "eur",
+      :customer => customer_id,
+      :description => "#{current_user.email} a payé")
+
     @user.member = true
     @user.save
     if @user.save
@@ -105,26 +110,26 @@ class HomeController < ApplicationController
     redirect_to pricing_path
   end
 
-  def unsubscribe
-    @user = current_user
-    @user.member = false
+  # def unsubscribe
+  #   @user = current_user
+  #   @user.member = false
 
 
-    customer_id = current_user.stripe_customer_id
-    subscriptions = Stripe::Customer.retrieve(customer_id).subscriptions.all
+  #   customer_id = current_user.stripe_customer_id
+  #   subscriptions = Stripe::Customer.retrieve(customer_id).subscriptions.all
 
-    current_subscription = subscriptions.first
-    current_subscription.quantity -= 1
-    current_subscription.save
+  #   current_subscription = subscriptions.first
+  #   current_subscription.quantity -= 1
+  #   current_subscription.save
 
-    @user.save
-    if @user.save
-      redirect_to pricing_path, alert:"you just unsubscribed to the Member plan"
-    else
-      redirect_to pricing_path, error:"problem!"
-    end
+  #   @user.save
+  #   if @user.save
+  #     redirect_to pricing_path, alert:"you just unsubscribed to the Member plan"
+  #   else
+  #     redirect_to pricing_path, error:"problem!"
+  #   end
 
-  end
+  # end
 
   def mentor
     @user = current_user

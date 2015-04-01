@@ -75,7 +75,7 @@
                     data-image="http://www.loudstory.com/assets/loudstory-logo-0cb44ef03dff7d9d386ecf3318974dad.svg"
                     data-email= <%= current_user.email %>
                     data-name="Loudstory"
-                    data-description="Member 29 €/MO"
+                    data-description="Member 29 €"
                     data-panel-label="Pay"
                     data-label="SIGN UP">
                   </script>
@@ -197,7 +197,9 @@
                     </script>
                   <% end %>
                 <% else %>
-                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal"> Ask a pro </button>
+                  <div class="text-center">
+                    <i class="fa fa-check", style="color:grey; margin-bottom:13px;"></i>
+                  </div>
                 <% end %>
               </div>
               </br>
