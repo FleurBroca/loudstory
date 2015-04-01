@@ -3,7 +3,7 @@ en:
   home:
     index:
       title_signed_out: "MAKE THEM LOVE YOUR STORY"
-      subtitle: "A simple methodology to build a powerful startup story."
+      # subtitle: "Step-by-step, build a powerful startup story."
       # textsearchbar: "Do the first 2 exercises of our methodology for free. No credit card required."
       title_logged_in: "Create Your Stories"
       header_logged_in: "'People may not always remember what you did or what you said. But they always remember how you made them feel.'"

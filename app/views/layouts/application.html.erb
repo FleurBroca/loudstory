@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LoudStory, Storytelling for Startups</title>
-    <meta name="keywords" content="storytelling, startup, communication" />
-    <meta name="description" content="Storytelling for startups" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <% if content_for?(:meta) %>
+      <%= yield(:meta) %>
+    <% end %>
+
+    <% title= content_for?(:title) ? yield(:title) : "LoudStory, Storytelling for Startups" %>
+
 
     <%= favicon_link_tag 'favicon.ico' %>
 

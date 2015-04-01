@@ -1,4 +1,14 @@
 <% if user_signed_in? %>
+<% content_for :title do %>
+  Create Your Story
+<% end %>
+<% content_for :meta do %>
+  <meta name="keywords" content="storytelling, startup, communication" />
+  <meta name="description" content="Storytelling for startups" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<% end %>
 <div class="wrapper-login">
   <div class="container double-page">
     <div class="row">
@@ -42,12 +52,22 @@
 </div>
 
 <% else %>
+<% content_for :title do %>
+  LoudStory | On-demand Storytelling
+<% end %>
+<% content_for :meta do %>
+  <meta name="keywords" content="storytelling, startup, communication" />
+  <meta name="description" content="Storytelling for startups" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<% end %>
   <div class="wrapper-logout">
     <div class="container" id="top">
       <div class="row single-page">
         <div class="col-sm-12 text-title">
           <h1><%= t '.title_signed_out' %></h1>
-          <h2> A simple methodology to build a powerful <span id="swap"></span> </h2>
+          <h2> Step-by-step, build a powerful <span id="swap"></span> </h2>
         </div>
 
         <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-6 col-md-offset-1 col-md-10" id="homebanner">
