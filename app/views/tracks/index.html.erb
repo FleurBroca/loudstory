@@ -1,46 +1,89 @@
-<div class="wrapper-login">
-  <div class="container double-page">
+<% content_for :title do %>
+  LoudStory | Create
+<% end %>
+
+<div id="wrapper-tracks-index">
+  <div class="container single-page">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6" id="all-tracks-banner">
-        <h1><%= t '.title' %></h1>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 page-header" id="all-tracks-text">
-        <div class="page-header">
-          <h4><%= t '.header_logged_in' %></h4>
-          <p class="pull-right"><%= t '.header_logged_in_name' %></p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-text">
-          <h2>Begin your storytelling by finding your north star story</h2>
-          <% @tracks.each do |track| %>
-            <% if track.position == 1 %>
-              <h3><%= link_to track.title, track %></h3>
-              <h5><%= track.description %></h5>
-              <div class="spacer-30 padding-left-20">
-                <ul class="list-unstyled list-inline">
-                  <li><%= link_to "Learn", posts_path, class: "btn btn-sm btn-blue" %></li>
-                  <li><%= link_to "Create", track, class: "btn btn-sm btn-danger" %></li>
-                </ul>
-              </div>
-          <% else %>
-            <h3><%= link_to track.title, track %></h3>
-            <h5><%= track.description %></h5>
-            <div class="spacer-30 padding-left-20">
-              <ul class="list-unstyled list-inline">
-                <li><%= link_to "Learn", votes_tracks_path, class: "btn btn-sm btn-blue" %></li>
-                <li><%= link_to "Create", votes_tracks_path, class: "btn btn-sm btn-danger" %></li>
-              </ul>
-            </div>
-          <% end %>
-<!--             <h3>The Press kit</h3>
-            <h5>This tool helps you write all the basic material your startup needs to reach out to journalists properly: a fact sheet, a boiler plate and a crispy way to send your first launching press release.</h5>
-            <h3>The Landing Page</h3>
-            <h5>This tool helps you identify the visual and content elements to reach your communication goal, every time someone lands on your page.</h5>
-            <h3>The Pitch contest</h3>
-            <h5>This tool helps you assemble a pitch structure that gets viral. From the hook to the punchline, you will learn how to combine facts with stories and align your value proposition with your brand and company culture. Our goal is to help you generate a big wow in the audience.</h5> -->
-          <% end %>
-        </div>
+      <div class="col-xs-12 col-sm-12 col-md-12" id="all-tracks-banner">
+        <h1><%= t '.title_logged_in' %></h1>
       </div>
     </div>
   </div>
 </div>
+  <div class="container single-page">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12" id="all-tracks-text">
+        <%= flash_messages %>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
+          <div class="page-header">
+            <h4><%= t '.header_logged_in' %></h4>
+            <p class="pull-right"><%= t '.header_logged_in_name' %></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
+          <h3>The checklist</h3>
+          <h5>Build your story in 11 steps & 4 hours.</h5>
+          <div class="spacer-2em"></div>
+
+          <ol class="checklist">
+            <li><b>Start with a 20-min call from our team to put your story on the right track</b>. Use the chat box on the bottom right to suggest 3 time slots and we'll answer in less than 24h.</li>
+            <li><b>Define the hero of your story</b>.</li>
+            <li><b>Understand your hero's dreams and fears</b>.</li>
+            <li><b>Express the mentor's mission</b>.</li>
+            <li><b>Define the mentor's values</b>.</li>
+            <li><b>Understand the mentor's uniqueness</b>.</li>
+            <li><b>Define the mentor's personality</b>.</li>
+            <li><b>Create an inspiring one-sentence pitch</b>.</li>
+            <li><b>Create a unique brand identity</b>.</li>
+            <li><b>Create an audacious mission statement</b>.</li>
+            <li><b>Get feedback from our team</b>. Upgrade to the Member or Pro plans to get in touch within 48h.</li>
+          </ol>
+          <div class="spacer-2em"></div>
+
+<!--           <% @tracks.each do |track| %>
+ --><!--             <% if track.position == 1 %>
+ -->
+<!--               <h3><%= link_to track.title, track %></h3>
+              <h5><%= track.description %></h5>
+              <div class="spacer-30 padding-left-20"> -->
+          <div class="checklist-button">
+            <%= link_to "Build", track, class: "btn btn-sm btn-blue-pricing" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="spacer-2em"></div>
+      </div>
+      <div class="col-xs-12 col-sm-12" id="all-tracks-text">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
+          <h3>The classroom</h3>
+          <h5>Get the storyteller mindset in 4 courses & 4 hours.</h5>
+          <div class="spacer-2em"></div>
+          <ol class="checklist">
+            <li><b>The Basics</b></li>
+            <li><b>The North Star Story</b></li>
+            <li><b>Storytelling for branding</b></li>
+            <li><b>Storytelling for your manifesto</b></li>
+          </ol>
+          <div class="spacer-2em"></div>
+          <div class="checklist-button">
+            <%= link_to "Learn", posts_path, class: "btn btn-sm btn-blue-pricing" %>
+          </div>
+<!--             <% else %>
+ -->
+              <!-- <h3><%= link_to track.title, track %></h3>
+              <h5><%= track.description %></h5> -->
+              <!-- <div class="spacer-30 padding-left-20">
+                <ul class="list-unstyled list-inline">
+                  <li><%= link_to "Learn", votes_tracks_path, class: "btn btn-sm btn-blue" %></li>
+                  <li><%= link_to "Create", votes_tracks_path, class: "btn btn-sm btn-danger" %></li>
+                </ul>
+              </div> -->
+<!--             <% end %>
+ -->         <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 

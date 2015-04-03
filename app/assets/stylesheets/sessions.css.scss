@@ -162,10 +162,6 @@ $btn-primary-border: none;
   background-color: transparent;
 }
 
-.btn-blue-big{
-
-}
-
 .btn-blue-small.btn:hover, .btn-blue-small.btn:focus{
   border-color: #0F0F6D;
   border-bottom-color: #0F0F76;
@@ -176,17 +172,19 @@ $btn-primary-border: none;
 
 
 .btn-white{
-  background-color: white;
-  color: #7A7A7A;
-  font-family: 'Raleway', sans-serif;
+  background-color: transparent;
+  color: #FF0000;
+  font-family: 'Oswald';
   font-weight: 400;
-  font-size: 10px;
-  font-weight: 300;
-  border-color: #8C8C8C;
+  font-size: 15px;
+  border-color: #FF0000;
+  border-style: solid;
   border-radius: 28px;
-  padding: 6px 9px 6px 10px;
-  letter-spacing: 1px;
+  border-width: 2px;
+  padding: 6px 19px 6px 20px;
+  letter-spacing: 3px;
 }
+
 
 .btn-white.btn:hover, .btn-white.btn:focus{
   border-color: #FF0000;
@@ -227,7 +225,7 @@ $btn-primary-border: none;
   letter-spacing: 1px;
 }
 
-.btn-grey.btn:hover, .btn-grey.btn:focus{
+.btn-grey-big.btn:hover, .btn-grey-big.btn:focus{
   border-color: #828282;
   border-bottom-color: #696969;
   background-color: #828282;

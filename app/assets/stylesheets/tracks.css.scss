@@ -1,10 +1,16 @@
-#star-track-banner{
-  background-image: image-url('jobs-blue.png');
+#wrapper-tracks-show {
+  background-image: image-url('jobs-banner-blue.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  height: 100%;
+  width: 100%;
+  margin-top: 82px;
   position: relative;
   display: table;
+}
+
+#star-track-banner {
+  margin-top: 300px;
 }
 
 #star-track-banner h1{
@@ -17,13 +23,13 @@
   text-align: center;
 }
 
-#star-track-text{
-  height: 1000px;
-  position: relative;
-  display: table;
-  margin-top: 67px;
-  padding-left: 50px;
-}
+// #star-track-text{
+//   height: 1000px;
+//   position: relative;
+//   display: table;
+//   margin-top: 67px;
+//   padding-left: 50px;
+// }
 
 #star-track-text h2 > a{
   font-family: 'Oswald';
@@ -39,10 +45,11 @@
 
 #star-track-text h5 {
   font-family: 'Raleway', sans-serif;
-  font-size: 17px;
+  font-weight: 400;
+  font-size: 21px;
   line-height: 22px;
-  font-weight: 300;
-  color: #404040;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 #star-track-text p{
@@ -54,14 +61,21 @@
   font-size: 20px;
 }
 
-#all-tracks-banner{
-  background-image: image-url('inside-apple-blue.jpg');
+#wrapper-tracks-index{
+  background-image: image-url('inside-apple-banner-blue.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  height: 100%;
+  width: 100%;
+  margin-top: 82px;
   position: relative;
   display: table;
 }
+
+#all-tracks-banner {
+  margin-top: 300px;
+}
+
 
 #all-tracks-banner h1{
   font-family: 'Oswald';
@@ -75,7 +89,7 @@
 
 #all-tracks-text h4 {
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
   color: #0F0F5B;
   line-height: 23px;
@@ -85,21 +99,23 @@
 
 #all-tracks-text p {
   font-family: 'Raleway', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #0F0F5B;
   line-height: 23px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+#star-track-text h3,
 #all-tracks-text h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 32px;
   line-height: 30px;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 20px;
+  color: #FF0000;
 }
 
 #all-tracks-text h3 a {
@@ -114,15 +130,17 @@
 #all-tracks-text h5{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 21px;
   line-height: 22px;
   padding-right: 20px;
   padding-left: 20px;
-  color: #404040;
+}
+#padding-track-list p{
+  padding-left: 24px;
 }
 
 #button-tracks-show ul {
-  line-height: 65px;
+  line-height: 45px;
 }
 
 .upvote-img {
