@@ -47,17 +47,15 @@ $color: #0F0F5B;
 }
 
 #header-onboarding{
-  padding-bottom: 9px;
-  margin-left: 11px;
+  margin-left: 180px;
   margin-right: 20px;
   margin-top: 70px;
-  margin-bottom: 20px;
-
 }
 
 #header-onboarding h3{
   font-size: 23px;
   font-family: 'Oswald';
+  margin-left: 8px;
 }
 
 #header-onboarding h4{
@@ -67,6 +65,10 @@ $color: #0F0F5B;
 #header-onboarding h5{
   font-size: 16px;
   line-height: 23px;
+  margin-left: 8px;
+  margin-top: -20px;
+  color: grey;
+  margin-bottom: 40px;
 }
 
 #header-onboarding p{
@@ -75,6 +77,10 @@ $color: #0F0F5B;
   color: #404040;
   font-weight: 400;
   margin-bottom: 7px;
+}
+
+.header-onboarding-form {
+  margin-left: 8px;
 }
 
 .btn-signup-team{
