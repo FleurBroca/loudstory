@@ -45,8 +45,8 @@ IntercomRails.config do |config|
   config.user.custom_data = {
     :member => Proc.new { |current_user| current_user.member },
     :pro => Proc.new { |current_user| current_user.pro },
-    :is_paid => Proc.new { |current_user| current_user.stripe_customer_id },
-    :project => Proc.new { |current_user| current_user.teams.last }
+    :is_paid => Proc.new { |current_user| current_user.stripe_customer_id }
+    # :project => Proc.new { |current_user| current_user.teams.last }
 
   }
 
