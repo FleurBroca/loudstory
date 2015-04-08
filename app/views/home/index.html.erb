@@ -20,107 +20,120 @@
     </div>
   </div>
 </div>
-<div class="container single-page-index">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12" id="all-tracks-text">
-      <%= flash_messages %>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
+<div class="wagon">
+  <div class="container single-page-index">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
         <div class="page-header">
           <h4><%= t '.header_logged_in' %></h4>
           <p class="pull-right"><%= t '.header_logged_in_name' %></p>
         </div>
       </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
-        <h3>The Checklist</h3>
-        <h5>12 steps to build your story - in just 4 hours.</h5>
-        <div class="spacer-2em"></div>
-
-        <ol class="checklist">
-          <li><b>The Brief</b><br>
-              Start with a 20-min free call with us to put your story on the right track.<br>
-              >> Tell us 3 available time slots in the chat box (bottom right of your screen) and we'll talk soon.</li>
-          <li><b>The Classroom</b>.<br> Get the Storyteller Mindset from our content library. <br>>> More info about the Classroom below.</li>
-          <li><b>The Hero</b><br> Define your user's lifestyle.</li>
-          <li><b>The Hero's Dreams and Fears</b><br> Understand your user's aspirations.</li>
-          <li><b>The Call to Adventure</b><br> Express your company's mission.</li>
-          <li><b>The Mentor's Values</b><br> Define your company's values.</li>
-          <li><b>The Mentor's Competitors</b><br> Understand your company's uniqueness on its market.</li>
-          <li><b>The Mentor's Personality</b><br> Define your company's look and feel.</li>
-          <li><b>The Pitch</b><br> Build an inspiring one-sentence pitch.</li>
-          <li><b>The Branding</b><br> Build a unique brand identity.</li>
-          <li><b>The Manifesto</b><br> Build an audacious mission statement.</li>
-          <li><b>The Debrief</b>.<br>
-           Validate your story with a pro.<br>
-           >> Upgrade to the Member Plan for a quick feedback on your story.<br>
-        </ol>
-        <div class="spacer-2em"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row" id="all-tracks-text">
+      <%= flash_messages %>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
+      <h3>The Checklist</h3>
+      <h5>12 steps to build your story - in just 4 hours.</h5>
+      <p>The Free Plan gives you access to the first 5 steps.</p>
+      <div class="spacer-2em"></div>
+      <ol class="checklist">
+        <li><b>The Classroom</b>.<br> Get the Storyteller Mindset from our content library. <br>>> More info about the Classroom below.</li>
+        <li><b>The Brief</b><br>
+          Start with a 20-min free call with us to put your story on the right track.<br>
+          >> Tell us 3 available time slots in the chat box (bottom right of your screen) and we'll talk soon.</li>
+        <li><b>The Call to Adventure</b><br> Express your company's mission.</li>
+        <li><b>The Mentor's Values</b><br> Define your company's values.</li>
+        <li><b>The Manifesto</b><br> Build an audacious mission statement.</li>
+        <li><b>The Hero</b><br> Define your user's lifestyle.</li>
+        <li><b>The Hero's Dreams and Fears</b><br> Understand your user's aspirations.</li>
+        <li><b>The Mentor's Competitors</b><br> Understand your company's uniqueness on its market.</li>
+        <li><b>The Mentor's Personality</b><br> Define your company's look and feel.</li>
+        <li><b>The Pitch</b><br> Build an inspiring one-sentence pitch.</li>
+        <li><b>The Branding</b><br> Build a unique brand identity.</li>
+        <li><b>The Debrief</b>.<br>
+         Validate your story with a pro.<br>
+         >> Upgrade to the Member Plan for a quick feedback on your story.<br>
+      </ol>
+      <div class="spacer-2em"></div>
 
 <!--           <% @tracks.each do |track| %>
 --><!--             <% if track.position == 1 %>
 -->
 <!--               <h3><%= link_to track.title, track %></h3>
-            <h5><%= track.description %></h5>
-            <div class="spacer-30 padding-left-20"> -->
-        <div class="checklist-button">
-          <%= link_to "Build", track, class: "btn btn-sm btn-blue-pricing" %>
-        </div>
+          <h5><%= track.description %></h5>
+          <div class="spacer-30 padding-left-20"> -->
+      <div class="checklist-button">
+        <%= link_to "Build", track, class: "btn btn-sm btn-blue-pricing" %>
       </div>
     </div>
     <div class="col-xs-12">
       <div class="spacer-2em"></div>
     </div>
-    <div class="col-xs-12 col-sm-12" id="all-tracks-text">
+  </div>
+</div>
+<div class="wagon">
+  <div class="container">
+    <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
         <h3>Work With Pros</h3>
-        <h5>Bring your story to life - Choose from 3 Plans.</h5>
+        <h5>Bring your story to life - Choose from one of our Pro Plans.</h5>
         <div class="spacer-2em"></div>
         <ol class="checklist">
           <li><b>Brand Story</b><br>For an engaging brand story crafted by a professional storyteller<br> >> Upgrade to the Pro Plan.</li>
           <li><b>Creative & Marketing Guidelines</b><br>For an actionable program to implement your brand story online and offline, in terms of visual, writing style and marketing tools, framed by a visionary storyteller<br> >> Upgrade to the X Plan (coming soon) </li>
-          <li><b>Crisp Copywriting</b><br> For inspiring taglines & paragraphs, for your Homepage or the About, Use Case or How it Work sections of your website, composed by a skilled storyteller<br> >> Upgrade to the Y Plan (coming soon) </li>
+          <li><b>Crisp Copywriting</b><br> For inspiring taglines & paragraphs, for your Homepage or the About, Use Case or How it Work sections of your website, composed by a skilled wordsmith<br> >> Upgrade to the Y Plan (coming soon) </li>
         </ol>
         <div class="spacer-2em"></div>
         <div class="checklist-button">
           <%= link_to "Upgrade", pricing_path, class: "btn btn-sm btn-blue-pricing" %>
         </div>
-      </div>
-    </div>
-    <div class="col-xs-12">
-      <div class="spacer-2em"></div>
-    </div>
-    <div class="col-xs-12 col-sm-12" id="all-tracks-text">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
-        <h3>The Classroom</h3>
-        <h5>5 courses to get the storyteller mindset - in just 4 hours.</h5>
         <div class="spacer-2em"></div>
-        <ol class="checklist">
-          <li><b>The Basics</b><br> The Why, What and How of Storytelling</li>
-          <li><b>The North Star Story</b><br> Useful guidelines to do the exercises</li>
-          <li><b>Storytelling for branding</b><br> How to build a brand identity</li>
-          <li><b>Storytelling for your manifesto</b><br> How to inspire your team, investors and users</li>
-          <li><b>Startup Case Studies</b><br> How successful startups embrace storytelling</li>
-        </ol>
-        <div class="spacer-2em"></div>
-        <div class="checklist-button">
-          <%= link_to "Learn", posts_path, class: "btn btn-sm btn-blue-pricing" %>
-        </div>
-<!--             <% else %>
--->
-            <!-- <h3><%= link_to track.title, track %></h3>
-            <h5><%= track.description %></h5> -->
-            <!-- <div class="spacer-30 padding-left-20">
-              <ul class="list-unstyled list-inline">
-                <li><%= link_to "Learn", votes_tracks_path, class: "btn btn-sm btn-blue" %></li>
-                <li><%= link_to "Create", votes_tracks_path, class: "btn btn-sm btn-danger" %></li>
-              </ul>
-            </div> -->
-<!--             <% end %>
--->         <% end %>
       </div>
     </div>
   </div>
 </div>
+<div class="col-xs-12">
+  <div class="spacer-2em"></div>
+</div>
+<div>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-3" id="all-tracks-text">
+          <h3>The Classroom</h3>
+          <h5>5 courses to get the storyteller mindset - in just 4 hours.</h5>
+          <div class="spacer-2em"></div>
+          <ol class="checklist">
+            <li><b>The Basics</b><br> The Why, What and How of Storytelling</li>
+            <li><b>The North Star Story</b><br> Useful guidelines to do the exercises</li>
+            <li><b>Storytelling for branding</b><br> How to build a brand identity</li>
+            <li><b>Storytelling for your manifesto</b><br> How to inspire your team, investors and users</li>
+            <li><b>Startup Case Studies</b><br> How successful startups embrace storytelling</li>
+          </ol>
+          <div class="spacer-2em"></div>
+          <div class="checklist-button">
+            <%= link_to "Learn", posts_path, class: "btn btn-sm btn-blue-pricing" %>
+          </div>
+          <div class="spacer-2em"></div>
+
+  <!--             <% else %>
+  -->
+              <!-- <h3><%= link_to track.title, track %></h3>
+              <h5><%= track.description %></h5> -->
+              <!-- <div class="spacer-30 padding-left-20">
+                <ul class="list-unstyled list-inline">
+                  <li><%= link_to "Learn", votes_tracks_path, class: "btn btn-sm btn-blue" %></li>
+                  <li><%= link_to "Create", votes_tracks_path, class: "btn btn-sm btn-danger" %></li>
+                </ul>
+              </div> -->
+  <!--       <% end %>
+  -->     <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+
 
 <% else %>
 <% content_for :title do %>

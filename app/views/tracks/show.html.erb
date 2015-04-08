@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  LoudStory | Build
+  LoudStory | North Star
 <% end %>
 
 <div id="wrapper-tracks-show">
@@ -11,20 +11,25 @@
     </div>
   </div>
 </div>
-<div class="container single-page-index">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12" id="star-track-text">
-      <%= flash_messages %>
+<div class="wagon">
+  <div class="container single-page-index">
+    <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="all-tracks-text">
         <div class="page-header">
           <h4>"The organizations who effectively tell their story are the ones who can recruit the top talent, acquire long-term customers, and build brands that endure. <br><br>Find your true north star, write it down and let it guide the way."</h4>
           <p class="pull-right"><%= t '.header_logged_in_name' %></p>
         </div>
       </div>
-      <div class="col-xs-12">
-        <div class="spacer-2em"></div>
-      </div>
-      <div class="ccol-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="star-track-text">
+    </div>
+  </div>
+</div>
+<div class="col-xs-12">
+  <div class="spacer-2em"></div>
+</div>
+<div class="container">
+   <div class="row">
+      <%= flash_messages %>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" id="star-track-text">
         <h3><%= t '.create' %></h3>
         <h5><%= t '.create2' %></h5>
         <div class="spacer-2em"></div>
@@ -111,6 +116,7 @@
     </div>
   </div>
 </div>
+<div class="spacer-2em"></div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
