@@ -17,6 +17,8 @@ ActiveAdmin.register User do
       f.input :last_name
       f.input :email
       f.input :stripe_customer_id
+      f.input :member
+      f.input :pro
     end
     f.inputs "Admin" do
       f.input :admin
