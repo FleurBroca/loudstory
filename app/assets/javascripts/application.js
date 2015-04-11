@@ -101,7 +101,7 @@ $(document).ready(function(){
   });
 
 
-  var txt = ['startup story', 'brand DNA', 'landing page', 'press kit', 'pitch'],
+  var txt = ['startup', 'brand DNA', 'landing page', 'press kit', 'pitch'],
     n = txt.length,
     $swap = $('#swap'),
     $span,

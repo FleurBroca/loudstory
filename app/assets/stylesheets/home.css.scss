@@ -3,7 +3,8 @@
 }
 
 #homebanner{
-  margin-top: 220px;
+  margin-top: 167px;
+  margin-bottom: 35px;
 }
 
 .text-title{
@@ -36,7 +37,6 @@
 
 .suit-target h2{
   font-size: 23px;
-  font-weight: 700;
   color: #0F0F5B;
 }
 
@@ -54,21 +54,22 @@
 
 .suit-quote-1 h2,
 .suit-quote-2 h2{
-  font-size: 17px;
-  font-style: italic;
+  font-size: 20px;
   color: #0F0F5B;
   line-height: 24px;
+  margin-bottom: 45px;
 }
 
 .suit-quote-1 p,
 .suit-quote-2 p {
   font-size: 16px;
   color: #0F0F5B;
+  font-weight: 700;
 }
 
 .quote-img{
   border-radius: 50%;
-  width: 55px;
+  width: 80px;
 }
 
 .suit-mission {
@@ -98,6 +99,13 @@
   padding-left: 15px;
 }
 
+.zindex-wagon{
+  z-index: 1;
+  background-color: #F0F1F5;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .suit-mission p{
   font-size: 17px;
   color: #0F0F5B;
@@ -110,19 +118,21 @@
 }
 
 .suit-features h2 {
-  font-size: 26px;
+  font-size: 31px;
   font-weight: bold;
   color: #0F0F5B;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .suit-features h4{
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
   font-weight: 700;
 }
 
 .suit-features p{
-  font-size: 15px;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -135,6 +145,10 @@
   font-weight: bold;
   color: #0F0F5B;
   margin-top: 0px;
+}
+
+.suit-testimonials-list li{
+  line-height: 27px;
 }
 
 .features-img {
@@ -478,7 +492,7 @@
   background-image: asset-url("macbook_air.png");
   background-position: center center;
   background-repeat: no-repeat;
-  min-height: 870px;
+  height: 870px;
   background-size: cover;
   width: 100%;
   left: -5px;
@@ -512,7 +526,7 @@
 
 .testimonials-title{
   text-align: center;
-  font-size: 23px;
+  font-size: 25px;
 }
 
 .checklist li {

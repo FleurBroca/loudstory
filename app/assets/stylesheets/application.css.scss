@@ -188,6 +188,10 @@ $link-hover-decoration: none;
     margin-left: 180px;
   }
 
+  .line-title {
+    margin-bottom: 20px;
+  }
+
   .line-title h3 {
     border-bottom: 1px solid #4e4e4e;
     width: 100%;
@@ -199,7 +203,19 @@ $link-hover-decoration: none;
     margin-bottom: 55px;
     height: 20px;
     z-index: 2;
+  }
 
+  .line-title-pricing h3 {
+    border-bottom: 1px solid #4e4e4e;
+    width: 100%;
+    font-family: 'Oswald';
+    font-size: 33px;
+    font-weight: 700;
+    color: #0F0F5B;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    height: 20px;
+    z-index: 2;
   }
 
   #mc_embed_signup {
@@ -209,7 +225,7 @@ $link-hover-decoration: none;
   }
 
   #mc_embed_signup_scroll{
-    padding-top: 40px;
+    padding-top: 55px;
   }
 
 

@@ -95,9 +95,9 @@ a {
   color: #404040;
 }
 
-.big-text-red{
-  font-size: 28px;
-  color: #FF0000;
+.small-text {
+  font-size: 17px;
+  color: #0F0F5B;
 }
 
 .very-tiny-text{
@@ -108,6 +108,11 @@ a {
 
 .notice {
   margin-top: 35px;
+}
+
+.big-text-red{
+  font-size: 28px;
+  color: #FF0000;
 }
 
 .color-red{
@@ -136,6 +141,10 @@ a {
 
 .spacer-4em{
   height: 4em;
+}
+
+.spacer-3em {
+  height: 3em;
 }
 
 .spacer-2em{
