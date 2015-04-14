@@ -267,28 +267,7 @@
 <div class="text-center">
   <a type="button" id="scroll-button" href="#top" style="outline:none;"class="btn btn-sm btn-danger"> Start now for free </a>
 </div>
-
-<div class="wagon">
-  <div class="container" id="mc_embed_signup">
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <div id="mc_embed_signup_scroll" class="text-center">
-          <label for="mce-EMAIL">COME JOIN OUR WEEKLY STORYTELLING DIGEST.</label>
-          <p class="small-text">We share tips, case studies, insights and updates to inspire you.</p>
-        </div>
-        <div class="spacer-2em"></div>
-        <div  class="text-center">
-          <%= form_tag(subscriber_path, method: "post") do %>
-            <%= email_field_tag :email,"", placeholder: "  Email", class: "signin-label form-control-nl" %>
-            <%= submit_tag "Subscribe me", class: 'btn btn-sm btn-danger' %>
-          <% end %>
-        </div>
-        <div class="spacer-4em"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="spacer-4em"></div>
+          <div class="spacer-2em"></div>
 
 <div class="container">
   <div class="row" id="suit1">
@@ -319,7 +298,27 @@
 <div class="spacer-4em"></div>
 
 
-
+<div class="wagon">
+  <div class="container" id="mc_embed_signup">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div id="mc_embed_signup_scroll" class="text-center">
+          <label for="mce-EMAIL">COME JOIN OUR WEEKLY STORYTELLING DIGEST.</label>
+          <p class="small-text">We share tips, case studies, insights and updates to inspire you.</p>
+        </div>
+        <div class="spacer-2em"></div>
+        <div  class="text-center">
+          <%= form_tag(subscriber_path, method: "post") do %>
+            <%= email_field_tag :email,"", placeholder: "  Email", class: "signin-label form-control-nl" %>
+            <%= submit_tag "Subscribe me", class: 'btn btn-sm btn-danger' %>
+          <% end %>
+        </div>
+        <div class="spacer-4em"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="spacer-4em"></div>
 
 <div class="spacer-2em"></div>
 
