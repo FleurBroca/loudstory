@@ -141,9 +141,9 @@
             <h2><%= t '.text_pricing_title2_pro' %></h2>
             <h1 class="text-center"><%= t '.text_pricing_title_pro1' %></h1>
             <h3 class="text-center"><%= t '.text_pricing_subtitle_pro' %></h3>
-            <div class="text-center">
+            <div class="text-center padding-pro">
               </br>
-              <% if !current_user.pro == true %>
+<!--              <% if !current_user.pro == true %>
                 <%= form_tag('/charge', method: :patch) do %>
                   <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -159,6 +159,7 @@
               <% else %>
                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal"> Ask a pro </button>
               <% end %>
+-->
             </div>
             </br>
             <div id="accordion.panel-group">

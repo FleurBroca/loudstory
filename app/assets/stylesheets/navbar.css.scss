@@ -223,6 +223,7 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   border: $profile-border-width solid $profile-border-color;
   box-shadow: 0 0 2px rgb(200, 200, 200);
   height: 50px - (2 * $profile-border-width);
+  width: 50px;
   margin-right: 18px;
   border-radius: $profile-radius;
 }
