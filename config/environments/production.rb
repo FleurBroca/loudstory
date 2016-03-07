@@ -83,7 +83,7 @@ Rails.application.configure do
 
   ActionMailer::Base.smtp_settings = {
     :port =>           '587',
-    :address =>        'smtp.mailgun.com',
+    :address =>        'smtp.mailgun.org',
     :user_name =>      ENV['MAILGUN_USERNAME'],
     :password =>       ENV['MAILGUN_APIKEY'],
     :domain =>         'loudstory.com',
