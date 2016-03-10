@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
   def welcome_member_plan(user)
     @user = user
 
-    mail(to: @user.email, subject: 'Welcome to LoudStory')
+    mail(to: @user.email, subject: 'Thanks for subscribing to the Member Plan')
     # This will render a view in `app/views/user_mailer`!  end
   end
 
